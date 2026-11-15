@@ -75,7 +75,7 @@ class PromptAnalyzer:
         
         # Check for nested structures (advanced)
         if '<functional_requirements>' in prompt or '<performance_requirements>' in prompt:
-            analysis['structure_score'] += 2
+            analysis['structure_score'] = min(10.0, analysis['structure_score'] + 2)
             analysis['strengths'].append("Advanced nested structure used")
         
         # Check for specific language in requirements
@@ -162,12 +162,12 @@ class PromptAnalyzer:
         print("Overall Improvement:")
         print("-" * 20)
         imp = comparison['improvement']
-        print(f"Structure: +{imp['structure']:.1f} points")
-        print(f"Clarity: +{imp['clarity']:.1f} points") 
-        print(f"Completeness: +{imp['completeness']:.1f} points")
+        print(f"Structure: {imp['structure']:+.1f} points")
+        print(f"Clarity: {imp['clarity']:+.1f} points") 
+        print(f"Completeness: {imp['completeness']:+.1f} points")
         
         total_improvement = sum(imp.values())
-        print(f"\nTotal Improvement: +{total_improvement:.1f} points")
+        print(f"\nTotal Improvement: {total_improvement:+.1f} points")
         
         if total_improvement > 10:
             print("🎉 Excellent improvement! Your XML prompt is much clearer.")
@@ -177,14 +177,13 @@ class PromptAnalyzer:
             print("📝 Your XML prompt needs more work. Review the template guidance.")
 
 def test_student_prompts():
-    """Interactive function for students to test their prompt conversions."""
+    """Score a sample traditional prompt and an XML version of it."""
     analyzer = PromptAnalyzer()
     
     print("=== PROMPT CONVERSION TESTER ===\n")
-    print("This tool helps you compare your traditional and XML prompts.\n")
+    print("This tool scores a sample traditional prompt and an XML version of it.\n")
     
-    # You would extend this to load student's actual converted prompts
-    # For now, showing the testing framework
+    # A sample pair: a traditional prompt and an XML version of it
     
     sample_traditional = "Write a function to process data from users and make sure it's secure."
     sample_xml = """
