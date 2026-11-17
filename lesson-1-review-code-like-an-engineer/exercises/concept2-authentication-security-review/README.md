@@ -28,7 +28,7 @@ pytest test_security_vulnerabilities.py -v
 1. **Open** `starter/user_auth.py` and examine the security flaws
 2. **Focus on security issues** - this is a security-critical component
 3. **Apply** the engineering framework with extra attention to:
-   - SQL injection vulnerabilities (line 27!)
+   - SQL injection vulnerabilities (line 25!)
    - Password handling (plain text storage!)
    - Input validation (none!)
    - Error handling
@@ -42,7 +42,7 @@ pytest test_secure_authentication.py -v
 **Expected Output:**
 - All security tests pass
 - SQL injection attempts are blocked
-- Passwords are properly hashed
+- Passwords are stored as hashes
 - Input validation works correctly
 
 ### Step 4: Document Security Issues
@@ -92,7 +92,7 @@ pytest test_secure_authentication.py -v
 4. **Information disclosure** through error messages
 5. **Tight coupling** between database and authentication logic
 
-## Security Best Practices (from Solution)
+## Security Best Practices
 
 - Use parameterized queries to prevent SQL injection
 - Hash passwords with strong algorithms (PBKDF2, bcrypt, Argon2)
@@ -111,4 +111,4 @@ The vulnerabilities in this code could lead to:
 - Credential theft
 - System-wide security failures
 
-After your review, examine the solution to understand how to implement secure authentication with proper password hashing, parameterized queries, and comprehensive security measures.
+After your review, examine the solution to understand how to implement secure authentication with password hashing, parameterized queries, and input validation.

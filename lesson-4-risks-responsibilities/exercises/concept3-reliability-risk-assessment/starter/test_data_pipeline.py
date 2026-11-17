@@ -189,8 +189,10 @@ class TestBasicFunctionality:
         """Test that pipeline orchestration works with mock data."""
         pipeline = DataPipelineOrchestrator()
         
-        # Use demo data source (no external dependencies)
-        result = pipeline.run_daily_pipeline("demo")
+        # Use demo data source; mock the external API so the test does not wait on the network
+        with patch.object(pipeline.processor.api_client, 'validate_account', return_value=True), \
+             patch.object(pipeline.processor.api_client, 'get_exchange_rate', return_value={"rate": 1.0}):
+            result = pipeline.run_daily_pipeline("demo")
         
         assert "pipeline_status" in result
         assert "duration_seconds" in result
