@@ -21,7 +21,7 @@ python -m pytest test_database_security.py -v
 
 **Expected Output:**
 - Basic functionality tests pass
-- Security tests FAIL (demonstrating SQL injection!)
+- Security tests pass too (for example, the `' OR '1'='1` email lookup returns a user)
 - Shows database security vulnerabilities
 
 ### Step 2: Review the Code
