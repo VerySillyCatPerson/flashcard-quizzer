@@ -27,7 +27,6 @@ API clients need proper error handling to provide good user experience and preve
 ### Test the Starter Code (Shows Problems)
 ```bash
 cd starter/
-python api_client.py
 pytest test_api_errors.py -v
 ```
 

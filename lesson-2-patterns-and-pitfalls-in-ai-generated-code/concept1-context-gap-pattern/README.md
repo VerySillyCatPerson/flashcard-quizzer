@@ -26,7 +26,7 @@ pytest test_log_formatter.py -v
 **Expected Output:**
 - **Original version tests**: All pass (showing it worked before)
 - **AI version timestamp tests**: Pass (timestamp feature works)  
-- **AI version workflow tests**: FAIL (missing file logging, monitoring, statistics)
+- **AI version workflow tests**: Pass (each one confirms a call the AI removed: file logging, monitoring, statistics)
 - **Comparison tests**: Clearly show the context gap pattern
 
 ### Step 2: Review the Code  
@@ -40,7 +40,7 @@ pytest test_log_formatter.py -v
 
 ### Step 3: Run the Solution Tests
 ```bash
-cd ../solution
+cd ../../exercises/concept1-context-gap-pattern/solution
 pytest test_log_formatter.py -v
 ```
 
