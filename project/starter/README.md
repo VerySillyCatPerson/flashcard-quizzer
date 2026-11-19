@@ -6,8 +6,8 @@ seeded randomness, and optional versioned JSON result export are included.
 
 Stages 7 and 8 are accepted based on reported evidence; final report wording is
 approved. Post-fix runs on **Windows CPython 3.10.11 and
-3.13.17** each passed **275 tests, 1 skipped**, with **98.21% combined coverage**
-including `main.py`. Statement coverage is **98.50%** and branch coverage is
+3.13.17** each passed **343 tests, 1 skipped**, with **98.21% combined coverage**
+including `main.py`. Statement coverage is **98.51%** and branch coverage is
 **96.77%**. Symlink creation is privilege-blocked; hard-link tests passed. Final
 audit findings are in [the authoritative-rubric audit](docs/final_rubric_audit.md).
 The rubric was supplied on 2026-11-19 and makes 1,000-1,500 words authoritative.
@@ -84,6 +84,14 @@ significant. Blank answers count as incorrect. Feedback shows Correct/Incorrect
 and the expected answer after a mistake. The table shows deck size, completed
 questions, correct count, accuracy, and missed fronts with original positions.
 
+Displayed card fronts and expected answers escape C0 controls (U+0000–U+001F),
+DEL (U+007F), and C1 controls (U+0080–U+009F). Newline, carriage return and tab
+keep the literal `\n`, `\r` and `\t` conventions; other controls use `\xhh`.
+For example, ESC followed by `[2J` displays as `\x1b[2J`, and C1 CSI displays
+as `\x9b`. Questions, incorrect-answer feedback and missed-card summaries use
+this escaping. Ordinary Unicode stays readable. Grading, identity, history and
+JSON export retain the original card values; escaping applies only to presentation.
+
 ## History, interruption, and export
 
 History stores version `1`, policy `error-balance-v1`, and content-keyed integer
@@ -152,18 +160,21 @@ tool and environment directories, and enforces an overall **81% combined** gate
 covered statements and branch outcomes; it is not the branch-only percentage or
 an unweighted average of percentages.
 
-| Post-F3 coverage measure (both runtimes) | Covered / total | Percent |
+| Post-independent-review coverage (both Windows runtimes) | Covered / total | Percent |
 | --- | --- | --- |
-| Statements | 593 / 602 | 98.50% |
+| Statements | 595 / 604 | 98.51% |
 | Branch outcomes | 120 / 124 | 96.77% |
-| Combined tool total | 713 / 726 | 98.21% |
+| Combined tool total | 715 / 728 | 98.21% |
 
 The historical zero-statement Stage 2 result is not submission evidence. Saved
-current [3.10 checks](docs/verification/f3_green_310.json),
-[3.13 checks](docs/verification/f3_green_313.json), and
-[coverage](docs/verification/f3_coverage_313.json) measure the corrected source.
+current [3.10 checks](docs/verification/independent_review_green_310.json),
+[3.13 checks](docs/verification/independent_review_green_313.json), and
+[coverage](docs/verification/independent_review_coverage_313.json) measure the corrected source.
 These use the existing isolated environments against the current working tree;
-they are not a new clean-install reproduction. Historical
+they are not a new clean-install reproduction. The [independent-review fixes](docs/independent_review_fixes.md)
+separate the reported Linux/Python 3.12 nesting-test failure from actual Windows
+results. Linux/Python 3.12 was not executed. These corrections and factual documentation updates were accepted on reported evidence.
+Historical
 [check outputs](docs/verification/stage_8_checks.json),
 [coverage data](docs/verification/stage_8_coverage.json), and
 [derived metrics](docs/verification/stage_8_metrics.json) record this run on

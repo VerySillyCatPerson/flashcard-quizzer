@@ -75,6 +75,8 @@ High coverage initially missed combined failure scenarios. An oversized-integer 
 
 Black, isort, flake8, strict mypy, typed functions, docstrings, and structured errors support review. Final inspection found eight missing bootstrap docstrings, eight spacing errors, and F3: failed startup-warning output replaced interrupt status 130 with 1. Approved corrections followed failing regressions. File-level and extracted-bootstrap lint now pass without weakened rules; unexpected programming errors remain visible.
 
+Independent review prompted portable nesting tests and C0/DEL/C1 display escaping; readable Unicode and domain data remain unchanged.
+
 ### Testing Strategy
 
 Pytest covers validation, immutable snapshots, source preservation, scoring, temporary-file round trips, persistence failures, exports, conflicts, and actual-entry-point subprocesses. Random tests check membership without requiring a changed shuffle. Stage 7 used regression-first development; this is not a claim that all development followed test-driven development.
@@ -107,9 +109,9 @@ main.py delegates execution. Models/loading define validated data; engine/strate
 
 ### Metrics
 
-Production comprises 11 Python files, 1,165 physical lines including blanks/docstrings, 62 function definitions including methods, and 22 classes. Tests comprise 13 files and 2,657 physical lines. These are size measures, not authorship counts.
+Production comprises 11 Python files, 1,167 physical lines including blanks/docstrings, 62 function definitions including methods, and 22 classes. Tests comprise 13 files and 2,764 physical lines. These are size measures, not authorship counts.
 
-Post-fix Windows CPython 3.10.11 and 3.13.17 runs each passed 275 tests with one skip, using the previously isolated environments against current source. Combined coverage is 98.21%; statements are 593/602, or 98.50%, and branches are 120/124, or 96.77%. All configured quality checks passed; no numeric linting score exists.
+Post-review Windows CPython 3.10.11 and 3.13.17 runs each passed 343 tests with one skip, using the previously isolated environments against current source. Combined coverage is 98.21%; statements are 595/604, or 98.51%, and branches are 120/124, or 96.77%. All configured quality checks passed; Linux/Python 3.12 was not executed.
 
 ### Self-Assessment
 
@@ -160,7 +162,7 @@ The project demonstrates reviewed AI-assisted implementation with measurable che
 
 ### Appendix B: Code Statistics
 
-[The final audit](final_rubric_audit.md) links commands, metrics, checklist findings, and tested-source hashes. The 98.21% combined figure is (593+120)/(602+124); historical zero-statement coverage is not submission evidence.
+[The final audit](final_rubric_audit.md) links commands, metrics, checklist findings, and tested-source hashes. The 98.21% combined figure is (595+120)/(604+124); historical zero-statement coverage is not submission evidence.
 
 ### Appendix C: Additional Resources
 

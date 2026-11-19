@@ -48,8 +48,10 @@ def configure_streams() -> None:
 
 
 def _one_line(value: str) -> str:
-    """Escape line controls for display without changing stored/comparison text."""
-    return value.translate({ord("\n"): r"\n", ord("\r"): r"\r", ord("\t"): r"\t"})
+    """Escape C0/DEL/C1 for display, preserving Unicode and stored/grading text."""
+    controls = {code: f"\\x{code:02x}" for code in (*range(0x20), *range(0x7F, 0xA0))}
+    controls.update({ord("\n"): r"\n", ord("\r"): r"\r", ord("\t"): r"\t"})
+    return value.translate(controls)
 
 
 def warn(message: str) -> None:

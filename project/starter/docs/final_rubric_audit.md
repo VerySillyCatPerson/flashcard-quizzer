@@ -1,5 +1,12 @@
 # Final audit against the authoritative rubric
 
+**Independent-review update — 2026-11-19:** Portable nesting tests and card-text
+control escaping are verified on Windows Python 3.10.11/3.13.17; the student
+accepted these corrections and factual updates based on reported evidence. The reviewer’s Linux/Python 3.12.14 issue was not
+executed here. [Actual changes/red-green evidence](independent_review_fixes.md)
+and [the prior audit snapshot](verification/independent_review_before_audit.json)
+separate current results from historical F1/F2/F3/clean-setup evidence.
+
 Updated after approved corrections: **2026-11-19**. Authority:
 [the supplied request/rubric](authoritative_audit_request.md).
 **39 PASS; no remaining confirmed mandatory gaps.** This is an evidence-based
@@ -27,7 +34,7 @@ or platform, subjective grading, or student final approval.
 | ID | Mandatory requirement | Status | Exact evidence |
 | --- | --- | --- | --- |
 | CR1 | Use AI tools to generate code for your application. | **PASS** | utils/models.py; utils/cli.py; docs/ai_edit_log.md Stage 3/6/7 implementation records; stage_7_fix_manifest.json original_code and current source. |
-| CR2 | Review all AI-generated code using the provided checklist. | **PASS** | checklist_review_2026-11-19.md maps all 99 initial prompts plus dated approved-fix follow-up; f3_fix_review.md reviews changed catch/fault hooks/assertions; f3_manifest.json retains before/red/after source and hashes. |
+| CR2 | Review all AI-generated code using the provided checklist. | **PASS** | checklist_review_2026-11-19.md maps initial prompts and follow-ups; independent_review_fixes.md reviews decoder-only mocks, card display controls and original-domain persistence; independent_review_manifest.json identifies final tested source. |
 | CR3 | Document your review process in ai_edit_log.md with specific examples. | **PASS** | docs/ai_edit_log.md Stages 1-9 and dated authoritative-rubric append; checklist_review_2026-11-19.md. |
 | CR4 | Show evidence of modifying or rejecting poor AI suggestions. | **PASS** | Log Stage 1 identity/scoring/context, Stage 6 raw-answer/overwrite decisions, Stage 7 F1/F2; stage_7_fix_red.json and stage_7_fix_checks.json. |
 
@@ -35,16 +42,16 @@ or platform, subjective grading, or student final approval.
 
 | ID | Mandatory requirement | Status | Exact evidence |
 | --- | --- | --- | --- |
-| CQ1 | All code follows PEP 8 style guidelines. | **PASS** | f3_green_310.json and f3_green_313.json: file-level Black/isort/flake8 and extracted executable _BOOTSTRAP flake8 all exit 0; no rule changes. |
-| CQ2 | Proper error handling and input validation. | **PASS** | utils/cli.py::main narrow TerminalOutputError catch; both f3_red_*.json show two failed/two passed before production edits, both f3_green_*.json show four focused passes; RuntimeError traceback remains visible. Existing validation/finalization tests remain passing. |
+| CQ1 | All code follows PEP 8 style guidelines. | **PASS** | independent_review_green_310.json and independent_review_green_313.json: Black/isort/flake8 plus extracted executable bootstrap flake8 all exit 0, using unchanged configuration. |
+| CQ2 | Proper error handling and input validation. | **PASS** | utils/terminal.py::_one_line escapes C0/DEL/C1 card text; tests cover all 65 controls at each display boundary. utils/data_loader.py decoder handling is unchanged; deterministic boundary and real nested-file contracts pass. Existing F3/finalization/error tests pass both full suites. |
 | CQ3 | Code is readable and maintainable. | **PASS** | Separate engine/strategies/history/terminal/export/paths; main.py thin guard; checklist review sections 2 and 8; documented phase and stream complexity. |
-| CQ4 | Functions have appropriate docstrings. | **PASS** | All 210 normally parsed functions documented; all 16 executable bootstrap functions documented (embedded_missing_docstrings empty in both f3_green_*.json). Eight original missing docstrings corrected. |
+| CQ4 | Functions have appropriate docstrings. | **PASS** | 215 normally parsed functions and all 16 executable bootstrap functions have docstrings; current source/AST inspection and unchanged bootstrap checks verified. |
 
 ### Functional Application
 
 | ID | Mandatory requirement | Status | Exact evidence |
 | --- | --- | --- | --- |
-| APP1 | Build a working application that extends the starter code. | **PASS** | main.py + utils CLI meaningfully extend the starter; both current-runtime full suites report 275 passed/one OS symlink skip, including corrected startup-warning status 130. |
+| APP1 | Build a working application that extends the starter code. | **PASS** | Implemented main.py CLI and both current Windows runtime full suites: 343 passed/one privilege-dependent symlink skip, including original modes, persistence, export and new display protection. |
 | APP2 | Implement at least 3 new features beyond basic CRUD operations. | **PASS** | Persistent adaptive learning: history.py/AdaptiveStrategy + test_history_reuse_changes_next_adaptive_order; seeded replay: RandomStrategy + test_seeded_randomness_reproduces_order; JSON session export: results_export.py + actual export/overwrite transcripts. |
 | APP3 | Application should have clear functionality and purpose. | **PASS** | README.md purpose/usage; finite quizzes with immediate feedback and answered-only statistics. |
 | APP4 | Use AI assistance throughout the development process. | **PASS** | ai_edit_log.md planning, setup, implementation, debugging, review, verification and documentation entries; no invented line-by-line authorship metric. |
@@ -61,18 +68,18 @@ or platform, subjective grading, or student final approval.
 
 | ID | Mandatory requirement | Status | Exact evidence |
 | --- | --- | --- | --- |
-| UT1 | Achieve >80% test coverage using pytest. | **PASS** | f3_coverage_310.json and f3_coverage_313.json: statements 593/602=98.50%, branches 120/124=96.77%, combined 713/726=98.21%; all 11 production modules including main.py. |
+| UT1 | Achieve >80% test coverage using pytest. | **PASS** | independent_review_coverage_310.json and independent_review_coverage_313.json: statements 595/604=98.51%, branches 120/124=96.77%, combined 715/728=98.21%; all 11 production modules including main.py. |
 | UT2 | Write tests for both original and AI-generated code. | **PASS** | test_existing_sample_decks preserves original array/wrapper contracts; test_importing_entry_point_does_not_start_quiz and generated domain/CLI tests. Original starter had no implemented runtime logic beyond placeholders. |
-| UT3 | Include tests for edge cases and error conditions. | **PASS** | tests/test_data_loader.py missing/unreadable/malformed/type/blank/duplicate/deep/large cases; test_history.py save/load failures; test_finalization.py F1/F2. |
+| UT3 | Include tests for edge cases and error conditions. | **PASS** | tests/test_data_loader.py decoder-only RecursionError translation plus real 5,000-deep rejection; tests/test_terminal.py all C0/DEL/C1 display contexts, Unicode and domain round trips; existing history/export/finalization error tests retained. |
 | UT4 | Use clear test names that describe what is being tested. | **PASS** | Examples: test_existing_export_is_refused_without_changing_bytes; test_between_phase_interrupt_continues_pending_work_once; test_real_two_session_round_trip. |
 
 ### AI-Generated Code Validation
 
 | ID | Mandatory requirement | Status | Exact evidence |
 | --- | --- | --- | --- |
-| VAL1 | Test all AI-generated code thoroughly. | **PASS** | Current full suites each 275 passed/one privilege-dependent symlink skip; four focused F3 regressions pass after genuine red evidence. All production modules measured; manual verification remains separate. |
-| VAL2 | Document any issues found with AI code in ai_edit_log.md. | **PASS** | ai_edit_log.md preserves decoder, F1/F2/shutdown, initial eight-docstring/eight-spacing and F3 findings, actual failures, student approval, correction and dual-runtime verification. |
-| VAL3 | Show evidence of fixing or rejecting problematic AI suggestions. | **PASS** | stage_3_regression_before.json and genuine Stage 7 regression chain retained; f3_red_310.json/f3_red_313.json precede production fix; f3_green_310.json/f3_green_313.json show corrected behavior. |
+| VAL1 | Test all AI-generated code thoroughly. | **PASS** | Both current full suites: 343 passed/one symlink skip; revised nesting 2 passed and terminal 70 passed. Linux/Python 3.12 reported issue is distinguished from Windows baseline observations, not claimed executed. |
+| VAL2 | Document any issues found with AI code in ai_edit_log.md. | **PASS** | ai_edit_log.md existing stage entries plus actual independent-review request, Windows original nesting baseline, new red terminal results, minimal fix, dual-runtime green/quality and actual user acceptance on reported evidence. |
+| VAL3 | Show evidence of fixing or rejecting problematic AI suggestions. | **PASS** | Earlier decoder/F1/F2/F3 red-green records preserved; independent_review_red_310.json and independent_review_red_313.json show 63 failed/7 passed terminal tests before production change; current green files show 70 terminal passes. |
 
 ### AI Interaction Log
 
@@ -90,13 +97,13 @@ or platform, subjective grading, or student final approval.
 | REP1 | Complete the final report using the provided template. | **PASS** | final_report.md preserves every major/minor template heading; report_template.md unchanged SHA-256; all report fields filled. |
 | REP2 | Explain how you used AI throughout your development process. | **PASS** | Report Executive Summary, AI Collaboration Experience, three actual examples including F1/F2, current checklist attribution. |
 | REP3 | Reflect on what you learned about working with AI tools. | **PASS** | Report reflection paragraphs and four rating values match student input; authorized factual self-assessment reasons now reflect completed runtime/reproduction/rubric checks. Original reasons remain in the Stage 8 log. |
-| REP4 | Report should be 1000-1500 words. | **PASS** | Approved report 1,381 rendered words / 1,428 raw Markdown whitespace tokens including headings/lists/appendices/footer; original template unchanged; name masked at student request. |
+| REP4 | Report should be 1000-1500 words. | **PASS** | Report 1,398 rendered words / 1,445 raw Markdown whitespace tokens including headings/lists/appendices/footer. Earlier wording approval preserved; current factual verification updates accepted on reported evidence; reflection/rating text unchanged. |
 
 ### README Updates
 
 | ID | Mandatory requirement | Status | Exact evidence |
 | --- | --- | --- | --- |
-| README1 | Update README.md with new features and setup instructions. | **PASS** | Root/project/application READMEs describe actual features/setup; current README links post-fix evidence and distinguishes historical clean setup from current-source reruns. |
+| README1 | Update README.md with new features and setup instructions. | **PASS** | Application README documents display-only C0/DEL/C1 escaping, original domain values, current tests/coverage/setup and explicit Linux/Python 3.12 limit; root/project links remain valid. |
 | README2 | Provide clear usage examples. | **PASS** | Application README help/sequential/adaptive/random/export/overwrite examples; stage_9_commands.json ten actual CLI commands exit 0 across both runtimes. |
 | README3 | Document any dependencies or installation requirements. | **PASS** | README Setup, requirements.txt pinned dev tools, requirements-lock.txt Windows/3.13 scope, stdlib-only runtime and explicit interpreter/venv instructions. |
 
@@ -106,13 +113,13 @@ or platform, subjective grading, or student final approval.
 | --- | --- | --- | --- |
 | SUB1 | Complete codebase with all source files, tests, and documentation. | **PASS** | Concrete final_submission_inventory.json includes all 11 production/13 test Python files, two sample decks, readmes, guides, report/log and evidence. CQ4 is satisfied by the verified bootstrap docstring corrections. |
 | SUB2 | Completed ai_edit_log.md with at least 5 detailed AI interaction examples. | **PASS** | docs/ai_edit_log.md nine grouped stages and current dated resolution; see LOG1-LOG4. |
-| SUB3 | Final project report using the provided template (1000-1500 words). | **PASS** | See REP1-REP4; report content/template/length pass and student wording approval is recorded; requested name masking applied. |
+| SUB3 | Final project report using the provided template (1000-1500 words). | **PASS** | See REP1-REP4; template/content/length criteria pass. Prior report wording approval remains recorded; independent-review factual metric updates were accepted on reported evidence. |
 | SUB4 | Updated README.md with current setup instructions and feature descriptions. | **PASS** | See README1-README3; root/application/project entry points have no relevant stubs or current missing-rubric claim. |
-| SUB5 | Test coverage report demonstrating >80% coverage. | **PASS** | f3_coverage_310.json and f3_coverage_313.json plus complete measurement commands in f3_green_310.json/f3_green_313.json; raw reports included in inventory. |
-| SUB6 | Code quality verification: all linting tools should pass without errors. | **PASS** | f3_green_310.json and f3_green_313.json: Black/isort/flake8/strict mypy/pip check/extracted-bootstrap flake8 all exit 0. Earlier lint failure remains in final_bootstrap_lint.json. |
+| SUB5 | Test coverage report demonstrating >80% coverage. | **PASS** | Current independent_review_coverage_310.json/independent_review_coverage_313.json and complete measurement commands in independent_review_green_310.json/independent_review_green_313.json are included in inventory. |
+| SUB6 | Code quality verification: all linting tools should pass without errors. | **PASS** | independent_review_green_310.json and independent_review_green_313.json: full Black/isort/flake8/strict mypy/pip check and extracted-bootstrap flake8 all exit 0 with unchanged rules. |
 
 
-## 2. Approved corrections and genuine before/after evidence
+## 2. Historical approved F3 corrections and genuine before/after evidence
 
 The user explicitly approved the F3 correction and bootstrap docstring/spacing
 work. Both runtimes first ran the new tests against unchanged production:
@@ -191,44 +198,48 @@ fourth algorithm without modifying the engine. The report explains this choice.
 
 ## 5. Current full verification and coverage
 
-Both runs use previously isolated Windows environments against current source.
-They are actual runtime runs, not grammar/static checks or another clean install.
-The historical Stage 9 clean-install evidence remains valid for its earlier source
-snapshot; it is not presented as current-source verification.
+Both Windows runtime runs use existing isolated environments against current
+source, not new clean installations or Linux verification. The original nesting
+test passed on both Windows versions before editing. The revised decoder/real-file
+tests each pass, without relying on the decoder's recursion threshold. Before
+production changes, terminal tests gave 63 failed/7 passed on each runtime.
 
 | Current check | Python 3.10.11 | Python 3.13.17 |
 | --- | --- | --- |
-| Focused F3 | 4 passed, 9 deselected | 4 passed, 9 deselected |
-| Full pytest | 275 passed, 1 skipped; 22.56s | 275 passed, 1 skipped; 22.99s |
+| Revised nesting | 2 passed, 71 deselected | 2 passed, 71 deselected |
+| Terminal regressions | 70 passed | 70 passed |
+| Full pytest | 343 passed, 1 skipped; 22.80s | 343 passed, 1 skipped; 22.38s |
 | Black/isort/flake8/strict mypy/pip check | All exit 0 | All exit 0 |
 | Extracted executable bootstrap flake8 | Exit 0 | Exit 0 |
 
-All commands, runtime versions, executable paths, cwd and actual streams are saved
-in f3_green_310.json/f3_green_313.json. Measurement uses the respective interpreter:
+Actual runtime/cwd/commands/streams are in independent_review_green_310.json and
+independent_review_green_313.json; before-production results are in the red files.
+Measurement uses each corresponding interpreter:
 
 ```powershell
-python -m pytest -rs --cov=. --cov-report=term-missing --cov-report=html --cov-report=json:docs/verification/f3_coverage_310.json
+python -m pytest -rs --cov=. --cov-report=term-missing --cov-report=html --cov-report=json:docs/verification/independent_review_coverage_310.json
 ```
 
-The 3.13 run substitutes f3_coverage_313.json. All 11 production modules including
-main.py appear in both raw coverage reports. Configurations and exclusions are
-unchanged; the combined 81% gate is stricter than the rubric's >80% requirement.
-The zero-statement Stage 2 baseline is not submission evidence.
+The 3.13 run substitutes independent_review_coverage_313.json. All 11 production
+modules including main.py appear in both raw reports. The 81% combined gate,
+coverage exclusions, dependencies and quality rules are unchanged. The Stage 2
+zero-statement baseline and earlier source coverage are not current submission
+evidence.
 
 | Coverage | Covered/total | Percent |
 | --- | ---: | ---: |
-| Statements | 593/602 | 98.50% |
+| Statements | 595/604 | 98.51% |
 | Branch outcomes | 120/124 | 96.77% |
-| Combined | 713/726 | 98.21% |
+| Combined | 715/728 | 98.21% |
 
-Combined is (593+120)/(602+124), not branch-only coverage or an average of
-percentages. Nine statements/four branch outcomes remain uncovered in defensive
-terminal/export/cleanup paths. Optional extra coverage was not added. The same
-actual symlink test skips with WinError 1314; passing hard-link tests are separate.
+Combined is (595+120)/(604+124). Nine statements/four branch outcomes remain
+uncovered in existing defensive terminal/export/cleanup paths. The same actual
+symlink test skips with WinError 1314; hard-link success is separate evidence.
+Physical Ctrl+C and Linux/Python 3.12 were not verified.
 
 ## 6. Report, submission inventory and hygiene
 
-The report contains **1,381 rendered-text words / 1,428 raw Markdown
+The report contains **1,398 rendered-text words / 1,445 raw Markdown
 whitespace tokens**, including headings, lists, appendices and footer. It has no
 tables; none are excluded by this method. Rendered counting strips Markdown
 syntax/link destinations only. All template headings and three examples remain;
@@ -236,7 +247,8 @@ the official template, supplied reflection paragraphs and four rating values are
 unchanged. The student authorized factual updates to stale self-assessment reasons;
 the original reasons remain preserved in the historical log.
 Factual metrics now identify current-source runs rather than reusing old coverage.
-**Final wording is approved.** The student's name is masked as requested.
+**Prior report wording approval is preserved.** The current factual verification
+updates and independent-review correction are accepted on reported evidence. The name remains masked.
 
 Use [the concrete inventory](verification/final_submission_inventory.json), which
 includes current uncommitted files rather than a whole workspace or HEAD-only zip:
@@ -265,7 +277,9 @@ or performance work was added.
 | Item | State | Explicit rubric blocker? | Required action |
 | --- | --- | --- | --- |
 | F3, helper spacing/docstrings | Corrected, verified and accepted | Previously CQ1/CQ2/CQ4/APP1/SUB6; now PASS | Student accepted on reported regression evidence; no further correction pending |
-| Report wording | Approved | User readiness gate satisfied | Student explicitly approved and requested name masking |
+| Independent-review fixes | Verified and accepted | No confirmed mandatory gap after checks | Student accepted corrections and factual metric updates on reported evidence |
+| Linux/Python 3.12.14 | UNVERIFIED | No requirement to execute every platform | Reviewer observation is reported, not independently reproduced |
+| Report wording | Prior wording approved | User readiness gate satisfied | Student explicitly approved and requested name masking |
 | Physical Ctrl+C | UNVERIFIED | Not explicitly required; user readiness gate | Perform shortest README procedure and report actual 130/partial-summary/files observations |
 | Actual symlink behavior | UNVERIFIED | No explicit requirement; coverage threshold already met | Optional capable-environment run; retain WinError 1314 limit |
 | Other platforms/patches | UNVERIFIED | No requirement to test every environment | Keep tested-runtime scope explicit |
@@ -273,4 +287,4 @@ or performance work was added.
 
 No confirmed mandatory gaps remain in the inspected scope. Report wording is
 approved; the physical result remains pending. No human observation or post-fix acceptance
-was invented. Stop for review. No commit, push, publication or submission.
+was invented. No further implementation or audit cycle is requested. No commit, push, publication or submission.

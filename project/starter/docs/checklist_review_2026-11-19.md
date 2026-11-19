@@ -1,5 +1,14 @@
 # Provided-checklist review: 2026-11-19
 
+**Independent-review follow-up — 2026-11-19:** Reviewed the portable nesting tests
+and presentation-only C0/DEL/C1 escaping now, including decoder-only exception
+scope, all 65 controls at each card-text display boundary, and unchanged Unicode/
+grading/identity/history/export behavior. Both Windows runtimes pass 343 tests/one
+symlink skip and all configured/extracted-bootstrap checks. The earlier partial
+terminal-control concern is resolved in this scope. Historical findings below
+remain dated evidence; the user accepted these corrections on reported evidence. See
+[the review and evidence](independent_review_fixes.md).
+
 **Later approved correction, 2026-11-19:** The initial findings/mapping below are
 preserved as the actual pre-fix review. The user subsequently approved F3 and the
 eight bootstrap docstring/spacing corrections. The changed source and regression

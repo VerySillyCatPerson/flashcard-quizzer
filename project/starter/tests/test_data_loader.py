@@ -305,12 +305,34 @@ def test_nonstandard_json_constants(tmp_path: Path, constant: str) -> None:
         load_flashcards(path)
 
 
+def test_decoder_recursion_error_becomes_nesting_load_error(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Translate decoder recursion deterministically, without an OS depth limit."""
+    path = _write_deck(tmp_path, [{"front": "A", "back": "B"}])
+    failure = RecursionError("scripted decoder recursion")
+
+    def fail_decoder(*args: object, **kwargs: object) -> object:
+        """Raise only at the JSON decoder boundary for this loader invocation."""
+        raise failure
+
+    with monkeypatch.context() as decoder:
+        decoder.setattr("utils.data_loader.json.loads", fail_decoder)
+        with pytest.raises(FlashcardLoadError) as captured:
+            load_flashcards(path)
+    assert captured.value.detail == "JSON nesting is too deep."
+    assert captured.value.path == path
+    assert captured.value.__cause__ is failure
+    assert load_flashcards(path) == [Flashcard("A", "B")]
+
+
 def test_excessive_json_nesting(tmp_path: Path) -> None:
-    """A decoder recursion limit becomes an expected loader error."""
+    """Reject a real nested file whether decoding or deck validation rejects it."""
     path = tmp_path / "nested.json"
     path.write_text("[" * 5000 + "0" + "]" * 5000, encoding="utf-8")
-    with pytest.raises(FlashcardLoadError, match="JSON nesting is too deep"):
+    with pytest.raises(FlashcardLoadError) as captured:
         load_flashcards(path)
+    assert captured.value.path == path
 
 
 def test_oversized_integer_field_is_a_loader_error(tmp_path: Path) -> None:

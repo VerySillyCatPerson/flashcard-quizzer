@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-19",
+  "mandatory_results": {
+    "PASS": 39,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNVERIFIED": 0
+  },
+  "confirmed_mandatory_gaps": [],
+  "source_manifest": "independent_review_manifest.json",
+  "changed_protected_files": [
+    "tests/test_data_loader.py",
+    "tests/test_terminal.py",
+    "utils/terminal.py"
+  ],
+  "all_other_protected_files_unchanged": true,
+  "loader_production_unchanged": true,
+  "production_unchanged_through_red": true,
+  "existing_unrelated_test_functions_ast_unchanged": true,
+  "runtime_results": {
+    "310": {
+      "original_nesting_baseline": "1 passed",
+      "nesting_red_and_green": "2 passed",
+      "terminal_red": "63 failed, 7 passed",
+      "terminal_green": "70 passed",
+      "full": "343 passed, 1 skipped",
+      "all_quality_exit_zero": true,
+      "runtime": {
+        "version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+        "executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "platform": "win32"
+      },
+      "coverage": {
+        "covered_lines": 595,
+        "num_statements": 604,
+        "percent_covered": 98.21428571428571,
+        "percent_covered_display": "98.21",
+        "missing_lines": 9,
+        "excluded_lines": 3,
+        "percent_statements_covered": 98.50993377483444,
+        "percent_statements_covered_display": "98.51",
+        "num_branches": 124,
+        "num_partial_branches": 4,
+        "covered_branches": 120,
+        "missing_branches": 4,
+        "percent_branches_covered": 96.7741935483871,
+        "percent_branches_covered_display": "96.77"
+      }
+    },
+    "313": {
+      "original_nesting_baseline": "1 passed",
+      "nesting_red_and_green": "2 passed",
+      "terminal_red": "63 failed, 7 passed",
+      "terminal_green": "70 passed",
+      "full": "343 passed, 1 skipped",
+      "all_quality_exit_zero": true,
+      "runtime": {
+        "version": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+        "executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "platform": "win32"
+      },
+      "coverage": {
+        "covered_lines": 595,
+        "num_statements": 604,
+        "percent_covered": 98.21428571428571,
+        "percent_covered_display": "98.21",
+        "missing_lines": 9,
+        "excluded_lines": 3,
+        "percent_statements_covered": 98.50993377483444,
+        "percent_statements_covered_display": "98.51",
+        "num_branches": 124,
+        "num_partial_branches": 4,
+        "covered_branches": 120,
+        "missing_branches": 4,
+        "percent_branches_covered": 96.7741935483871,
+        "percent_branches_covered_display": "96.77"
+      }
+    }
+  },
+  "normally_parsed_documented_functions": 215,
+  "embedded_documented_functions": 16,
+  "report_rendered_words": 1398,
+  "report_raw_whitespace_tokens": 1445,
+  "report_template_headings_preserved": true,
+  "report_reflections_ratings_and_reasons_unchanged": true,
+  "prior_report_wording_approval_preserved": true,
+  "latest_correction_and_factual_updates_user_review_pending": true,
+  "name_still_masked": true,
+  "candidate_files": 158,
+  "relative_links_checked": 124,
+  "broken_links": [],
+  "referenced_evidence_count": 45,
+  "all_evidence_accessible": true,
+  "all_candidate_json_parse": true,
+  "bounded_secret_and_forbidden_artifact_scan_clear": true,
+  "previous_168_ignore_probes_reused_same_hash": true,
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'project/starter/tests/test_data_loader.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'project/starter/tests/test_terminal.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'project/starter/utils/terminal.py', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "linux_python312_verified": false,
+  "physical_ctrl_c_verified": false,
+  "actual_symlink_verified": false,
+  "submission_ready_claimed": false,
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "submitted": false,
+  "actual_integrity_command_result": {
+    "chunk_id": "f2fc2a",
+    "wall_time_seconds": 0.5308015,
+    "exit_code": 0,
+    "original_token_count": 98,
+    "output": "Integrity passed: source/test/config hashes verified; report 1398 rendered/1445 raw words; reflections/ratings unchanged.\r\nInventory 158 files; 124 relative links resolve; 45 evidence references accessible; 39 mandatory PASS.\r\nBoth Windows runtimes: full 343 passed/1 skipped and all quality checks exit 0. Linux, physical Ctrl+C and actual symlinks unverified; correction awaits review.\r\n"
+  }
+}

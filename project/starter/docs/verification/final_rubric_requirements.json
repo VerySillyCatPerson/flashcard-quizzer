@@ -24,7 +24,7 @@
       "category": "AI Code Review",
       "requirement": "Review all AI-generated code using the provided checklist.",
       "status": "PASS",
-      "evidence": "checklist_review_2026-11-19.md maps all 99 initial prompts plus dated approved-fix follow-up; f3_fix_review.md reviews changed catch/fault hooks/assertions; f3_manifest.json retains before/red/after source and hashes.",
+      "evidence": "checklist_review_2026-11-19.md maps initial prompts and follow-ups; independent_review_fixes.md reviews decoder-only mocks, card display controls and original-domain persistence; independent_review_manifest.json identifies final tested source.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -54,7 +54,7 @@
       "category": "Code Quality",
       "requirement": "All code follows PEP 8 style guidelines.",
       "status": "PASS",
-      "evidence": "f3_green_310.json and f3_green_313.json: file-level Black/isort/flake8 and extracted executable _BOOTSTRAP flake8 all exit 0; no rule changes.",
+      "evidence": "independent_review_green_310.json and independent_review_green_313.json: Black/isort/flake8 plus extracted executable bootstrap flake8 all exit 0, using unchanged configuration.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -64,7 +64,7 @@
       "category": "Code Quality",
       "requirement": "Proper error handling and input validation.",
       "status": "PASS",
-      "evidence": "utils/cli.py::main narrow TerminalOutputError catch; both f3_red_*.json show two failed/two passed before production edits, both f3_green_*.json show four focused passes; RuntimeError traceback remains visible. Existing validation/finalization tests remain passing.",
+      "evidence": "utils/terminal.py::_one_line escapes C0/DEL/C1 card text; tests cover all 65 controls at each display boundary. utils/data_loader.py decoder handling is unchanged; deterministic boundary and real nested-file contracts pass. Existing F3/finalization/error tests pass both full suites.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -84,7 +84,7 @@
       "category": "Code Quality",
       "requirement": "Functions have appropriate docstrings.",
       "status": "PASS",
-      "evidence": "All 210 normally parsed functions documented; all 16 executable bootstrap functions documented (embedded_missing_docstrings empty in both f3_green_*.json). Eight original missing docstrings corrected.",
+      "evidence": "215 normally parsed functions and all 16 executable bootstrap functions have docstrings; current source/AST inspection and unchanged bootstrap checks verified.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -94,7 +94,7 @@
       "category": "Functional Application",
       "requirement": "Build a working application that extends the starter code.",
       "status": "PASS",
-      "evidence": "main.py + utils CLI meaningfully extend the starter; both current-runtime full suites report 275 passed/one OS symlink skip, including corrected startup-warning status 130.",
+      "evidence": "Implemented main.py CLI and both current Windows runtime full suites: 343 passed/one privilege-dependent symlink skip, including original modes, persistence, export and new display protection.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -164,7 +164,7 @@
       "category": "Unit Testing",
       "requirement": "Achieve >80% test coverage using pytest.",
       "status": "PASS",
-      "evidence": "f3_coverage_310.json and f3_coverage_313.json: statements 593/602=98.50%, branches 120/124=96.77%, combined 713/726=98.21%; all 11 production modules including main.py.",
+      "evidence": "independent_review_coverage_310.json and independent_review_coverage_313.json: statements 595/604=98.51%, branches 120/124=96.77%, combined 715/728=98.21%; all 11 production modules including main.py.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -184,7 +184,7 @@
       "category": "Unit Testing",
       "requirement": "Include tests for edge cases and error conditions.",
       "status": "PASS",
-      "evidence": "tests/test_data_loader.py missing/unreadable/malformed/type/blank/duplicate/deep/large cases; test_history.py save/load failures; test_finalization.py F1/F2.",
+      "evidence": "tests/test_data_loader.py decoder-only RecursionError translation plus real 5,000-deep rejection; tests/test_terminal.py all C0/DEL/C1 display contexts, Unicode and domain round trips; existing history/export/finalization error tests retained.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -204,7 +204,7 @@
       "category": "AI-Generated Code Validation",
       "requirement": "Test all AI-generated code thoroughly.",
       "status": "PASS",
-      "evidence": "Current full suites each 275 passed/one privilege-dependent symlink skip; four focused F3 regressions pass after genuine red evidence. All production modules measured; manual verification remains separate.",
+      "evidence": "Both current full suites: 343 passed/one symlink skip; revised nesting 2 passed and terminal 70 passed. Linux/Python 3.12 reported issue is distinguished from Windows baseline observations, not claimed executed.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -214,7 +214,7 @@
       "category": "AI-Generated Code Validation",
       "requirement": "Document any issues found with AI code in ai_edit_log.md.",
       "status": "PASS",
-      "evidence": "ai_edit_log.md preserves decoder, F1/F2/shutdown, initial eight-docstring/eight-spacing and F3 findings, actual failures, student approval, correction and dual-runtime verification.",
+      "evidence": "ai_edit_log.md existing stage entries plus actual independent-review request, Windows original nesting baseline, new red terminal results, minimal fix, dual-runtime green/quality and actual user acceptance on reported evidence.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -224,7 +224,7 @@
       "category": "AI-Generated Code Validation",
       "requirement": "Show evidence of fixing or rejecting problematic AI suggestions.",
       "status": "PASS",
-      "evidence": "stage_3_regression_before.json and genuine Stage 7 regression chain retained; f3_red_310.json/f3_red_313.json precede production fix; f3_green_310.json/f3_green_313.json show corrected behavior.",
+      "evidence": "Earlier decoder/F1/F2/F3 red-green records preserved; independent_review_red_310.json and independent_review_red_313.json show 63 failed/7 passed terminal tests before production change; current green files show 70 terminal passes.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -275,9 +275,9 @@
       "requirement": "Complete the final report using the provided template.",
       "status": "PASS",
       "evidence": "final_report.md preserves every major/minor template heading; report_template.md unchanged SHA-256; all report fields filled.",
-      "gap": "Final wording is not approved by the student.",
-      "consequence": "Content/template criterion is met; separate user approval gate remains.",
-      "smallest_correction": "Student final wording review."
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
     },
     {
       "id": "REP2",
@@ -304,7 +304,7 @@
       "category": "Final Report",
       "requirement": "Report should be 1000-1500 words.",
       "status": "PASS",
-      "evidence": "Approved report 1,381 rendered words / 1,428 raw Markdown whitespace tokens including headings/lists/appendices/footer; original template unchanged; name masked at student request.",
+      "evidence": "Report 1,398 rendered words / 1,445 raw Markdown whitespace tokens including headings/lists/appendices/footer. Earlier wording approval preserved; current factual verification updates accepted on reported evidence; reflection/rating text unchanged.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -314,7 +314,7 @@
       "category": "README Updates",
       "requirement": "Update README.md with new features and setup instructions.",
       "status": "PASS",
-      "evidence": "Root/project/application READMEs describe actual features/setup; current README links post-fix evidence and distinguishes historical clean setup from current-source reruns.",
+      "evidence": "Application README documents display-only C0/DEL/C1 escaping, original domain values, current tests/coverage/setup and explicit Linux/Python 3.12 limit; root/project links remain valid.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -364,7 +364,7 @@
       "category": "Submission Checklist",
       "requirement": "Final project report using the provided template (1000-1500 words).",
       "status": "PASS",
-      "evidence": "See REP1-REP4; report content/template/length pass and student wording approval is recorded; requested name masking applied.",
+      "evidence": "See REP1-REP4; template/content/length criteria pass. Prior report wording approval remains recorded; independent-review factual metric updates were accepted on reported evidence.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -384,7 +384,7 @@
       "category": "Submission Checklist",
       "requirement": "Test coverage report demonstrating >80% coverage.",
       "status": "PASS",
-      "evidence": "f3_coverage_310.json and f3_coverage_313.json plus complete measurement commands in f3_green_310.json/f3_green_313.json; raw reports included in inventory.",
+      "evidence": "Current independent_review_coverage_310.json/independent_review_coverage_313.json and complete measurement commands in independent_review_green_310.json/independent_review_green_313.json are included in inventory.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -394,7 +394,7 @@
       "category": "Submission Checklist",
       "requirement": "Code quality verification: all linting tools should pass without errors.",
       "status": "PASS",
-      "evidence": "f3_green_310.json and f3_green_313.json: Black/isort/flake8/strict mypy/pip check/extracted-bootstrap flake8 all exit 0. Earlier lint failure remains in final_bootstrap_lint.json.",
+      "evidence": "independent_review_green_310.json and independent_review_green_313.json: full Black/isort/flake8/strict mypy/pip check and extracted-bootstrap flake8 all exit 0 with unchanged rules.",
       "gap": null,
       "consequence": null,
       "smallest_correction": null
@@ -428,11 +428,17 @@
   "application_test_or_dependency_changes_made": true,
   "submission_ready_claimed": false,
   "changed_protected_files": [
-    "utils/cli.py",
-    "tests/cli_helpers.py",
-    "tests/test_finalization.py"
+    "utils/terminal.py",
+    "tests/test_data_loader.py",
+    "tests/test_terminal.py"
   ],
   "dependencies_changed": false,
-  "source_evidence": "f3_manifest.json",
-  "historical_nonpassing_results_preserved": true
+  "source_evidence": "independent_review_manifest.json",
+  "historical_nonpassing_results_preserved": true,
+  "historical_source_evidence": "f3_manifest.json",
+  "latest_correction_user_acceptance_pending": false,
+  "linux_python312_verified": false,
+  "latest_correction_user_accepted": true,
+  "factual_documentation_updates_accepted": true,
+  "acceptance_date": "2026-11-19"
 }

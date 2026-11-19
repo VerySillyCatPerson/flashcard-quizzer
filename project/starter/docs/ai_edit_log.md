@@ -1607,6 +1607,79 @@ documentation-only changes. Physical Ctrl+C remains unobserved; actual symlinks
 remain privilege-blocked and unverified. Report approval is not submission
 authorization. No commit, push, publication or submission.
 
+**Independent Review Request and Corrections — 2026-11-19:** The user requested
+two fixes: make excessive-JSON-nesting tests portable, and escape C0/DEL/C1 controls
+in displayed card fronts/expected answers. They required tests first, narrow decoder
+mocking, preservation of Unicode/domain data, focused/full tests and coverage on
+available Python 3.10.11/3.13.17, normal/extracted-bootstrap quality checks, factual
+documentation/evidence updates, unchanged reflections/ratings, and a review stop.
+No commit, push, publication or submission was authorized.
+
+**Inspection and Windows Baseline:** Read loader/terminal/models/history/export,
+relevant tests/configurations and searched this repository for AGENTS.md; no local
+project instructions were present. The reviewer reported Linux/Python 3.12.14
+decoded 5,000 arrays then rejected the deck structure, making the old message
+assertion fail. This Linux runtime was not executed here. The original test passed
+on both Windows runtimes before editing; results/source/hashes are retained in
+docs/verification/independent_review_manifest.json.
+
+**Tests Before Production:** Added a scoped json.loads RecursionError injection
+requiring exact nesting detail/path/cause, restored real decoding afterward, and
+changed the real 5,000-deep test to require FlashcardLoadError/path without a
+decoder-limit/message assumption. No production loader handling changed. Added
+65 control cases covering exact question/feedback output and missed summaries,
+readable Unicode, and original grading/identity/history/export behavior. Before
+production editing, both runtimes reported **2 nesting passes** and **63 terminal
+failures/7 passes**. The latter are genuine reproduced display failures, not the
+unreproduced Linux portability failure. Actual commands/streams are preserved in
+independent_review_red_310.json and independent_review_red_313.json. Tests used
+captured StringIO/subprocess output, never hostile interactive-console sequences.
+
+**Small Production Change:** Only utils/terminal.py::_one_line changes runtime
+behavior: translate C0, DEL and C1 to literal backslash-x text, retaining literal
+backslash-n/r/t and ordinary Unicode. Existing call sites protect questions,
+incorrect expected answers and missed fronts. Original data remain unchanged for
+grading, identity, history and JSON export. Only this module and the two test files
+changed among protected source/config/dependency/template/sample files. Existing
+unrelated assertions, exception handling, quality rules and coverage exclusions
+are unchanged. Black formatted the changed files before recorded final checks.
+
+**Actual Green Verification:** Both existing isolated Windows environments ran
+against current source. Revised nesting: **2 passed/71 deselected**; terminal:
+**70 passed**; full pytest: **343 passed/one symlink skip**, 22.80s on 3.10.11 and
+22.38s on 3.13.17. Black/isort/flake8/strict mypy/pip check and extracted-bootstrap
+flake8 all exit 0 on each runtime. Actual interpreter paths/cwd/commands/streams
+are in independent_review_green_310.json and independent_review_green_313.json.
+Coverage commands use pytest -rs --cov=. --cov-report=term-missing --cov-report=html
+and separate JSON destinations independent_review_coverage_310.json/_313.json.
+Both measure all 11 production modules: **595/604 statements (98.51%), 120/124
+branch outcomes (96.77%), combined 715/728 (98.21%)**. The symlink skip remains
+WinError 1314; no Linux/Python 3.12 or physical Ctrl+C verification is claimed.
+
+**Documentation and Pending Review:** README explains display-only escaping and
+current verification. The rubric matrix/audit, checklist follow-up, inventory and
+report factual metrics now reference current source/evidence; the prior audit
+snapshot is retained in independent_review_before_audit.json. The report is
+**1,398 rendered words / 1,445 raw Markdown tokens**, counting all headings,
+lists, appendices and footer. Masked name, all reflection paragraphs, four rating
+values and their reasons are unchanged. Earlier report approval is preserved;
+this correction and factual verification updates await user review. Current audit
+remains 39 PASS in inspected scope, not a new user acceptance or readiness claim.
+Documentation/source/inventory checks are in independent_review_integrity.json.
+Physical Ctrl+C and actual symlinks remain unverified. Stop for review; no commit,
+push, publication or submission.
+
+**User Acceptance of Independent-Review Corrections ? 2026-11-19:** The user
+accepted the portable nesting tests, terminal-control escaping corrections, and
+factual documentation updates based on the reported evidence. They requested
+recording acceptance only, with no further implementation or audit cycle.
+Current review-status markers now reflect this acceptance; historical requests,
+failures, test results, and pending-at-delivery records remain unchanged.
+No application/report changes, tests, or audit cycle were performed for this
+acceptance record. Physical Ctrl+C, actual symlink behavior and Linux/Python 3.12
+remain unverified. Earlier final report approval is preserved. No commit, push,
+publication or submission. Work stops as requested.
+
 **Lessons Learned:** Audit observation: fresh interpreter execution is stronger
 evidence than static compatibility checks; clean venvs are distinct from clean
 machines, and ignored on-disk artifacts are distinct from candidate files.
