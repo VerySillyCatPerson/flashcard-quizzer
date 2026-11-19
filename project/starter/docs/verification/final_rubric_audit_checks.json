@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-19",
+  "audit_validation_completed": true,
+  "mandatory_results": {
+    "PASS": 39,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNVERIFIED": 0
+  },
+  "no_confirmed_mandatory_gaps_in_inspected_scope": true,
+  "historical_initial_audit_checks": "f3_before_audit_checks.json",
+  "approved_source_changes": [
+    "tests/cli_helpers.py",
+    "tests/test_finalization.py",
+    "utils/cli.py"
+  ],
+  "production_unchanged_until_red": true,
+  "all_other_protected_files_unchanged": true,
+  "existing_finalization_assertions_ast_unchanged": true,
+  "rules_dependencies_exclusions_weakened": false,
+  "runtime_results": {
+    "310": {
+      "red": "2 failed, 2 passed",
+      "focused_green": "4 passed",
+      "full": "275 passed, 1 skipped",
+      "all_quality_exit_zero": true,
+      "coverage": {
+        "covered_lines": 593,
+        "num_statements": 602,
+        "percent_covered": 98.20936639118457,
+        "percent_covered_display": "98.21",
+        "missing_lines": 9,
+        "excluded_lines": 3,
+        "percent_statements_covered": 98.50498338870432,
+        "percent_statements_covered_display": "98.50",
+        "num_branches": 124,
+        "num_partial_branches": 4,
+        "covered_branches": 120,
+        "missing_branches": 4,
+        "percent_branches_covered": 96.7741935483871,
+        "percent_branches_covered_display": "96.77"
+      }
+    },
+    "313": {
+      "red": "2 failed, 2 passed",
+      "focused_green": "4 passed",
+      "full": "275 passed, 1 skipped",
+      "all_quality_exit_zero": true,
+      "coverage": {
+        "covered_lines": 593,
+        "num_statements": 602,
+        "percent_covered": 98.20936639118457,
+        "percent_covered_display": "98.21",
+        "missing_lines": 9,
+        "excluded_lines": 3,
+        "percent_statements_covered": 98.50498338870432,
+        "percent_statements_covered_display": "98.50",
+        "num_branches": 124,
+        "num_partial_branches": 4,
+        "covered_branches": 120,
+        "missing_branches": 4,
+        "percent_branches_covered": 96.7741935483871,
+        "percent_branches_covered_display": "96.77"
+      }
+    }
+  },
+  "normally_parsed_documented_functions": 210,
+  "embedded_documented_functions": 16,
+  "missing_docstrings": [],
+  "official_template_unchanged": true,
+  "report_template_headings_match": true,
+  "report_rendered_words": 1381,
+  "report_raw_whitespace_tokens": 1428,
+  "word_count_scope": "Entire report including headings/lists/appendices/footer; no tables; rendered count strips Markdown syntax/link destinations only.",
+  "candidate_files": 148,
+  "relative_file_links_checked": 115,
+  "broken_relative_file_links": [],
+  "referenced_evidence_count": 37,
+  "missing_referenced_evidence": [],
+  "all_candidate_json_files_parse": true,
+  "detected_credentials_or_forbidden_local_artifacts": [],
+  "secret_scan_is_exhaustive": false,
+  "previous_168_ignore_probes_reused_same_rule_hash": true,
+  "nine_grouped_stage_log_entries_preserved": true,
+  "physical_ctrl_c_verified": false,
+  "actual_symlink_verified": false,
+  "report_wording_approved": true,
+  "student_post_fix_acceptance_recorded": true,
+  "submission_ready_claimed": false,
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "submitted": false,
+  "latest_documentation_checks": "final_report_approval.json",
+  "student_reflection_paragraphs_and_rating_values_unchanged": true,
+  "self_assessment_reasons_factually_updated_with_user_authorization": true,
+  "historical_actual_integrity_command_result": {
+    "chunk_id": "67bfc4",
+    "wall_time_seconds": 0.5445751,
+    "exit_code": 0,
+    "original_token_count": 93,
+    "output": "Integrity passed: 39 mandatory PASS; 146 candidate files; 115 resolving relative links; 35 accessible evidence references.\r\nBoth runtimes: red 2 failed/2 passed; green 4 passed; full 275 passed/1 skipped; all quality checks exit 0.\r\nReport 1346 rendered/1393 raw words; supplied reflections/ratings and official template unchanged; no readiness or manual-result claim.\r\n"
+  },
+  "student_name_masked": true,
+  "privacy_redaction_applied_to_historical_names_only": true
+}

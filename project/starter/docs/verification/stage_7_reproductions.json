@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-18",
+  "runtime": "Windows CPython 3.13.17",
+  "physical_ctrl_c_verified": false,
+  "application_or_test_source_modified": false,
+  "records": [
+    {
+      "scenario": "control_eof",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\control_eof\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\control_eof\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\control_eof\\results.json"
+      ],
+      "bootstrap": null,
+      "stdin": "wrong\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+-------+\n| Deck size       | 3     |\n| Total questions | 1     |\n| Correct         | 0     |\n| Accuracy        | 0.00% |\n| Missed terms    | #1 A  |\n+-----------------+-------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\n",
+      "stored_score": 3,
+      "expected_score_if_completed_answer_saved": 3,
+      "history_bytes_unchanged": false,
+      "export_exists": true,
+      "physical_ctrl_c_verified": false
+    },
+    {
+      "scenario": "interrupt_at_history_permission_guard",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\interrupt_at_history_permission_guard\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\interrupt_at_history_permission_guard\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\interrupt_at_history_permission_guard\\results.json"
+      ],
+      "bootstrap": "import runpy, sys\n\nfrom utils.history import HistoryStore\noriginal_can_save = HistoryStore.can_save.fget\nassert original_can_save is not None\ninterrupted = False\ndef interrupt_once(self):\n    global interrupted\n    if not interrupted:\n        interrupted = True\n        raise KeyboardInterrupt\n    return original_can_save(self)\nHistoryStore.can_save = property(interrupt_once)\n\nsys.argv = ['main.py', *sys.argv[1:]]\nrunpy.run_path('main.py', run_name='__main__')\n",
+      "stdin": "wrong\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+-------+\n| Deck size       | 3     |\n| Total questions | 1     |\n| Correct         | 0     |\n| Accuracy        | 0.00% |\n| Missed terms    | #1 A  |\n+-----------------+-------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\nWarning: Interrupted by Ctrl+C before quiz finalization.\n",
+      "stored_score": 2,
+      "expected_score_if_completed_answer_saved": 3,
+      "history_bytes_unchanged": true,
+      "export_exists": false,
+      "physical_ctrl_c_verified": false
+    },
+    {
+      "scenario": "closed_summary_pipe_after_eof",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\closed_summary_pipe_after_eof\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\closed_summary_pipe_after_eof\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\closed_summary_pipe_after_eof\\results.json"
+      ],
+      "bootstrap": "import runpy, sys\n\nimport os\nimport utils.terminal as terminal\noriginal_show_summary = terminal.show_summary\ndef summary_into_closed_pipe(*args, **kwargs):\n    previous_stdout = sys.stdout\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    broken_stream = os.fdopen(write_fd, 'w', encoding='utf-8')\n    sys.stdout = broken_stream\n    try:\n        return original_show_summary(*args, **kwargs)\n    finally:\n        sys.stdout = previous_stdout\n        try:\n            broken_stream.close()\n        except OSError:\n            pass\nterminal.show_summary = summary_into_closed_pipe\n\nsys.argv = ['main.py', *sys.argv[1:]]\nrunpy.run_path('main.py', run_name='__main__')\n",
+      "stdin": "wrong\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: ",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 23, in <module>\n    runpy.run_path('main.py', run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"main.py\", line 6, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 203, in main\n    return _execute(options, paths, cards)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 175, in _execute\n    return _finalize(session, cards, history, paths, options, reason, input_detail)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 119, in _finalize\n    terminal.show_summary(summary, cards, reason, input_detail)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 13, in summary_into_closed_pipe\n    return original_show_summary(*args, **kwargs)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 125, in show_summary\n    print(\"\\n\" + format_summary(summary, cards, reason), flush=True)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 22] Invalid argument\n",
+      "stored_score": 2,
+      "expected_score_if_completed_answer_saved": 3,
+      "history_bytes_unchanged": true,
+      "export_exists": false,
+      "physical_ctrl_c_verified": false
+    },
+    {
+      "scenario": "closed_summary_pipe_after_input_interrupt",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\closed_summary_pipe_after_input_interrupt\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\closed_summary_pipe_after_input_interrupt\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-review-093_jsgl\\closed_summary_pipe_after_input_interrupt\\results.json"
+      ],
+      "bootstrap": "import runpy, sys\n\nimport builtins\noriginal_input = builtins.input\ninput_count = 0\ndef interrupt_second_input(prompt=''):\n    global input_count\n    if input_count == 1:\n        raise KeyboardInterrupt\n    input_count += 1\n    return original_input(prompt)\nbuiltins.input = interrupt_second_input\n\nimport os\nimport utils.terminal as terminal\noriginal_show_summary = terminal.show_summary\ndef summary_into_closed_pipe(*args, **kwargs):\n    previous_stdout = sys.stdout\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    broken_stream = os.fdopen(write_fd, 'w', encoding='utf-8')\n    sys.stdout = broken_stream\n    try:\n        return original_show_summary(*args, **kwargs)\n    finally:\n        sys.stdout = previous_stdout\n        try:\n            broken_stream.close()\n        except OSError:\n            pass\nterminal.show_summary = summary_into_closed_pipe\n\nsys.argv = ['main.py', *sys.argv[1:]]\nrunpy.run_path('main.py', run_name='__main__')\n",
+      "stdin": "wrong\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 34, in <module>\n    runpy.run_path('main.py', run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"main.py\", line 6, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 203, in main\n    return _execute(options, paths, cards)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 175, in _execute\n    return _finalize(session, cards, history, paths, options, reason, input_detail)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 119, in _finalize\n    terminal.show_summary(summary, cards, reason, input_detail)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 24, in summary_into_closed_pipe\n    return original_show_summary(*args, **kwargs)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 125, in show_summary\n    print(\"\\n\" + format_summary(summary, cards, reason), flush=True)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 22] Invalid argument\n",
+      "stored_score": 2,
+      "expected_score_if_completed_answer_saved": 3,
+      "history_bytes_unchanged": true,
+      "export_exists": false,
+      "physical_ctrl_c_verified": false
+    }
+  ]
+}

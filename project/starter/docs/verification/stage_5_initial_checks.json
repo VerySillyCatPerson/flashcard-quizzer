@@ -1,0 +1,43 @@
+{
+  "stage": 5,
+  "date": "2026-11-18",
+  "phase": "initial checks before test-fixture/style/type corrections",
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "exit_code": 1,
+      "output": "============================= test session starts =============================\r\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\r\nrootdir: C:\\Projects\\flashcard\\project\\starter\r\nconfigfile: pyproject.toml\r\ntestpaths: tests\r\nplugins: platformdirs-4.14.7, cov-7.1.0\r\ncollected 194 items\r\n\r\ntests\\test_data_loader.py .............................................. [ 23%]\r\n..........................                                               [ 37%]\r\ntests\\test_engine.py ............................                        [ 51%]\r\ntests\\test_history.py .................................................. [ 77%]\r\n...F....                                                                 [ 81%]\r\ntests\\test_models.py ................                                    [ 89%]\r\ntests\\test_strategies.py ....................                            [100%]\r\n\r\n================================== FAILURES ===================================\r\n________________ test_failed_serialization_preserves_old_file _________________\r\n\r\ntmp_path = WindowsPath('C:/Users/cirae/AppData/Local/Temp/pytest-of-cirae/pytest-46/test_failed_serialization_pres0')\r\ncards = [Flashcard(front='API', back='Application Programming Interface'), Flashcard(front='CPU', back='Central Processing Unit'), Flashcard(front='RAM', back='Random Access Memory')]\r\nmonkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FDA987EC10>\r\n\r\n    def test_failed_serialization_preserves_old_file(\r\n        tmp_path: Path, cards: list[Flashcard], monkeypatch: pytest.MonkeyPatch\r\n    ) -> None:\r\n        \"\"\"A decoder-compatible score may still hit a serialization resource limit.\"\"\"\r\n        path = tmp_path / \"history.json\"\r\n        _write_history(path, _document({cards[0].card_id: 2}))\r\n        before = path.read_bytes()\r\n        store = HistoryStore(path)\r\n    \r\n        def encoding_limit(*args: object, **kwargs: object) -> NoReturn:\r\n            \"\"\"Simulate the stdlib integer-encoding ValueError without huge fixtures.\"\"\"\r\n            raise ValueError(\"integer encoding limit\")\r\n    \r\n        monkeypatch.setattr(history_module.json, \"dumps\", encoding_limit)\r\n        with pytest.raises(HistorySaveError, match=\"Could not encode history\"):\r\n>           store.save_session(_one_answer(cards[0]))\r\n\r\ntests\\test_history.py:442: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nutils\\history.py:225: in save_session\r\n    scores = updated_scores(self._scores, summary.answers)\r\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nutils\\history.py:55: in updated_scores\r\n    key = result.card.card_id\r\n          ^^^^^^^^^^^^^^^^^^^\r\nutils\\models.py:36: in card_id\r\n    content = json.dumps(\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nargs = (('api', 'application programming interface'),)\r\nkwargs = {'ensure_ascii': True, 'separators': (',', ':')}\r\n\r\n    def encoding_limit(*args: object, **kwargs: object) -> NoReturn:\r\n        \"\"\"Simulate the stdlib integer-encoding ValueError without huge fixtures.\"\"\"\r\n>       raise ValueError(\"integer encoding limit\")\r\nE       ValueError: integer encoding limit\r\n\r\ntests\\test_history.py:438: ValueError\r\n=============================== tests coverage ================================\r\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\r\n\r\nName                   Stmts   Miss Branch BrPart   Cover   Missing\r\n-------------------------------------------------------------------\r\nmain.py                    0      0      0      0 100.00%\r\nutils\\__init__.py          0      0      0      0 100.00%\r\nutils\\data_loader.py      78      0     24      0 100.00%\r\nutils\\engine.py           31      0      8      0 100.00%\r\nutils\\history.py         126      2     30      0  98.72%   140-141\r\nutils\\models.py           42      0      2      0 100.00%\r\nutils\\strategies.py       20      0      0      0 100.00%\r\n-------------------------------------------------------------------\r\nTOTAL                    297      2     64      0  99.45%\r\nCoverage HTML written to dir htmlcov\r\nCoverage JSON written to file coverage.json\r\nRequired test coverage of 81.0% reached. Total coverage: 99.45%\r\n=========================== short test summary info ===========================\r\nFAILED tests/test_history.py::test_failed_serialization_preserves_old_file - ...\r\n======================== 1 failed, 193 passed in 2.23s ========================\r\n"
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "exit_code": 0,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n14 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "exit_code": 0,
+      "output": "Skipped 4 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "exit_code": 1,
+      "output": ".\\tests\\test_history.py:209:89: E501 line too long (89 > 88 characters)\n.\\tests\\test_history.py:225:89: E501 line too long (90 > 88 characters)\n"
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy .",
+      "exit_code": 1,
+      "output": "tests\\test_history.py:415: error: Module \"utils.history\" does not explicitly export attribute \"os\"  [attr-defined]\r\ntests\\test_history.py:440: error: Module \"utils.history\" does not explicitly export attribute \"json\"  [attr-defined]\r\ntests\\test_history.py:461: error: Module \"utils.history\" does not explicitly export attribute \"os\"  [attr-defined]\r\nFound 3 errors in 1 file (checked 14 source files)\r\n"
+    },
+    {
+      "name": "python310_syntax",
+      "command": "@'\nimport ast\nfrom pathlib import Path\nfiles = [Path('main.py'), *Path('utils').glob('*.py'), *Path('tests').glob('*.py')]\nfor path in files:\n    ast.parse(path.read_text(encoding='utf-8'), filename=str(path), feature_version=(3, 10))\nprint(f'Python 3.10 grammar accepted for {len(files)} source/test files on CPython 3.13.17. Python 3.10 runtime not tested.')\n'@ | .\\.venv\\Scripts\\python.exe -",
+      "exit_code": 0,
+      "output": "Python 3.10 grammar accepted for 14 source/test files on CPython 3.13.17. Python 3.10 runtime not tested.\r\n"
+    }
+  ]
+}

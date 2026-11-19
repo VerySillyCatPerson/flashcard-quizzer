@@ -1,0 +1,25 @@
+{
+  "samples": [
+    {
+      "path": "data/glossary.json",
+      "cards": 10,
+      "format": "array",
+      "sha256": "cfa17d3ad2c3c97a5f854a16aae1e2f484a4b4983d5595812593da184cf885df"
+    },
+    {
+      "path": "data/python_basics.json",
+      "cards": 8,
+      "format": "object.cards",
+      "sha256": "f0d6d0652cb292e63eecad8eefe90ddeef0e1741258a9ea27b27c12b3c260d8f"
+    }
+  ],
+  "samples_and_official_template_git_diff_exit": 0,
+  "git_diff_stdout": "",
+  "git_diff_stderr": "warning: unable to access 'C:\\Users\\cirae/.config/git/ignore': Permission denied\n",
+  "head": "808893c4f8639804ab81a031dbd2bc3672d308ba",
+  "expected_initial_head": "808893c4f8639804ab81a031dbd2bc3672d308ba",
+  "head_unchanged": true,
+  "python_310_package_sha256": "7c6f99b160a36a7e09492dfcff2b0a3a60bb5229ca44cdcc3ecb32871a6144d0",
+  "package_source": "https://api.nuget.org/v3-flatcontainer/python/3.10.11/python.3.10.11.nupkg",
+  "package_hash_is_independent_publisher_authentication": false
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18",
+  "phase": "regression reproduction before fix",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_data_loader.py::test_oversized_integer_field_is_a_loader_error",
+    "-q"
+  ],
+  "exit_code": 1,
+  "stdout": "F                                                                        [100%]\n================================== FAILURES ===================================\n_______________ test_oversized_integer_field_is_a_loader_error ________________\n\ntmp_path = WindowsPath('C:/Users/cirae/AppData/Local/Temp/pytest-of-cirae/pytest-42/test_oversized_integer_field_i0')\n\n    def test_oversized_integer_field_is_a_loader_error(tmp_path: Path) -> None:\n        \"\"\"Decoder digit limits must not leak ValueError for an invalid back field.\"\"\"\n        path = tmp_path / \"large-number.json\"\n        path.write_text('[{\"front\":\"A\",\"back\":' + \"9\" * 10000 + \"}]\", encoding=\"utf-8\")\n        with pytest.raises(FlashcardLoadError) as captured:\n>           load_flashcards(path)\n\ntests\\test_data_loader.py:321: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nutils\\data_loader.py:114: in load_flashcards\n    payload: object = json.loads(\n.tools\\python.3.13.17\\tools\\Lib\\json\\__init__.py:365: in loads\n    return cls(**kw).decode(s)\n           ^^^^^^^^^^^^^^^^^^^\n.tools\\python.3.13.17\\tools\\Lib\\json\\decoder.py:345: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x0000022C4A564B90>\ns = '[{\"front\":\"A\",\"back\":999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999...99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999}]'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n>           obj, end = self.scan_once(s, idx)\n                       ^^^^^^^^^^^^^^^^^^^^^^\nE           ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 10000 digits; use sys.set_int_max_str_digits() to increase the limit\n\n.tools\\python.3.13.17\\tools\\Lib\\json\\decoder.py:361: ValueError\n=========================== short test summary info ===========================\nFAILED tests/test_data_loader.py::test_oversized_integer_field_is_a_loader_error\n1 failed in 0.12s\n",
+  "stderr": ""
+}

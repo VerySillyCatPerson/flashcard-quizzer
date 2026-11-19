@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-18",
+  "kind": "scripted demonstration outside the engine, not user answers",
+  "strategy": "sequential",
+  "answers": [
+    {
+      "front": "API",
+      "answer": " application programming interface ",
+      "correct": true,
+      "expected": "Application Programming Interface"
+    },
+    {
+      "front": "CPU",
+      "answer": "incorrect",
+      "correct": false,
+      "expected": "Central Processing Unit"
+    },
+    {
+      "front": "RAM",
+      "answer": "RANDOM ACCESS MEMORY",
+      "correct": true,
+      "expected": "Random Access Memory"
+    }
+  ],
+  "summary": {
+    "deck_size": 3,
+    "answered_count": 3,
+    "correct_count": 2,
+    "accuracy_percent": 66.66666666666666,
+    "missed_terms": [
+      "CPU"
+    ],
+    "is_complete": true
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-18",
+  "rendered_text_whitespace_words": 1223,
+  "raw_markdown_whitespace_tokens": 1270,
+  "scope": "Entire report including all headings, examples, appendices and footer",
+  "counting_method": "Remove Markdown link destinations, heading/list/separator prefixes, bold markers and backticks; split remaining text on whitespace. Also report raw Markdown whitespace tokens.",
+  "within_1000_1500": true,
+  "major_headings_match_template_in_order": true,
+  "minor_heading_prefixes_match_template_in_order": true,
+  "documented_examples": 3,
+  "student_name": "A***** P*****",
+  "four_student_supplied_ratings_present": true,
+  "personal_input_received_before_personal_drafting": true,
+  "official_template_unchanged_sha256": "84920033e806c78816534e2779ec387a55991a230351dd92aea1ac7439808218",
+  "local_links_checked": [
+    {
+      "file": "README.md",
+      "target": "docs/environment.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/stage_8_checks.json"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/stage_8_coverage.json"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/stage_8_metrics.json"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/manual_stage_6.ps1"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/stage_8_verification.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_report.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/stage_7_fix_review.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/ai_edit_log.md"
+    },
+    {
+      "file": "README.md",
+      "target": "../../LICENSE.txt"
+    },
+    {
+      "file": "docs/final_report.md",
+      "target": "ai_edit_log.md"
+    },
+    {
+      "file": "docs/final_report.md",
+      "target": "stage_8_verification.md"
+    },
+    {
+      "file": "docs/final_report.md",
+      "target": "report_template.md"
+    },
+    {
+      "file": "docs/final_report.md",
+      "target": "design_patterns.md"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "verification/stage_8_checks.json"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "verification/stage_8_coverage.json"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "verification/stage_8_metrics.json"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "stage_7_fix_review.md"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "ai_edit_log.md"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "verification/stage_8_log_audit.json"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "final_report.md"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "verification/stage_8_report_validation.json"
+    },
+    {
+      "file": "docs/stage_8_verification.md",
+      "target": "verification/stage_8_manifest.json"
+    }
+  ],
+  "all_production_modules_in_coverage": true,
+  "source_test_configuration_template_samples_unchanged": true,
+  "review_pending": true
+}

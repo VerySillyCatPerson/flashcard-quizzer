@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-18",
+  "runtime": "Windows CPython 3.13.17",
+  "physical_ctrl_c_verified": false,
+  "coverage_exclusions_changed": false,
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest -rs --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "exit_code": 0,
+      "output": "261 passed, 1 skipped in 17.20s; 562 statements, 112 branches, 6 missing statements, 1 partial branch; 98.96% coverage. Symbolic-link alias test skipped: WinError 1314.",
+      "output_is_summary": true
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "chunk_id": "729d9b",
+      "wall_time_seconds": 0.0000206,
+      "exit_code": 0,
+      "original_token_count": 18,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n23 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "chunk_id": "048085",
+      "wall_time_seconds": 0.0000209,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "Skipped 4 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "chunk_id": "57babc",
+      "wall_time_seconds": 0.0000217,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy .",
+      "chunk_id": "7c9fb3",
+      "wall_time_seconds": 0.0000245,
+      "exit_code": 0,
+      "original_token_count": 12,
+      "output": "Success: no issues found in 23 source files\r\n"
+    },
+    {
+      "name": "coverage_inspection",
+      "command": "@'\nimport json\nfrom pathlib import Path\nreport = json.loads(Path('docs/verification/stage_6_export_review_coverage.json').read_text(encoding='utf-8'))\nfor name, entry in report['files'].items():\n    if entry['missing_lines'] or entry.get('missing_branches'):\n        print(name)\n        lines = Path(name).read_text(encoding='utf-8').splitlines()\n        for number in entry['missing_lines']:\n            print(f'{number}: {lines[number - 1].strip()}')\n        print('Missing branch arcs:', entry.get('missing_branches'))\nreproductions = json.loads(Path('docs/verification/stage_7_reproductions.json').read_text(encoding='utf-8'))\nprint('Closed-pipe native exception tail:')\nprint('\\n'.join(reproductions['records'][3]['stderr'].splitlines()[-7:]))\n'@ | .\\.venv\\Scripts\\python.exe -",
+      "chunk_id": "773773",
+      "wall_time_seconds": 0.0878584,
+      "exit_code": 0,
+      "original_token_count": 196,
+      "output": "utils\\results_export.py\r\n59: except OSError as failure:\r\n60: raise ResultsExportError(\r\n91: except ValueError as failure:\r\n92: raise ResultsExportError(\r\n124: except OSError as cleanup_failure:\r\n125: detail += f\" Temporary file cleanup also failed: {cleanup_failure}\"\r\nMissing branch arcs: [[121, 126]]\r\nClosed-pipe native exception tail:\r\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"<string>\", line 24, in summary_into_closed_pipe\r\n    return original_show_summary(*args, **kwargs)\r\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 125, in show_summary\r\n    print(\"\\n\" + format_summary(summary, cards, reason), flush=True)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nOSError: [Errno 22] Invalid argument\r\n"
+    },
+    {
+      "name": "python_3_10_grammar",
+      "exit_code": 0,
+      "output": "Python 3.10 grammar: 23 files passed; runtime compatibility is not verified by parsing."
+    }
+  ]
+}

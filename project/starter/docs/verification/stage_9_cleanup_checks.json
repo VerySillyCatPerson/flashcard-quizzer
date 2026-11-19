@@ -1,0 +1,1868 @@
+{
+  "date": "2026-11-19",
+  "before_candidate_paths": [
+    "CODEOWNERS",
+    "LICENSE.txt",
+    "README.md",
+    "project/README.md",
+    "project/starter/.claude/CLAUDE.md",
+    "project/starter/.claude/commands/debug-help",
+    "project/starter/.claude/commands/generate-function",
+    "project/starter/.claude/commands/refactor-code",
+    "project/starter/.claude/commands/review-code",
+    "project/starter/.claude/mcp.json",
+    "project/starter/.editorconfig",
+    "project/starter/.flake8",
+    "project/starter/.gitignore",
+    "project/starter/README.md",
+    "project/starter/ai_guidance/code_review_checklist.md",
+    "project/starter/ai_guidance/prompting_best_practices.md",
+    "project/starter/data/glossary.json",
+    "project/starter/data/python_basics.json",
+    "project/starter/docs/ai_edit_log.md",
+    "project/starter/docs/design_patterns.md",
+    "project/starter/docs/environment.md",
+    "project/starter/docs/final_report.md",
+    "project/starter/docs/manual_stage_6.ps1",
+    "project/starter/docs/report_template.md",
+    "project/starter/docs/stage_1_plan.md",
+    "project/starter/docs/stage_3_review.md",
+    "project/starter/docs/stage_4_review.md",
+    "project/starter/docs/stage_5_review.md",
+    "project/starter/docs/stage_6_review.md",
+    "project/starter/docs/stage_7_fix_review.md",
+    "project/starter/docs/stage_7_review.md",
+    "project/starter/docs/stage_8_verification.md",
+    "project/starter/docs/stage_9_audit.md",
+    "project/starter/docs/verification/stage_2_baseline.json",
+    "project/starter/docs/verification/stage_2_followup.json",
+    "project/starter/docs/verification/stage_3_checks.json",
+    "project/starter/docs/verification/stage_3_coverage.json",
+    "project/starter/docs/verification/stage_3_examples.json",
+    "project/starter/docs/verification/stage_3_regression_before.json",
+    "project/starter/docs/verification/stage_3_review_checks.json",
+    "project/starter/docs/verification/stage_4_checks.json",
+    "project/starter/docs/verification/stage_4_coverage.json",
+    "project/starter/docs/verification/stage_4_demo.json",
+    "project/starter/docs/verification/stage_4_review_checks.json",
+    "project/starter/docs/verification/stage_5_checks.json",
+    "project/starter/docs/verification/stage_5_coverage.json",
+    "project/starter/docs/verification/stage_5_demo.json",
+    "project/starter/docs/verification/stage_5_initial_checks.json",
+    "project/starter/docs/verification/stage_5_review_checks.json",
+    "project/starter/docs/verification/stage_6_checks.json",
+    "project/starter/docs/verification/stage_6_commands.json",
+    "project/starter/docs/verification/stage_6_coverage.json",
+    "project/starter/docs/verification/stage_6_export_review_checks.json",
+    "project/starter/docs/verification/stage_6_export_review_commands.json",
+    "project/starter/docs/verification/stage_6_export_review_coverage.json",
+    "project/starter/docs/verification/stage_6_initial_checks.json",
+    "project/starter/docs/verification/stage_7_checks.json",
+    "project/starter/docs/verification/stage_7_coverage.json",
+    "project/starter/docs/verification/stage_7_fix_after_commands.json",
+    "project/starter/docs/verification/stage_7_fix_before_commands.json",
+    "project/starter/docs/verification/stage_7_fix_checks.json",
+    "project/starter/docs/verification/stage_7_fix_coverage.json",
+    "project/starter/docs/verification/stage_7_fix_expanded_red.json",
+    "project/starter/docs/verification/stage_7_fix_initial_checks.json",
+    "project/starter/docs/verification/stage_7_fix_initial_manifest.json",
+    "project/starter/docs/verification/stage_7_fix_manifest.json",
+    "project/starter/docs/verification/stage_7_fix_red.json",
+    "project/starter/docs/verification/stage_7_fix_shutdown_probe.json",
+    "project/starter/docs/verification/stage_7_fix_shutdown_red.json",
+    "project/starter/docs/verification/stage_7_reproductions.json",
+    "project/starter/docs/verification/stage_7_source_manifest.json",
+    "project/starter/docs/verification/stage_8_artifact_checks.json",
+    "project/starter/docs/verification/stage_8_checks.json",
+    "project/starter/docs/verification/stage_8_coverage.json",
+    "project/starter/docs/verification/stage_8_log_audit.json",
+    "project/starter/docs/verification/stage_8_manifest.json",
+    "project/starter/docs/verification/stage_8_metrics.json",
+    "project/starter/docs/verification/stage_8_report_validation.json",
+    "project/starter/docs/verification/stage_9_alias_followup.json",
+    "project/starter/docs/verification/stage_9_alias_probe.json",
+    "project/starter/docs/verification/stage_9_checks_310.json",
+    "project/starter/docs/verification/stage_9_checks_313.json",
+    "project/starter/docs/verification/stage_9_clean_copy.json",
+    "project/starter/docs/verification/stage_9_commands.json",
+    "project/starter/docs/verification/stage_9_coverage_310.json",
+    "project/starter/docs/verification/stage_9_coverage_313.json",
+    "project/starter/docs/verification/stage_9_criteria.json",
+    "project/starter/docs/verification/stage_9_documentation_updates.json",
+    "project/starter/docs/verification/stage_9_final_audit_checks.json",
+    "project/starter/docs/verification/stage_9_initial_links.json",
+    "project/starter/docs/verification/stage_9_manifest.json",
+    "project/starter/docs/verification/stage_9_manual_script.json",
+    "project/starter/docs/verification/stage_9_metrics.json",
+    "project/starter/docs/verification/stage_9_report_validation.json",
+    "project/starter/docs/verification/stage_9_repository_hygiene.json",
+    "project/starter/docs/verification/stage_9_samples_and_source.json",
+    "project/starter/docs/verification/stage_9_setup.json",
+    "project/starter/docs/verification/stage_9_submission_inventory.json",
+    "project/starter/main.py",
+    "project/starter/pyproject.toml",
+    "project/starter/requirements-lock.txt",
+    "project/starter/requirements.txt",
+    "project/starter/tests/__init__.py",
+    "project/starter/tests/cli_helpers.py",
+    "project/starter/tests/conftest.py",
+    "project/starter/tests/test_cli.py",
+    "project/starter/tests/test_data_loader.py",
+    "project/starter/tests/test_engine.py",
+    "project/starter/tests/test_finalization.py",
+    "project/starter/tests/test_history.py",
+    "project/starter/tests/test_models.py",
+    "project/starter/tests/test_paths.py",
+    "project/starter/tests/test_results_export.py",
+    "project/starter/tests/test_strategies.py",
+    "project/starter/tests/test_terminal.py",
+    "project/starter/utils/__init__.py",
+    "project/starter/utils/cli.py",
+    "project/starter/utils/data_loader.py",
+    "project/starter/utils/engine.py",
+    "project/starter/utils/history.py",
+    "project/starter/utils/models.py",
+    "project/starter/utils/paths.py",
+    "project/starter/utils/results_export.py",
+    "project/starter/utils/strategies.py",
+    "project/starter/utils/terminal.py"
+  ],
+  "protected_before": {
+    "project/starter/main.py": "09cceb66abcc1394d1ab53c47e15ca595aa27954ce9b1bf50f9454482b5257b1",
+    "project/starter/utils/cli.py": "1f792d7750e56b542bbfe917d85cdeaf4366b72bcce36c8460650025ccd8a2ca",
+    "project/starter/utils/data_loader.py": "f67d0a6e2559853f4367391af004c7bbbc8389103cbb59f43b1d9997dc65ce41",
+    "project/starter/utils/engine.py": "6d2dc1ad342d01c366554e578817cb95ddfd23b75b19c56941ec6bc14b25d541",
+    "project/starter/utils/history.py": "ec5867d3b17a503066b351892dc0a0c7ffa8d8bf0d0c68bdadbf85fcba3750e6",
+    "project/starter/utils/models.py": "c01f9fa105a27a5a56f6f951cab1b9b0b7764370d903b09079afd6542cd2cb9b",
+    "project/starter/utils/paths.py": "afdd559b01fa79f81af632bbab46ccd4e20c60b15dd8e6bba960f7d09a008edf",
+    "project/starter/utils/results_export.py": "078bdfffcb47ef7d4cc51d1c34b92b7fbef2b5df3337d137f05c29d7f8e362e8",
+    "project/starter/utils/strategies.py": "ae6f5b8746f4e411df0266605ea64e23cf662cc04481099dbbcdb1eafaf75743",
+    "project/starter/utils/terminal.py": "42a73351a0d439f1e6292c9a5ee210416794a4394354dfb666abaa71b4b9a91d",
+    "project/starter/utils/__init__.py": "f12e0eef47364beb0d02b210fee225b2156d7b4434c2604efff05f4938d26579",
+    "project/starter/tests/cli_helpers.py": "22e9560a0fbcf39a0be0278fa89c3f079d6b896305f65396cd2739bb9d0bfc50",
+    "project/starter/tests/conftest.py": "c0f000fc49c1057f61d0ea4fe06bf0347592082bfb892ad2bf5948ecab6c324f",
+    "project/starter/tests/test_cli.py": "8c13f1dfec6bb83d691b8f3e2fd02ecd6a002b3b7ba5454a67b39e487ee84fef",
+    "project/starter/tests/test_data_loader.py": "33661f395aa107a263f279f141535f50e37074874bbc518791fb414ccbb974cb",
+    "project/starter/tests/test_engine.py": "390b1939cd844ea037a50e8839dc68c51f2856619052ee2cb8c71ded589ca48a",
+    "project/starter/tests/test_finalization.py": "3eafb74b66efc8580cee4e489ddbfe682e550722d9121b3f68b0c6aeba68bf97",
+    "project/starter/tests/test_history.py": "202d9878f615ad377eac46cf4f602ea6b85644e2b4581d13c5ef21640a1a95b2",
+    "project/starter/tests/test_models.py": "6da1aa5203b7a9fcb39e97d1e3e6ac3dbd05d49bb2761786f7f3be2dacc4b865",
+    "project/starter/tests/test_paths.py": "2b77aaedbbd7c754d6622aea496bcd01c7b1aa557003c2bb0220bb22df1c7c1f",
+    "project/starter/tests/test_results_export.py": "0a929d3afe6b948987cc09d2c3d8ce967e83e758963c84658108bafb3c165842",
+    "project/starter/tests/test_strategies.py": "8960be82f51efa947f4e47e83aaa081050d3497e1e6de5d19c95d11aacd3c9fe",
+    "project/starter/tests/test_terminal.py": "a50b1cec4f7867b4a4efe6af6cdbc3a82d6f2bebf1f1d52cc7928c312186c1ff",
+    "project/starter/tests/__init__.py": "c1be88fd427cc67c4c40cf43c762c0ced95249c0e6a131f60f8a8fdfb4194ed2",
+    "project/starter/pyproject.toml": "4fc093a0fdd12e091cac373faa4efee4b829772182e8ed40579893f7d7d8ba1a",
+    "project/starter/.flake8": "5784f4961ccfc6dad4816706cf1e04caf3a6dde1dbf49e24d6998c24d1af635f",
+    "project/starter/requirements.txt": "89ee641398fa9b466de96e6d1936c5307eb2127f80a121d10b175a692391425b",
+    "project/starter/requirements-lock.txt": "c0db9de1e7be6b0fbb3201ea0cc557fc94fe4a2528559ec9a9a3900bd45aab60",
+    "project/starter/docs/report_template.md": "84920033e806c78816534e2779ec387a55991a230351dd92aea1ac7439808218",
+    "project/starter/data/glossary.json": "cfa17d3ad2c3c97a5f854a16aae1e2f484a4b4983d5595812593da184cf885df",
+    "project/starter/data/python_basics.json": "f0d6d0652cb292e63eecad8eefe90ddeef0e1741258a9ea27b27c12b3c260d8f"
+  },
+  "before_readme": "# README Template\n\nBelow is a template provided for use when building your README file for students.\n\n# Project Title\n\nProject description goes here.\n\n## Getting Started\n\nInstructions for how to get a copy of the project running on your local machine.\n\n### Dependencies\n\n```\nExamples here\n```\n\n### Installation\n\nStep by step explanation of how to get a dev environment running.\n\nList out the steps\n\n```\nGive an example here\n```\n\n## Testing\n\nExplain the steps needed to run any automated tests\n\n### Break Down Tests\n\nExplain what each test does and why\n\n```\nExamples here\n```\n\n## Project Instructions\n\nThis section should contain all the student deliverables for this project.\n\n## Built With\n\n* [Item1](www.item1.com) - Description of item\n* [Item2](www.item2.com) - Description of item\n* [Item3](www.item3.com) - Description of item\n\nInclude all items used to build project.\n\n## License\n\n[License](LICENSE.txt)\n",
+  "before_report": "# AI-Assisted Development Project Report\n\n**Student Name:** A***** P*****  \n**Project Title:** Flashcard Quizzer CLI  \n**Date:** 2026-11-18 \u2014 draft for review\n\n## Executive Summary\n\nThe Flashcard Quizzer loads validated JSON decks, asks each card once, evaluates text answers, and reports accuracy and missed terms. Sequential, seeded random, and adaptive modes share an engine. Persistent error-balance history and optional JSON results extend the core quiz.\n\nDevelopment used ChatGPT/Codex through separately reviewed stages. The student questioned design choices and accepted stages based on explanations and reported evidence. Codex executed the recorded checks; acceptance does not imply independent Python inspection or physical terminal verification.\n\n## Project Overview\n\n### Problem Statement\n\nLearners need repeatable practice and useful feedback without losing progress when deck files move. Invalid input and interrupted sessions should produce understandable outcomes while preserving completed answers.\n\n### Solution Approach\n\nPython 3.10 is the minimum target. Runtime dependencies are entirely standard-library modules; pip and venv isolate development tools. Frozen dataclasses represent cards and summaries, while Protocol defines a structural Strategy interface. As with TypeScript interfaces, annotations describe contracts without validating untrusted JSON.\n\n### Final Features\n\n- Validated array and object-wrapped decks, immediate feedback, and partial statistics.\n- Sequential, seeded random, and fixed adaptive ordering.\n- Persistent scores and content identities shared across decks.\n- Optional metadata/statistics/missed-card export with explicit overwrite authorization.\n\n## AI Collaboration Experience\n\n### AI Tools Used\n\nChatGPT/Codex generated and refined implementation, tests, explanations, and documentation. No other assistant is claimed.\n\n### Collaboration Workflow\n\nRequests specified scope, behavior, evidence, and a stopping point. Follow-up questions challenged identity, duplicates, scoring, persistence, exports, and interruption behavior. Design proposals were distinguished from accepted decisions. Stage 7 presented reproduced defects before edits; approved corrections began with failing regressions.\n\n### Most Valuable AI Interactions\n\nThese are documented examples rather than a student-ranked list.\n\n#### Example 1: Durable identity and useful priority\n\n**Context:** History initially depended on paths and cumulative mistakes.  \n**AI Prompt:** Explain moves, edits, duplicates, and decreasing scores.  \n**AI Response:** Proposed content identity and error balance.  \n**Your Changes:** Student review rejected path dependence, front-only uniqueness, and optional context.  \n**Outcome:** Normalized front/back JSON pairs are hashed; identical cards share history. Incorrect adds one, correct subtracts one with a zero floor.\n\n#### Example 2: F1 interruption between phases\n\n**Context:** A boundary interruption skipped pending persistence.  \n**AI Prompt:** Reproduce, test first, and prevent repeated committed updates.  \n**AI Response:** Added failing entry-point regressions and phase tracking.  \n**Your Changes:** Student approval required uncertain writes not be blindly retried.  \n**Outcome:** Pending work resumes with status 130; observed history attempts remain one.\n\n#### Example 3: F2 failed terminal output\n\n**Context:** Summary failure skipped writes and changed interruption status.  \n**AI Prompt:** Preserve saving/export and statuses after expected output errors.  \n**AI Response:** Added closed-pipe regressions and narrow terminal error handling.  \n**Your Changes:** Review required independence and visible programming errors.  \n**Outcome:** EOF/interruption retain 1/130. A further regression caught shutdown status 120; retiring the failed descriptor corrected it.\n\n### Challenges with AI Collaboration\n\nHigh coverage initially missed combined failure scenarios. An oversized-integer decoder exception also required a narrow fix. A test-bootstrap delimiter mistake was corrected before valid regression results were interpreted. These failures and corrections remain recorded.\n\n## Software Engineering Practices\n\n### Code Quality Measures\n\nBlack, isort, flake8, strict mypy, typed functions, docstrings, and structured errors support review. The clean checks passed without weakening assertions or coverage exclusions.\n\n### Testing Strategy\n\nPytest covers validation, immutable snapshots, source preservation, scoring, temporary-file round trips, persistence failures, exports, conflicts, and actual-entry-point subprocesses. Random tests check membership without requiring a changed shuffle. Stage 7 used regression-first development; this is not a claim that all development followed test-driven development.\n\n### Design Patterns Used\n\nStrategy provides interchangeable ordering through structural typing. CLI composition selects a strategy; the engine handles evaluation and progress. Explicit dependency boundaries keep filesystem and terminal effects separate from domain behavior.\n\n### Code Structure and Organization\n\nmain.py delegates execution. Models/loading define validated data; engine/strategies manage sessions; history owns score updates and persistence; paths validate file roles; terminal formats output; export builds result documents; CLI coordinates them.\n\n## Technical Challenges and Solutions\n\n### Challenge 1: Persistence without unnecessary infrastructure\n\n**Problem:** Renaming decks should preserve progress, and learned cards should lose priority.  \n**Solution:** Canonical normalized JSON pairs produce content hashes; stable sorting uses decreasing error balance.  \n**AI Involvement:** Compared alternatives and tested serialization boundaries and cross-deck sharing.  \n**Lessons Learned:** Content identity trades edit continuity for simple shared history; this is a documented design consequence.\n\n### Challenge 2: Uncertain commits and failed displays\n\n**Problem:** An interrupted replacement may already have committed, while printing can fail independently.  \n**Solution:** Finalization marks attempts before invocation and continues pending phases. Only terminal write/flush errors are translated.  \n**AI Involvement:** Preserved before/after evidence, including real replacement followed by interruption.  \n**Lessons Learned:** An exception does not prove noncommit. Tests observe scores and attempt counts, while formatting RuntimeError remains visible.\n\n## Code Quality Analysis\n\n### Metrics\n\nProduction comprises 11 Python files, 1,162 physical lines including blanks/docstrings, 62 function definitions including methods, and 22 classes. Tests comprise 13 files and 2,566 physical lines. These are size measures, not authorship counts.\n\nClean Windows CPython 3.10.11 and 3.13.17 runs each passed 271 tests with one skip. Combined coverage is 98.20%; statements are 590/599, or 98.50%, and branches are 120/124, or 96.77%. Flake8 exits zero; it supplies no numeric linting score.\n\n### Self-Assessment\n\nStudent-supplied ratings from Stage 8, before clean reproduction and Python 3.10 runtime verification:\n\n- **Readability: 4/5.** Clear modules and typed models; finalization/stream handling need careful reading.\n- **Maintainability: 4/5.** Engine, storage, and presentation are separated; interruption complexity is documented.\n- **Test Quality: 4/5.** Strong behavioral and subprocess regressions; physical Ctrl+C, symlinks, and Python 3.10 runtime remain unverified.\n- **Documentation: 4/5.** Detailed instructions and evidence; clean reproduction and full rubric audit remain pending.\n\n## Learning Outcomes\n\n### Technical Skills Developed\n\nI learned that Python annotations do not validate JSON at runtime, much like TypeScript types. Protocols resemble structural interfaces.\n\n### AI Collaboration Skills\n\nI challenged path-based history identity, cumulative scoring, unnecessary raw export answers, and automatic result replacement. Explanations and evidence helped me assess Python details I could not independently evaluate.\n\n### Software Engineering Insights\n\nI learned why high coverage does not guarantee correct behavior across failure scenarios. F1/F2 provided concrete examples of the distinction.\n\n## Reflection\n\n### What Worked Well\n\nPausing between stages gave me manageable decisions to review. The process let me question behavior before accepting it.\n\n### What Could Be Improved\n\nRepeated review rounds were lengthy. Next time, I would provide the full rubric earlier, agree storage/export behavior before implementation, and run manual terminal checks alongside automated tests earlier.\n\n### Future Enhancements\n\nCompleting outstanding verification takes priority over adding features. Concurrent-session merging would require a separately agreed design; atomic replacement alone does not provide it.\n\n## Conclusion\n\nThe project demonstrates reviewed AI-assisted implementation with measurable checks and documented limits. My next workflow would establish assessment criteria earlier and combine manual and automated verification sooner. Stage 9 findings and report wording still require review; submission is not authorized.\n\n## Appendices\n\n### Appendix A: AI Interaction Log\n\n[The log](ai_edit_log.md) records nine detailed stage entries with grouped follow-ups, including identity/scoring, decoder validation, snapshots, save retries, export refinements, F1/F2, and clean reproduction. This is not a count of chat turns.\n\n### Appendix B: Code Statistics\n\n[The final audit](stage_9_audit.md) links commands, metrics, coverage, audit, and unchanged-source hashes. The 98.20% combined figure is (590+120)/(599+124); historical zero-statement coverage is not submission evidence.\n\n### Appendix C: Additional Resources\n\nThe preserved [official template](report_template.md), [design-pattern guide](design_patterns.md), and README provide project context. The full classroom rubric is unavailable. Physical Ctrl+C and real symlink verification remain outstanding; clean reproduction and Python 3.10.11 runtime checks passed. The root README retains three placeholder links.\n\n---\n\n**Length rule:** Follow the classroom's 1,000\u20131,500 words. The preserved template footer instead requests 2,000\u20133,000; the student explicitly chose the classroom limit. Due date and submission instructions were not supplied.\n\n",
+  "root_ignore_existed": false,
+  "ignore_checks": [
+    {
+      "path": ".env",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:2:.env\t.env"
+    },
+    {
+      "path": ".env.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\t.env.local"
+    },
+    {
+      "path": ".env.production",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\t.env.production"
+    },
+    {
+      "path": ".env.production.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\t.env.production.local"
+    },
+    {
+      "path": "private.key",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:14:*.key\tprivate.key"
+    },
+    {
+      "path": "server.key",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:14:*.key\tserver.key"
+    },
+    {
+      "path": "server.key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:15:*.key.pem\tserver.key.pem"
+    },
+    {
+      "path": "key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:16:key.pem\tkey.pem"
+    },
+    {
+      "path": "private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:17:private.pem\tprivate.pem"
+    },
+    {
+      "path": "private-key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:18:private-key.pem\tprivate-key.pem"
+    },
+    {
+      "path": "private_key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:19:private_key.pem\tprivate_key.pem"
+    },
+    {
+      "path": "server-private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:20:*-private.pem\tserver-private.pem"
+    },
+    {
+      "path": "server_private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:21:*_private.pem\tserver_private.pem"
+    },
+    {
+      "path": "server-private-key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:22:*-private-key.pem\tserver-private-key.pem"
+    },
+    {
+      "path": "server_private_key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:23:*_private_key.pem\tserver_private_key.pem"
+    },
+    {
+      "path": "id_rsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:24:id_rsa\tid_rsa"
+    },
+    {
+      "path": "id_dsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:25:id_dsa\tid_dsa"
+    },
+    {
+      "path": "id_ecdsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:26:id_ecdsa\tid_ecdsa"
+    },
+    {
+      "path": "id_ed25519",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:27:id_ed25519\tid_ed25519"
+    },
+    {
+      "path": "id_ecdsa_sk",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:28:id_ecdsa_sk\tid_ecdsa_sk"
+    },
+    {
+      "path": "id_ed25519_sk",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:29:id_ed25519_sk\tid_ed25519_sk"
+    },
+    {
+      "path": ".env.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:6:!.env.example\t.env.example"
+    },
+    {
+      "path": ".env.sample",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:7:!.env.sample\t.env.sample"
+    },
+    {
+      "path": ".env.template",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:8:!.env.template\t.env.template"
+    },
+    {
+      "path": ".env.local.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:9:!.env.*.example\t.env.local.example"
+    },
+    {
+      "path": ".env.production.sample",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:10:!.env.*.sample\t.env.production.sample"
+    },
+    {
+      "path": ".env.development.template",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:11:!.env.*.template\t.env.development.template"
+    },
+    {
+      "path": "server.key.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "private.pem.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "example.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:40:!example.key\texample.key"
+    },
+    {
+      "path": "sample.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:41:!sample.key\tsample.key"
+    },
+    {
+      "path": "template.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:42:!template.key\ttemplate.key"
+    },
+    {
+      "path": "dev.example.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:43:!*.example.key\tdev.example.key"
+    },
+    {
+      "path": "dev.sample.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:44:!*.sample.key\tdev.sample.key"
+    },
+    {
+      "path": "dev.template.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:45:!*.template.key\tdev.template.key"
+    },
+    {
+      "path": "example.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:46:!example.key.pem\texample.key.pem"
+    },
+    {
+      "path": "sample.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:47:!sample.key.pem\tsample.key.pem"
+    },
+    {
+      "path": "template.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:48:!template.key.pem\ttemplate.key.pem"
+    },
+    {
+      "path": "dev.example.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:49:!*.example.key.pem\tdev.example.key.pem"
+    },
+    {
+      "path": "dev.sample.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:50:!*.sample.key.pem\tdev.sample.key.pem"
+    },
+    {
+      "path": "dev.template.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:51:!*.template.key.pem\tdev.template.key.pem"
+    },
+    {
+      "path": "public.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:31:!public.key\tpublic.key"
+    },
+    {
+      "path": "pub.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:30:!pub.key\tpub.key"
+    },
+    {
+      "path": "server.public.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:33:!*.public.key\tserver.public.key"
+    },
+    {
+      "path": "server.pub.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:32:!*.pub.key\tserver.pub.key"
+    },
+    {
+      "path": "public.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:35:!public.key.pem\tpublic.key.pem"
+    },
+    {
+      "path": "pub.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:34:!pub.key.pem\tpub.key.pem"
+    },
+    {
+      "path": "server.public.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:37:!*.public.key.pem\tserver.public.key.pem"
+    },
+    {
+      "path": "server.pub.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:36:!*.pub.key.pem\tserver.pub.key.pem"
+    },
+    {
+      "path": "id_rsa.pub",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "id_ed25519.pub",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "certificate.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "public.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "server.crt",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "ordinary.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "data.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/.env",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:2:.env\tproject/starter/.env"
+    },
+    {
+      "path": "project/starter/.env.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\tproject/starter/.env.local"
+    },
+    {
+      "path": "project/starter/.env.production",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\tproject/starter/.env.production"
+    },
+    {
+      "path": "project/starter/.env.production.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\tproject/starter/.env.production.local"
+    },
+    {
+      "path": "project/starter/private.key",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:14:*.key\tproject/starter/private.key"
+    },
+    {
+      "path": "project/starter/server.key",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:14:*.key\tproject/starter/server.key"
+    },
+    {
+      "path": "project/starter/server.key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:15:*.key.pem\tproject/starter/server.key.pem"
+    },
+    {
+      "path": "project/starter/key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:16:key.pem\tproject/starter/key.pem"
+    },
+    {
+      "path": "project/starter/private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:17:private.pem\tproject/starter/private.pem"
+    },
+    {
+      "path": "project/starter/private-key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:18:private-key.pem\tproject/starter/private-key.pem"
+    },
+    {
+      "path": "project/starter/private_key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:19:private_key.pem\tproject/starter/private_key.pem"
+    },
+    {
+      "path": "project/starter/server-private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:20:*-private.pem\tproject/starter/server-private.pem"
+    },
+    {
+      "path": "project/starter/server_private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:21:*_private.pem\tproject/starter/server_private.pem"
+    },
+    {
+      "path": "project/starter/server-private-key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:22:*-private-key.pem\tproject/starter/server-private-key.pem"
+    },
+    {
+      "path": "project/starter/server_private_key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:23:*_private_key.pem\tproject/starter/server_private_key.pem"
+    },
+    {
+      "path": "project/starter/id_rsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:24:id_rsa\tproject/starter/id_rsa"
+    },
+    {
+      "path": "project/starter/id_dsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:25:id_dsa\tproject/starter/id_dsa"
+    },
+    {
+      "path": "project/starter/id_ecdsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:26:id_ecdsa\tproject/starter/id_ecdsa"
+    },
+    {
+      "path": "project/starter/id_ed25519",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:27:id_ed25519\tproject/starter/id_ed25519"
+    },
+    {
+      "path": "project/starter/id_ecdsa_sk",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:28:id_ecdsa_sk\tproject/starter/id_ecdsa_sk"
+    },
+    {
+      "path": "project/starter/id_ed25519_sk",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:29:id_ed25519_sk\tproject/starter/id_ed25519_sk"
+    },
+    {
+      "path": "project/starter/.env.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:6:!.env.example\tproject/starter/.env.example"
+    },
+    {
+      "path": "project/starter/.env.sample",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:7:!.env.sample\tproject/starter/.env.sample"
+    },
+    {
+      "path": "project/starter/.env.template",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:8:!.env.template\tproject/starter/.env.template"
+    },
+    {
+      "path": "project/starter/.env.local.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:9:!.env.*.example\tproject/starter/.env.local.example"
+    },
+    {
+      "path": "project/starter/.env.production.sample",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:10:!.env.*.sample\tproject/starter/.env.production.sample"
+    },
+    {
+      "path": "project/starter/.env.development.template",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:11:!.env.*.template\tproject/starter/.env.development.template"
+    },
+    {
+      "path": "project/starter/server.key.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/private.pem.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/example.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:40:!example.key\tproject/starter/example.key"
+    },
+    {
+      "path": "project/starter/sample.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:41:!sample.key\tproject/starter/sample.key"
+    },
+    {
+      "path": "project/starter/template.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:42:!template.key\tproject/starter/template.key"
+    },
+    {
+      "path": "project/starter/dev.example.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:43:!*.example.key\tproject/starter/dev.example.key"
+    },
+    {
+      "path": "project/starter/dev.sample.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:44:!*.sample.key\tproject/starter/dev.sample.key"
+    },
+    {
+      "path": "project/starter/dev.template.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:45:!*.template.key\tproject/starter/dev.template.key"
+    },
+    {
+      "path": "project/starter/example.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:46:!example.key.pem\tproject/starter/example.key.pem"
+    },
+    {
+      "path": "project/starter/sample.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:47:!sample.key.pem\tproject/starter/sample.key.pem"
+    },
+    {
+      "path": "project/starter/template.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:48:!template.key.pem\tproject/starter/template.key.pem"
+    },
+    {
+      "path": "project/starter/dev.example.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:49:!*.example.key.pem\tproject/starter/dev.example.key.pem"
+    },
+    {
+      "path": "project/starter/dev.sample.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:50:!*.sample.key.pem\tproject/starter/dev.sample.key.pem"
+    },
+    {
+      "path": "project/starter/dev.template.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:51:!*.template.key.pem\tproject/starter/dev.template.key.pem"
+    },
+    {
+      "path": "project/starter/public.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:31:!public.key\tproject/starter/public.key"
+    },
+    {
+      "path": "project/starter/pub.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:30:!pub.key\tproject/starter/pub.key"
+    },
+    {
+      "path": "project/starter/server.public.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:33:!*.public.key\tproject/starter/server.public.key"
+    },
+    {
+      "path": "project/starter/server.pub.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:32:!*.pub.key\tproject/starter/server.pub.key"
+    },
+    {
+      "path": "project/starter/public.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:35:!public.key.pem\tproject/starter/public.key.pem"
+    },
+    {
+      "path": "project/starter/pub.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:34:!pub.key.pem\tproject/starter/pub.key.pem"
+    },
+    {
+      "path": "project/starter/server.public.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:37:!*.public.key.pem\tproject/starter/server.public.key.pem"
+    },
+    {
+      "path": "project/starter/server.pub.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:36:!*.pub.key.pem\tproject/starter/server.pub.key.pem"
+    },
+    {
+      "path": "project/starter/id_rsa.pub",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/id_ed25519.pub",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/certificate.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/public.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/server.crt",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/ordinary.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/data.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/.env",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:2:.env\tproject/starter/config/nested/.env"
+    },
+    {
+      "path": "project/starter/config/nested/.env.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\tproject/starter/config/nested/.env.local"
+    },
+    {
+      "path": "project/starter/config/nested/.env.production",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\tproject/starter/config/nested/.env.production"
+    },
+    {
+      "path": "project/starter/config/nested/.env.production.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\tproject/starter/config/nested/.env.production.local"
+    },
+    {
+      "path": "project/starter/config/nested/private.key",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:14:*.key\tproject/starter/config/nested/private.key"
+    },
+    {
+      "path": "project/starter/config/nested/server.key",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:14:*.key\tproject/starter/config/nested/server.key"
+    },
+    {
+      "path": "project/starter/config/nested/server.key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:15:*.key.pem\tproject/starter/config/nested/server.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:16:key.pem\tproject/starter/config/nested/key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:17:private.pem\tproject/starter/config/nested/private.pem"
+    },
+    {
+      "path": "project/starter/config/nested/private-key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:18:private-key.pem\tproject/starter/config/nested/private-key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/private_key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:19:private_key.pem\tproject/starter/config/nested/private_key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/server-private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:20:*-private.pem\tproject/starter/config/nested/server-private.pem"
+    },
+    {
+      "path": "project/starter/config/nested/server_private.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:21:*_private.pem\tproject/starter/config/nested/server_private.pem"
+    },
+    {
+      "path": "project/starter/config/nested/server-private-key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:22:*-private-key.pem\tproject/starter/config/nested/server-private-key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/server_private_key.pem",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:23:*_private_key.pem\tproject/starter/config/nested/server_private_key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/id_rsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:24:id_rsa\tproject/starter/config/nested/id_rsa"
+    },
+    {
+      "path": "project/starter/config/nested/id_dsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:25:id_dsa\tproject/starter/config/nested/id_dsa"
+    },
+    {
+      "path": "project/starter/config/nested/id_ecdsa",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:26:id_ecdsa\tproject/starter/config/nested/id_ecdsa"
+    },
+    {
+      "path": "project/starter/config/nested/id_ed25519",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:27:id_ed25519\tproject/starter/config/nested/id_ed25519"
+    },
+    {
+      "path": "project/starter/config/nested/id_ecdsa_sk",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:28:id_ecdsa_sk\tproject/starter/config/nested/id_ecdsa_sk"
+    },
+    {
+      "path": "project/starter/config/nested/id_ed25519_sk",
+      "expected_ignored": true,
+      "ignored": true,
+      "exit_code": 0,
+      "rule": ".gitignore:29:id_ed25519_sk\tproject/starter/config/nested/id_ed25519_sk"
+    },
+    {
+      "path": "project/starter/config/nested/.env.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:6:!.env.example\tproject/starter/config/nested/.env.example"
+    },
+    {
+      "path": "project/starter/config/nested/.env.sample",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:7:!.env.sample\tproject/starter/config/nested/.env.sample"
+    },
+    {
+      "path": "project/starter/config/nested/.env.template",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:8:!.env.template\tproject/starter/config/nested/.env.template"
+    },
+    {
+      "path": "project/starter/config/nested/.env.local.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:9:!.env.*.example\tproject/starter/config/nested/.env.local.example"
+    },
+    {
+      "path": "project/starter/config/nested/.env.production.sample",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:10:!.env.*.sample\tproject/starter/config/nested/.env.production.sample"
+    },
+    {
+      "path": "project/starter/config/nested/.env.development.template",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:11:!.env.*.template\tproject/starter/config/nested/.env.development.template"
+    },
+    {
+      "path": "project/starter/config/nested/server.key.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/private.pem.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/example.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:40:!example.key\tproject/starter/config/nested/example.key"
+    },
+    {
+      "path": "project/starter/config/nested/sample.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:41:!sample.key\tproject/starter/config/nested/sample.key"
+    },
+    {
+      "path": "project/starter/config/nested/template.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:42:!template.key\tproject/starter/config/nested/template.key"
+    },
+    {
+      "path": "project/starter/config/nested/dev.example.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:43:!*.example.key\tproject/starter/config/nested/dev.example.key"
+    },
+    {
+      "path": "project/starter/config/nested/dev.sample.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:44:!*.sample.key\tproject/starter/config/nested/dev.sample.key"
+    },
+    {
+      "path": "project/starter/config/nested/dev.template.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:45:!*.template.key\tproject/starter/config/nested/dev.template.key"
+    },
+    {
+      "path": "project/starter/config/nested/example.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:46:!example.key.pem\tproject/starter/config/nested/example.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/sample.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:47:!sample.key.pem\tproject/starter/config/nested/sample.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/template.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:48:!template.key.pem\tproject/starter/config/nested/template.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/dev.example.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:49:!*.example.key.pem\tproject/starter/config/nested/dev.example.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/dev.sample.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:50:!*.sample.key.pem\tproject/starter/config/nested/dev.sample.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/dev.template.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:51:!*.template.key.pem\tproject/starter/config/nested/dev.template.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/public.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:31:!public.key\tproject/starter/config/nested/public.key"
+    },
+    {
+      "path": "project/starter/config/nested/pub.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:30:!pub.key\tproject/starter/config/nested/pub.key"
+    },
+    {
+      "path": "project/starter/config/nested/server.public.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:33:!*.public.key\tproject/starter/config/nested/server.public.key"
+    },
+    {
+      "path": "project/starter/config/nested/server.pub.key",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:32:!*.pub.key\tproject/starter/config/nested/server.pub.key"
+    },
+    {
+      "path": "project/starter/config/nested/public.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:35:!public.key.pem\tproject/starter/config/nested/public.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/pub.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:34:!pub.key.pem\tproject/starter/config/nested/pub.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/server.public.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:37:!*.public.key.pem\tproject/starter/config/nested/server.public.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/server.pub.key.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ".gitignore:36:!*.pub.key.pem\tproject/starter/config/nested/server.pub.key.pem"
+    },
+    {
+      "path": "project/starter/config/nested/id_rsa.pub",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/id_ed25519.pub",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/certificate.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/public.pem",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/server.crt",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/ordinary.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    },
+    {
+      "path": "project/starter/config/nested/data.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "exit_code": 1,
+      "rule": ""
+    }
+  ],
+  "ignore_checks_passed": 168,
+  "existing_submission_paths_hidden": [],
+  "existing_recognized_example_files": [],
+  "after_candidate_paths": [
+    ".gitignore",
+    "CODEOWNERS",
+    "LICENSE.txt",
+    "README.md",
+    "project/README.md",
+    "project/starter/.claude/CLAUDE.md",
+    "project/starter/.claude/commands/debug-help",
+    "project/starter/.claude/commands/generate-function",
+    "project/starter/.claude/commands/refactor-code",
+    "project/starter/.claude/commands/review-code",
+    "project/starter/.claude/mcp.json",
+    "project/starter/.editorconfig",
+    "project/starter/.flake8",
+    "project/starter/.gitignore",
+    "project/starter/README.md",
+    "project/starter/ai_guidance/code_review_checklist.md",
+    "project/starter/ai_guidance/prompting_best_practices.md",
+    "project/starter/data/glossary.json",
+    "project/starter/data/python_basics.json",
+    "project/starter/docs/ai_edit_log.md",
+    "project/starter/docs/design_patterns.md",
+    "project/starter/docs/environment.md",
+    "project/starter/docs/final_report.md",
+    "project/starter/docs/manual_stage_6.ps1",
+    "project/starter/docs/report_template.md",
+    "project/starter/docs/stage_1_plan.md",
+    "project/starter/docs/stage_3_review.md",
+    "project/starter/docs/stage_4_review.md",
+    "project/starter/docs/stage_5_review.md",
+    "project/starter/docs/stage_6_review.md",
+    "project/starter/docs/stage_7_fix_review.md",
+    "project/starter/docs/stage_7_review.md",
+    "project/starter/docs/stage_8_verification.md",
+    "project/starter/docs/stage_9_audit.md",
+    "project/starter/docs/verification/stage_2_baseline.json",
+    "project/starter/docs/verification/stage_2_followup.json",
+    "project/starter/docs/verification/stage_3_checks.json",
+    "project/starter/docs/verification/stage_3_coverage.json",
+    "project/starter/docs/verification/stage_3_examples.json",
+    "project/starter/docs/verification/stage_3_regression_before.json",
+    "project/starter/docs/verification/stage_3_review_checks.json",
+    "project/starter/docs/verification/stage_4_checks.json",
+    "project/starter/docs/verification/stage_4_coverage.json",
+    "project/starter/docs/verification/stage_4_demo.json",
+    "project/starter/docs/verification/stage_4_review_checks.json",
+    "project/starter/docs/verification/stage_5_checks.json",
+    "project/starter/docs/verification/stage_5_coverage.json",
+    "project/starter/docs/verification/stage_5_demo.json",
+    "project/starter/docs/verification/stage_5_initial_checks.json",
+    "project/starter/docs/verification/stage_5_review_checks.json",
+    "project/starter/docs/verification/stage_6_checks.json",
+    "project/starter/docs/verification/stage_6_commands.json",
+    "project/starter/docs/verification/stage_6_coverage.json",
+    "project/starter/docs/verification/stage_6_export_review_checks.json",
+    "project/starter/docs/verification/stage_6_export_review_commands.json",
+    "project/starter/docs/verification/stage_6_export_review_coverage.json",
+    "project/starter/docs/verification/stage_6_initial_checks.json",
+    "project/starter/docs/verification/stage_7_checks.json",
+    "project/starter/docs/verification/stage_7_coverage.json",
+    "project/starter/docs/verification/stage_7_fix_after_commands.json",
+    "project/starter/docs/verification/stage_7_fix_before_commands.json",
+    "project/starter/docs/verification/stage_7_fix_checks.json",
+    "project/starter/docs/verification/stage_7_fix_coverage.json",
+    "project/starter/docs/verification/stage_7_fix_expanded_red.json",
+    "project/starter/docs/verification/stage_7_fix_initial_checks.json",
+    "project/starter/docs/verification/stage_7_fix_initial_manifest.json",
+    "project/starter/docs/verification/stage_7_fix_manifest.json",
+    "project/starter/docs/verification/stage_7_fix_red.json",
+    "project/starter/docs/verification/stage_7_fix_shutdown_probe.json",
+    "project/starter/docs/verification/stage_7_fix_shutdown_red.json",
+    "project/starter/docs/verification/stage_7_reproductions.json",
+    "project/starter/docs/verification/stage_7_source_manifest.json",
+    "project/starter/docs/verification/stage_8_artifact_checks.json",
+    "project/starter/docs/verification/stage_8_checks.json",
+    "project/starter/docs/verification/stage_8_coverage.json",
+    "project/starter/docs/verification/stage_8_log_audit.json",
+    "project/starter/docs/verification/stage_8_manifest.json",
+    "project/starter/docs/verification/stage_8_metrics.json",
+    "project/starter/docs/verification/stage_8_report_validation.json",
+    "project/starter/docs/verification/stage_9_alias_followup.json",
+    "project/starter/docs/verification/stage_9_alias_probe.json",
+    "project/starter/docs/verification/stage_9_checks_310.json",
+    "project/starter/docs/verification/stage_9_checks_313.json",
+    "project/starter/docs/verification/stage_9_clean_copy.json",
+    "project/starter/docs/verification/stage_9_cleanup_checks.json",
+    "project/starter/docs/verification/stage_9_commands.json",
+    "project/starter/docs/verification/stage_9_coverage_310.json",
+    "project/starter/docs/verification/stage_9_coverage_313.json",
+    "project/starter/docs/verification/stage_9_criteria.json",
+    "project/starter/docs/verification/stage_9_documentation_updates.json",
+    "project/starter/docs/verification/stage_9_final_audit_checks.json",
+    "project/starter/docs/verification/stage_9_initial_links.json",
+    "project/starter/docs/verification/stage_9_manifest.json",
+    "project/starter/docs/verification/stage_9_manual_script.json",
+    "project/starter/docs/verification/stage_9_metrics.json",
+    "project/starter/docs/verification/stage_9_report_validation.json",
+    "project/starter/docs/verification/stage_9_repository_hygiene.json",
+    "project/starter/docs/verification/stage_9_samples_and_source.json",
+    "project/starter/docs/verification/stage_9_setup.json",
+    "project/starter/docs/verification/stage_9_submission_inventory.json",
+    "project/starter/main.py",
+    "project/starter/pyproject.toml",
+    "project/starter/requirements-lock.txt",
+    "project/starter/requirements.txt",
+    "project/starter/tests/__init__.py",
+    "project/starter/tests/cli_helpers.py",
+    "project/starter/tests/conftest.py",
+    "project/starter/tests/test_cli.py",
+    "project/starter/tests/test_data_loader.py",
+    "project/starter/tests/test_engine.py",
+    "project/starter/tests/test_finalization.py",
+    "project/starter/tests/test_history.py",
+    "project/starter/tests/test_models.py",
+    "project/starter/tests/test_paths.py",
+    "project/starter/tests/test_results_export.py",
+    "project/starter/tests/test_strategies.py",
+    "project/starter/tests/test_terminal.py",
+    "project/starter/utils/__init__.py",
+    "project/starter/utils/cli.py",
+    "project/starter/utils/data_loader.py",
+    "project/starter/utils/engine.py",
+    "project/starter/utils/history.py",
+    "project/starter/utils/models.py",
+    "project/starter/utils/paths.py",
+    "project/starter/utils/results_export.py",
+    "project/starter/utils/strategies.py",
+    "project/starter/utils/terminal.py"
+  ],
+  "candidate_selection": "git ls-files --cached --others --exclude-standard -- project .gitignore README.md LICENSE.txt CODEOWNERS",
+  "root_gitignore_included": true,
+  "git_warnings": [
+    "warning: unable to access 'C:\\Users\\cirae/.config/git/ignore': Permission denied"
+  ],
+  "all_31_protected_files_unchanged": true,
+  "physical_ctrl_c_verified": false,
+  "symlink_verified": false,
+  "full_rubric_available": false,
+  "report_wording_approved": false,
+  "submission_ready_claimed": false,
+  "example_test_method": "Virtual path probes via actual git check-ignore; no credential/example fixture files created.",
+  "local_markdown_links": [
+    {
+      "file": "README.md",
+      "target": "project/starter/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "LICENSE.txt",
+      "exists": true
+    },
+    {
+      "file": "project/README.md",
+      "target": "starter/",
+      "exists": true
+    },
+    {
+      "file": "project/README.md",
+      "target": "starter/README.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/stage_9_audit.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/environment.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_8_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_8_coverage.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_8_metrics.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_9_checks_313.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_9_checks_310.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_9_setup.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/manual_stage_6.ps1",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/stage_8_verification.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/final_report.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/stage_7_fix_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/ai_edit_log.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_9_cleanup_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "../../LICENSE.txt",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "stage_8_verification.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "stage_9_audit.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "verification/stage_2_baseline.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "verification/stage_2_followup.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "ai_edit_log.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "stage_9_audit.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "report_template.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "design_patterns.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_3_review.md",
+      "target": "stage_4_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_4_review.md",
+      "target": "stage_5_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_5_review.md",
+      "target": "stage_6_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "stage_7_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_manifest.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_red.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_expanded_red.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_shutdown_probe.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_shutdown_red.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_before_commands.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_after_commands.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_review.md",
+      "target": "verification/stage_7_reproductions.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_review.md",
+      "target": "stage_7_fix_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_coverage.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_metrics.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "stage_7_fix_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "ai_edit_log.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_log_audit.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "final_report.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_report_validation.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_manifest.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_cleanup_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_clean_copy.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_setup.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_checks_313.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_checks_310.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_commands.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_manual_script.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_coverage_313.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_coverage_310.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_metrics.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_criteria.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_report_validation.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_repository_hygiene.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_submission_inventory.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_samples_and_source.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_manifest.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_alias_probe.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_alias_followup.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_9_audit.md",
+      "target": "verification/stage_9_documentation_updates.json",
+      "exists": true
+    }
+  ],
+  "local_link_check_scope": "All current candidate Markdown, fenced examples excluded; relative file existence checked, external URLs/fragment semantics not claimed.",
+  "broken_relative_file_links": [],
+  "link_checks_passed": 69,
+  "candidate_file_count": 127,
+  "report_rendered_words": 1255,
+  "report_raw_tokens": 1302,
+  "report_personal_sections_and_rating_lines_unchanged": true,
+  "report_within_1000_1500": true,
+  "changes": {
+    "root_readme": "--- before/README.md\n+++ after/README.md\n@@ -42,13 +42,10 @@\n \n This section should contain all the student deliverables for this project.\n \n-## Built With\n+## Project Documentation\n \n-* [Item1](www.item1.com) - Description of item\n-* [Item2](www.item2.com) - Description of item\n-* [Item3](www.item3.com) - Description of item\n-\n-Include all items used to build project.\n+See the [Flashcard Quizzer README](project/starter/README.md) for the application's\n+setup, usage, and verification instructions.\n \n ## License\n \n",
+    "report_factual_update": "--- before/final_report.md\n+++ after/final_report.md\n@@ -164,7 +164,7 @@\n \n ### Appendix C: Additional Resources\n \n-The preserved [official template](report_template.md), [design-pattern guide](design_patterns.md), and README provide project context. The full classroom rubric is unavailable. Physical Ctrl+C and real symlink verification remain outstanding; clean reproduction and Python 3.10.11 runtime checks passed. The root README retains three placeholder links.\n+The preserved [official template](report_template.md), [design-pattern guide](design_patterns.md), and README provide project context. The full classroom rubric is unavailable. Physical Ctrl+C and real symlink verification remain outstanding; clean reproduction and Python 3.10.11 runtime checks passed. The root README placeholder links were removed during cleanup.\n \n ---\n \n"
+  },
+  "root_ignore_contents": "# Local environment files throughout the repository.\n.env\n.env.*\n\n# Shareable environment examples/templates must contain dummy values only.\n!.env.example\n!.env.sample\n!.env.template\n!.env.*.example\n!.env.*.sample\n!.env.*.template\n\n# Conventional private-key filenames; keep public keys/certificates eligible.\n*.key\n*.key.pem\nkey.pem\nprivate.pem\nprivate-key.pem\nprivate_key.pem\n*-private.pem\n*_private.pem\n*-private-key.pem\n*_private_key.pem\nid_rsa\nid_dsa\nid_ecdsa\nid_ed25519\nid_ecdsa_sk\nid_ed25519_sk\n!pub.key\n!public.key\n!*.pub.key\n!*.public.key\n!pub.key.pem\n!public.key.pem\n!*.pub.key.pem\n!*.public.key.pem\n\n# Explicitly named dummy key examples/templates remain eligible.\n!example.key\n!sample.key\n!template.key\n!*.example.key\n!*.sample.key\n!*.template.key\n!example.key.pem\n!sample.key.pem\n!template.key.pem\n!*.example.key.pem\n!*.sample.key.pem\n!*.template.key.pem\n",
+  "root_ignore_sha256": "0cd4667e652b49570aacd57fc8009b620e1c62196036cf539e4c50a48434ef60",
+  "runtime_test_suite_rerun_for_cleanup": false,
+  "verification_note": "Documentation and Git-ignore cleanup only; prior reproduction evidence retained without relabeling it as a new runtime run.",
+  "committed": false,
+  "pushed": false,
+  "submitted": false,
+  "validation_tool_result": {
+    "chunk_id": "372098",
+    "wall_time_seconds": 0.2655033,
+    "exit_code": 0,
+    "original_token_count": 109,
+    "output": "warning: unable to access 'C:\\Users\\cirae/.config/git/ignore': Permission denied\nCleanup complete: 69 relative file links resolve; 168 Git exclusion/exception probes pass; no prior candidate hidden.\r\nReport: 1255 rendered words / 1302 raw tokens; personal sections/ratings unchanged; wording/manual test still pending.\r\nCandidate contains root .gitignore; 31 protected application/test/configuration/sample/template files unchanged.\r\n"
+  },
+  "git_diff_check": {
+    "chunk_id": "8903d8",
+    "wall_time_seconds": 0.0213682,
+    "exit_code": 0,
+    "original_token_count": 30,
+    "output": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  }
+}

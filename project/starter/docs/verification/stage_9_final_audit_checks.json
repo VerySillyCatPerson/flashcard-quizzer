@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-18",
+  "available_criteria_checked": 33,
+  "candidate_files": 125,
+  "both_clean_suites_passed": true,
+  "python_310_runtime_verified": "Windows CPython 3.10.11",
+  "python_313_runtime_verified": "Windows CPython 3.13.17",
+  "all_protected_files_unchanged": true,
+  "report_word_count": 1253,
+  "template_and_personal_sections_preserved": true,
+  "known_root_placeholder_links": 3,
+  "no_detected_credentials_or_local_artifacts_in_candidate": true,
+  "secret_scan_is_exhaustive": false,
+  "credential_ignore_hardening_optional": [
+    ".env",
+    "private.key"
+  ],
+  "full_rubric_available": false,
+  "physical_ctrl_c_verified": false,
+  "actual_symlink_verified": false,
+  "full_rubric_compliance_claimed": false,
+  "report_wording_approved": false,
+  "application_changes_made": false,
+  "committed": false,
+  "pushed": false,
+  "submitted": false,
+  "validation_tool_result": {
+    "chunk_id": "865567",
+    "wall_time_seconds": 0.3688181,
+    "exit_code": 0,
+    "original_token_count": 133,
+    "output": "Final audit: 33 available criteria mapped; 125 candidate files; all 31 protected files and both tested snapshots unchanged.\r\nReport: 1253 words / 1300 raw tokens; template headings, personal sections and ratings preserved; nine actual stage entries.\r\nRelative file links: 69 checked; three known inherited root placeholders; application README/report valid. Fragment references seen: 0.\r\nNo detected credentials, local environments/caches/tools or personal-state files in candidate. Optional .env/private.key ignore gap retained.\r\n"
+  },
+  "git_diff_check": {
+    "chunk_id": "01dc55",
+    "wall_time_seconds": 0.0236971,
+    "exit_code": 0,
+    "original_token_count": 30,
+    "output": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  }
+}

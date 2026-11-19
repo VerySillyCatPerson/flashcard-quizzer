@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-19",
+  "application_source_modified": false,
+  "test_source_modified": false,
+  "scenarios": [
+    {
+      "scenario": "healthy_warning_control",
+      "exit_code": 130,
+      "expected_exit_under_documented_interrupt_policy": 130,
+      "stdout": "",
+      "stderr": "Warning: Interrupted by Ctrl+C before quiz finalization.\n",
+      "bootstrap": "import os, runpy, sys\nfrom pathlib import Path\nimport utils.cli as cli\nimport utils.terminal as terminal\n\ndef interrupt_home() -> Path:\n    \"\"\"Inject the same pre-quiz interrupt boundary already tested by the suite.\"\"\"\n    raise KeyboardInterrupt\ncli.default_history_path = interrupt_home\n\nsys.argv = ['main.py', '--file', 'data/glossary.json']\nrunpy.run_path('main.py', run_name='__main__')\n",
+      "physical_ctrl_c_verified": false
+    },
+    {
+      "scenario": "failed_warning_restored_for_diagnostics",
+      "exit_code": 1,
+      "expected_exit_under_documented_interrupt_policy": 130,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 221, in main\n    paths = _prepare_paths(options)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 96, in _prepare_paths\n    history = default_history_path()\n  File \"<string>\", line 8, in interrupt_home\n    raise KeyboardInterrupt\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 25, in _write\n    print(message, file=stream, flush=True)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 22] Invalid argument\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 28, in <module>\n    runpy.run_path('main.py', run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"main.py\", line 6, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 234, in main\n    terminal.warn(\"Interrupted by Ctrl+C before quiz finalization.\")\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 20, in warning_into_closed_pipe\n    original_warning(message)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 57, in warn\n    _write(f\"Warning: {message}\", error_stream=True)\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 35, in _write\n    raise TerminalOutputError(\n        f\"Could not write terminal output: {failure}\"\n    ) from failure\nutils.terminal.TerminalOutputError: Could not write terminal output: [Errno 22] Invalid argument\n",
+      "bootstrap": "import os, runpy, sys\nfrom pathlib import Path\nimport utils.cli as cli\nimport utils.terminal as terminal\n\ndef interrupt_home() -> Path:\n    \"\"\"Inject the same pre-quiz interrupt boundary already tested by the suite.\"\"\"\n    raise KeyboardInterrupt\ncli.default_history_path = interrupt_home\n\noriginal_warning = terminal.warn\ndef warning_into_closed_pipe(message: str) -> None:\n    \"\"\"Exercise the real warning printer against a closed native pipe.\"\"\"\n    previous = sys.stderr\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    stream = os.fdopen(write_fd, 'w', encoding='utf-8')\n    sys.stderr = stream\n    try:\n        original_warning(message)\n    finally:\n        if True:\n            sys.stderr = previous\n            stream.close()\nterminal.warn = warning_into_closed_pipe\n\nsys.argv = ['main.py', '--file', 'data/glossary.json']\nrunpy.run_path('main.py', run_name='__main__')\n",
+      "physical_ctrl_c_verified": false
+    },
+    {
+      "scenario": "failed_warning_permanent_pipe",
+      "exit_code": 1,
+      "expected_exit_under_documented_interrupt_policy": 130,
+      "stdout": "",
+      "stderr": "",
+      "bootstrap": "import os, runpy, sys\nfrom pathlib import Path\nimport utils.cli as cli\nimport utils.terminal as terminal\n\ndef interrupt_home() -> Path:\n    \"\"\"Inject the same pre-quiz interrupt boundary already tested by the suite.\"\"\"\n    raise KeyboardInterrupt\ncli.default_history_path = interrupt_home\n\noriginal_warning = terminal.warn\ndef warning_into_closed_pipe(message: str) -> None:\n    \"\"\"Exercise the real warning printer against a closed native pipe.\"\"\"\n    previous = sys.stderr\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    stream = os.fdopen(write_fd, 'w', encoding='utf-8')\n    sys.stderr = stream\n    try:\n        original_warning(message)\n    finally:\n        if False:\n            sys.stderr = previous\n            stream.close()\nterminal.warn = warning_into_closed_pipe\n\nsys.argv = ['main.py', '--file', 'data/glossary.json']\nrunpy.run_path('main.py', run_name='__main__')\n",
+      "physical_ctrl_c_verified": false
+    }
+  ],
+  "confirmed": "Expected TerminalOutputError raised inside main KeyboardInterrupt handler escapes sibling except; status 130 is replaced by 1.",
+  "proposed_fix": "Catch TerminalOutputError narrowly around the warning inside the top-level KeyboardInterrupt handler and return 130 regardless of warning success; keep programming errors visible.",
+  "fix_implemented": false,
+  "runtime": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.venv\\Scripts\\python.exe"
+}

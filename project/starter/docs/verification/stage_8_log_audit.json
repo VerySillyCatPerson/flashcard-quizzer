@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-18",
+  "basis": "Visible user requests/replies compared with grouped log and retained evidence; no claim of independent human verification.",
+  "stage_entry_count": 8,
+  "raw_chat_turn_count": "Not inferred from grouped entries",
+  "acceptance_provenance": {
+    "1": "Explicit final acceptance of failure/status/zero-answer rules and path/saving refinements; Stage 2 authorized.",
+    "2": "Explicit acceptance; zero-statement baseline excluded as submission evidence; 3.10 retained.",
+    "3": "Conditional acceptance after serialization/decoder/normalization evidence passed; later confirmed explanation resolved concerns.",
+    "4": "Conditional acceptance after three requested existing state/snapshot tests passed.",
+    "5": "Conditional acceptance after four existing save-retry cases passed; continuation alone did not count.",
+    "6": "Explicit acceptance based on reported export-refinement tests; physical Ctrl+C remains unverified.",
+    "7": "Explicit acceptance based on reported regression evidence and explained limitations; no independent inspection inferred.",
+    "8": "Review pending; actual personal reflections, self-ratings and name received before drafting those sections."
+  },
+  "historical_evidence_references_checked": [
+    "stage_2_baseline.json",
+    "stage_2_followup.json",
+    "stage_3_checks.json",
+    "stage_3_coverage.json",
+    "stage_3_examples.json",
+    "stage_3_regression_before.json",
+    "stage_3_review_checks.json",
+    "stage_4_checks.json",
+    "stage_4_coverage.json",
+    "stage_4_demo.json",
+    "stage_4_review_checks.json",
+    "stage_5_demo.json",
+    "stage_5_initial_checks.json",
+    "stage_5_review_checks.json",
+    "stage_6_checks.json",
+    "stage_6_commands.json",
+    "stage_6_export_review_checks.json",
+    "stage_6_export_review_commands.json",
+    "stage_6_export_review_coverage.json",
+    "stage_6_initial_checks.json",
+    "stage_7_reproductions.json",
+    "stage_8_checks.json"
+  ],
+  "missing_evidence_references": [],
+  "corrections": [
+    "Removed the explicitly fictional starter example and two empty entry placeholders.",
+    "Corrected historical combined coverage labels without changing raw results.",
+    "Recorded actual Stage 7 acceptance in its existing entry.",
+    "Recorded student reflections, name and four 4/5 ratings only after their actual replies.",
+    "Left untracked AI-authorship counts and personal rankings uninvented."
+  ],
+  "retained_failure_history": [
+    "Windows checkout/network issues and sparse checkout recovery",
+    "Empty Stage 2 tests and zero-statement coverage",
+    "Oversized integer decoder regression and narrow fix",
+    "Stage 5 serialization mock scope, typing and lint corrections",
+    "Stage 6 lint and export policy refinements",
+    "Stage 7 regression bootstrap delimiter correction",
+    "F1/F2 failing regressions and shutdown status-120 correction"
+  ],
+  "outstanding": [
+    "Full classroom rubric",
+    "Physical Ctrl+C",
+    "Python 3.10 runtime",
+    "Actual symlink verification",
+    "Stage 9 clean-environment reproduction"
+  ],
+  "physical_ctrl_c_verified": false,
+  "stage_8_accepted": false
+}

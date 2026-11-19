@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-18",
+  "runtime": "CPython 3.13.17",
+  "kind": "scripted real temporary-file demonstration, not user answers",
+  "sessions": [
+    {
+      "session": 1,
+      "asked_order": [
+        "API",
+        "CPU",
+        "RAM"
+      ],
+      "scores_after": {
+        "API": 1,
+        "CPU": 1,
+        "RAM": 0
+      },
+      "next_adaptive_order": [
+        "API",
+        "CPU",
+        "RAM"
+      ],
+      "persisted_document": {
+        "policy": "error-balance-v1",
+        "scores": {
+          "card-v1:73a3291e20aec03d1209a628b2c93dc1229af29c0b0e8b0c7217ff587a6be975": 1,
+          "card-v1:9b3645233510f60f35e042d54fb68915e3f84fa417a1a0a334bb5365b38fa3fe": 0,
+          "card-v1:b0b75fb84db99a3f770f8be1b91ef57196820975795b8ccc5d7293645b44f37e": 1
+        },
+        "version": 1
+      }
+    },
+    {
+      "session": 2,
+      "asked_order": [
+        "API",
+        "CPU",
+        "RAM"
+      ],
+      "scores_after": {
+        "API": 0,
+        "CPU": 2,
+        "RAM": 0
+      },
+      "next_adaptive_order": [
+        "CPU",
+        "API",
+        "RAM"
+      ],
+      "persisted_document": {
+        "policy": "error-balance-v1",
+        "scores": {
+          "card-v1:73a3291e20aec03d1209a628b2c93dc1229af29c0b0e8b0c7217ff587a6be975": 0,
+          "card-v1:9b3645233510f60f35e042d54fb68915e3f84fa417a1a0a334bb5365b38fa3fe": 0,
+          "card-v1:b0b75fb84db99a3f770f8be1b91ef57196820975795b8ccc5d7293645b44f37e": 2
+        },
+        "version": 1
+      }
+    }
+  ],
+  "shared_deck": {
+    "same_cpu_identity": true,
+    "shared_cpu_score": 2
+  },
+  "corrupt_history": {
+    "load_error_type": "HistoryLoadError",
+    "scores": {},
+    "saving_disabled": true,
+    "preserved_bytes": true,
+    "adaptive_fallback_order": [
+      "API",
+      "CPU",
+      "RAM"
+    ]
+  },
+  "failed_save": {
+    "error_type": "HistorySaveError",
+    "previous_valid_bytes_preserved": true,
+    "memory_scores_preserved": true,
+    "temporary_file_removed": true,
+    "can_retry": true
+  }
+}

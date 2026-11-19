@@ -1,5 +1,6 @@
-"""Entry point for the Flashcard Quizzer CLI.
+"""Thin entry point for the Flashcard Quizzer CLI."""
 
-This file is intentionally empty. Direct your AI agent to build the
-application here, following the project Instructions in the classroom.
-"""
+from utils.cli import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())

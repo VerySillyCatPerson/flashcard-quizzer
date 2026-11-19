@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-18",
+  "physical_ctrl_c_verified": false,
+  "focused_checks": {
+    "chunk_id": "1e4103",
+    "wall_time_seconds": 1.5472601,
+    "exit_code": 0,
+    "original_token_count": 376,
+    "output": "............                                                             [100%]\r\n=================================== PASSES ====================================\r\n=========================== short test summary info ===========================\r\nPASSED tests/test_finalization.py::test_between_phase_interrupt_continues_pending_work_once[interrupt_history_guard]\r\nPASSED tests/test_finalization.py::test_between_phase_interrupt_continues_pending_work_once[interrupt_after_history_commit]\r\nPASSED tests/test_finalization.py::test_summary_output_failure_keeps_writes_and_exit_precedence[False-False]\r\nPASSED tests/test_finalization.py::test_summary_output_failure_keeps_writes_and_exit_precedence[False-True]\r\nPASSED tests/test_finalization.py::test_summary_output_failure_keeps_writes_and_exit_precedence[True-False]\r\nPASSED tests/test_finalization.py::test_summary_output_failure_keeps_writes_and_exit_precedence[True-True]\r\nPASSED tests/test_finalization.py::test_uncertain_history_write_is_not_retried_and_export_continues[False]\r\nPASSED tests/test_finalization.py::test_uncertain_history_write_is_not_retried_and_export_continues[True]\r\nPASSED tests/test_finalization.py::test_feedback_output_error_saves_the_completed_answer\r\nPASSED tests/test_terminal.py::test_string_stream_configuration_and_control_display\r\nPASSED tests/test_terminal.py::test_partial_summary_labels_duplicate_fronts_by_position\r\nPASSED tests/test_terminal.py::test_summary_programming_error_is_not_disguised\r\n12 passed in 1.19s\r\n"
+  },
+  "formatting": {
+    "chunk_id": "890c3f",
+    "wall_time_seconds": 1.3862217000000001,
+    "exit_code": 0,
+    "original_token_count": 20,
+    "output": "Skipped 4 files\r\nAll done! \\u2728 \\U0001f370 \\u2728\r\n24 files left unchanged.\r\n"
+  },
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest -rs --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "chunk_id": "eaefdc",
+      "wall_time_seconds": 10.0028562,
+      "original_token_count": 86,
+      "output": "============================= test session starts =============================\r\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\r\nrootdir: C:\\Projects\\flashcard\\project\\starter\r\nconfigfile: pyproject.toml\r\ntestpaths: tests\r\nplugins: platformdirs-4.14.7, cov-7.1.0\r\ncollected 272 items\r\n\r\ntests\\test_cli.py ....................................s...............   [ 19%]\r\ntests\\test_data_loader.py .............................................. [ 36%]\r\n..........................                                               [ 45%]\r\ntests\\test_engine.py ............................                        [ 55%]\r\ntests\\test_finalization.py .........                                     [ 59%]\r\ntests\\test_history.py .................................................. [ 77%]\r\n........                                                                 [ 80%]\r\ntests\\test_models.py ................                                    [ 86%]\r\ntests\\test_paths.py .......                                              [ 88%]\r\ntests\\test_results_export.py .......                                     [ 91%]\r\ntests\\test_strategies.py ....................                            [ 98%]\r\ntests\\test_terminal.py ...                                               [100%]\r\n\r\n=============================== tests coverage ================================\r\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\r\n\r\nName                      Stmts   Miss Branch BrPart   Cover   Missing\r\n----------------------------------------------------------------------\r\nmain.py                       3      0      2      0 100.00%\r\nutils\\__init__.py             0      0      0      0 100.00%\r\nutils\\cli.py                141      1     28      2  98.22%   145->169, 182->122, 237\r\nutils\\data_loader.py         78      0     24      0 100.00%\r\nutils\\engine.py              31      0      8      0 100.00%\r\nutils\\history.py            126      0     30      0 100.00%\r\nutils\\models.py              44      0      2      0 100.00%\r\nutils\\paths.py               37      0      8      0 100.00%\r\nutils\\results_export.py      50      6      6      1  87.50%   59-60, 91-92, 121->126, 124-125\r\nutils\\strategies.py          20      0      0      0 100.00%\r\nutils\\terminal.py            69      2     16      1  96.47%   27->35, 33-34\r\n----------------------------------------------------------------------\r\nTOTAL                       599      9    124      4  98.20%\r\nCoverage HTML written to dir htmlcov\r\nCoverage JSON written to file coverage.json\r\nRequired test coverage of 81.0% reached. Total coverage: 98.20%\r\n=========================== short test summary info ===========================\r\nSKIPPED [1] tests\\test_cli.py:436: symbolic links unavailable: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-61\\\\test_existing_file_alias_confl1\\\\deck.json' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-61\\\\test_existing_file_alias_confl1\\\\alias.json'\r\n======================= 271 passed, 1 skipped in 20.80s =======================\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "chunk_id": "c8e29a",
+      "wall_time_seconds": 1.8116778999999998,
+      "exit_code": 0,
+      "original_token_count": 18,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n24 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "chunk_id": "e1d806",
+      "wall_time_seconds": 0.7039021,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "Skipped 4 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "chunk_id": "e6bb08",
+      "wall_time_seconds": 1.5648119,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy",
+      "chunk_id": "82739b",
+      "wall_time_seconds": 0.6569054,
+      "exit_code": 0,
+      "original_token_count": 12,
+      "output": "Success: no issues found in 24 source files\r\n"
+    },
+    {
+      "name": "python_3_10_grammar",
+      "command": "@'\nimport ast\nfrom pathlib import Path\npaths = [Path('main.py'), *Path('utils').glob('*.py'), *Path('tests').glob('*.py')]\nfor path in paths:\n    ast.parse(path.read_text(encoding='utf-8'), filename=str(path), feature_version=(3, 10))\nprint(f'Python 3.10 grammar: {len(paths)} files passed; runtime remains CPython 3.13.17.')\n'@ | & .\\.venv\\Scripts\\python.exe -",
+      "chunk_id": "9bac63",
+      "wall_time_seconds": 0.1796291,
+      "exit_code": 0,
+      "original_token_count": 18,
+      "output": "Python 3.10 grammar: 24 files passed; runtime remains CPython 3.13.17.\r\n"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "313": {
+    "runs": [
+      {
+        "scenario": "help",
+        "command": [
+          "python",
+          "main.py",
+          "--help"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\n               [--overwrite]\n\nQuiz JSON flashcards in sequential, random, or adaptive order.\n\noptions:\n  -h, --help            show this help message and exit\n  -f, --file FILE       UTF-8 JSON deck\n  -m, --mode {sequential,random,adaptive}\n                        quiz order (default: sequential)\n  --history HISTORY     history file (default:\n                        ~/.flashcard_quizzer/history.json)\n  --seed SEED           reproducible seed, only with --mode random\n  --export EXPORT       optional JSON metadata/statistics/misses file (refuses\n                        existing files)\n  --overwrite           atomically replace an existing --export file; history\n                        is unaffected\n\nHistory saves at session end or orderly interruption. Forced termination may\nlose updates; concurrent sessions are not merged.\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_sequential",
+        "command": [
+          "python",
+          "main.py",
+          "--mode",
+          "sequential",
+          "--file",
+          "data/glossary.json"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/10] API\nAnswer: Correct\n\n[2/10] CDN\nAnswer: Correct\n\n[3/10] CPU\nAnswer: Correct\n\n[4/10] DNS\nAnswer: Correct\n\n[5/10] HTTP\nAnswer: Correct\n\n[6/10] IP\nAnswer: Correct\n\n[7/10] RAM\nAnswer: Correct\n\n[8/10] SSH\nAnswer: Correct\n\n[9/10] TLS\nAnswer: Correct\n\n[10/10] VPN\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 10      |\n| Total questions | 10      |\n| Correct         | 10      |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_adaptive",
+        "command": [
+          "python",
+          "main.py",
+          "-m",
+          "adaptive",
+          "-f",
+          "data/python_basics.json"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/8] Which keyword defines a function?\nAnswer: Correct\n\n[2/8] Which built-in function returns the length of a list?\nAnswer: Correct\n\n[3/8] Which keyword starts a loop over the items of a sequence?\nAnswer: Correct\n\n[4/8] What is the boolean type called?\nAnswer: Correct\n\n[5/8] Which keyword handles an exception raised in a try block?\nAnswer: Correct\n\n[6/8] Which built-in function converts the string \"42\" to an integer?\nAnswer: Correct\n\n[7/8] Which mutable built-in type stores key-value pairs?\nAnswer: Correct\n\n[8/8] Which keyword imports a module?\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 8       |\n| Total questions | 8       |\n| Correct         | 8       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_random_export",
+        "command": [
+          "python",
+          "main.py",
+          "-m",
+          "random",
+          "-f",
+          "data/glossary.json",
+          "--seed",
+          "23",
+          "--history",
+          "results/history.json",
+          "--export",
+          "results/session.json"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/10] SSH\nAnswer: Incorrect. Expected: Secure Shell\n\n[2/10] TLS\nAnswer: Incorrect. Expected: Transport Layer Security\n\n[3/10] IP\nAnswer: Incorrect. Expected: Internet Protocol\n\n[4/10] RAM\nAnswer: Incorrect. Expected: Random Access Memory\n\n[5/10] DNS\nAnswer: Incorrect. Expected: Domain Name System\n\n[6/10] CPU\nAnswer: Incorrect. Expected: Central Processing Unit\n\n[7/10] VPN\nAnswer: Incorrect. Expected: Virtual Private Network\n\n[8/10] API\nAnswer: Incorrect. Expected: Application Programming Interface\n\n[9/10] CDN\nAnswer: Incorrect. Expected: Content Delivery Network\n\n[10/10] HTTP\nAnswer: Incorrect. Expected: Hypertext Transfer Protocol\n\nCompleted session (completed)\n+-----------------+---------------------------------------------------------------------------------+\n| Deck size       | 10                                                                              |\n| Total questions | 10                                                                              |\n| Correct         | 0                                                                               |\n| Accuracy        | 0.00%                                                                           |\n| Missed terms    | #8 SSH; #9 TLS; #6 IP; #7 RAM; #4 DNS; #3 CPU; #10 VPN; #1 API; #2 CDN; #5 HTTP |\n+-----------------+---------------------------------------------------------------------------------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_overwrite",
+        "command": [
+          "python",
+          "main.py",
+          "-f",
+          "data/glossary.json",
+          "--export",
+          "results/session.json",
+          "--overwrite"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/10] API\nAnswer: Correct\n\n[2/10] CDN\nAnswer: Correct\n\n[3/10] CPU\nAnswer: Correct\n\n[4/10] DNS\nAnswer: Correct\n\n[5/10] HTTP\nAnswer: Correct\n\n[6/10] IP\nAnswer: Correct\n\n[7/10] RAM\nAnswer: Correct\n\n[8/10] SSH\nAnswer: Correct\n\n[9/10] TLS\nAnswer: Correct\n\n[10/10] VPN\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 10      |\n| Total questions | 10      |\n| Correct         | 10      |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      }
+    ],
+    "final_export": {
+      "version": 1,
+      "mode": "sequential",
+      "seed": null,
+      "finish_reason": "completed",
+      "complete": true,
+      "deck_size": 10,
+      "answered_count": 10,
+      "correct_count": 10,
+      "accuracy_percent": 100.0,
+      "missed": []
+    },
+    "isolated_default_home": true,
+    "pip_freeze_exit": 0,
+    "pip_freeze": "ast_serialize==0.13.1\nblack==26.10.1\nclick==8.5.1\ncolorama==0.4.6\ncoverage==7.16.2\nflake8==7.4.1\niniconfig==2.3.1\nisort==9.0.2\nlibrt==0.16.0\nmccabe==0.7.0\nmypy==2.4.1\nmypy_extensions==1.2.0\npackaging==26.3\npathspec==1.1.1\nplatformdirs==4.14.7\npluggy==1.7.0\npycodestyle==2.15.0\npyflakes==4.0.3\nPygments==2.21.0\npytest==9.2.0\npytest-cov==7.1.0\npytokens==0.4.1\ntyping_extensions==4.16.0\n"
+  },
+  "310": {
+    "runs": [
+      {
+        "scenario": "help",
+        "command": [
+          "python",
+          "main.py",
+          "--help"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\n               [--overwrite]\n\nQuiz JSON flashcards in sequential, random, or adaptive order.\n\noptions:\n  -h, --help            show this help message and exit\n  -f FILE, --file FILE  UTF-8 JSON deck\n  -m {sequential,random,adaptive}, --mode {sequential,random,adaptive}\n                        quiz order (default: sequential)\n  --history HISTORY     history file (default:\n                        ~/.flashcard_quizzer/history.json)\n  --seed SEED           reproducible seed, only with --mode random\n  --export EXPORT       optional JSON metadata/statistics/misses file (refuses\n                        existing files)\n  --overwrite           atomically replace an existing --export file; history\n                        is unaffected\n\nHistory saves at session end or orderly interruption. Forced termination may\nlose updates; concurrent sessions are not merged.\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_sequential",
+        "command": [
+          "python",
+          "main.py",
+          "--mode",
+          "sequential",
+          "--file",
+          "data/glossary.json"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/10] API\nAnswer: Correct\n\n[2/10] CDN\nAnswer: Correct\n\n[3/10] CPU\nAnswer: Correct\n\n[4/10] DNS\nAnswer: Correct\n\n[5/10] HTTP\nAnswer: Correct\n\n[6/10] IP\nAnswer: Correct\n\n[7/10] RAM\nAnswer: Correct\n\n[8/10] SSH\nAnswer: Correct\n\n[9/10] TLS\nAnswer: Correct\n\n[10/10] VPN\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 10      |\n| Total questions | 10      |\n| Correct         | 10      |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_adaptive",
+        "command": [
+          "python",
+          "main.py",
+          "-m",
+          "adaptive",
+          "-f",
+          "data/python_basics.json"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/8] Which keyword defines a function?\nAnswer: Correct\n\n[2/8] Which built-in function returns the length of a list?\nAnswer: Correct\n\n[3/8] Which keyword starts a loop over the items of a sequence?\nAnswer: Correct\n\n[4/8] What is the boolean type called?\nAnswer: Correct\n\n[5/8] Which keyword handles an exception raised in a try block?\nAnswer: Correct\n\n[6/8] Which built-in function converts the string \"42\" to an integer?\nAnswer: Correct\n\n[7/8] Which mutable built-in type stores key-value pairs?\nAnswer: Correct\n\n[8/8] Which keyword imports a module?\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 8       |\n| Total questions | 8       |\n| Correct         | 8       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_random_export",
+        "command": [
+          "python",
+          "main.py",
+          "-m",
+          "random",
+          "-f",
+          "data/glossary.json",
+          "--seed",
+          "23",
+          "--history",
+          "results/history.json",
+          "--export",
+          "results/session.json"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/10] SSH\nAnswer: Incorrect. Expected: Secure Shell\n\n[2/10] TLS\nAnswer: Incorrect. Expected: Transport Layer Security\n\n[3/10] IP\nAnswer: Incorrect. Expected: Internet Protocol\n\n[4/10] RAM\nAnswer: Incorrect. Expected: Random Access Memory\n\n[5/10] DNS\nAnswer: Incorrect. Expected: Domain Name System\n\n[6/10] CPU\nAnswer: Incorrect. Expected: Central Processing Unit\n\n[7/10] VPN\nAnswer: Incorrect. Expected: Virtual Private Network\n\n[8/10] API\nAnswer: Incorrect. Expected: Application Programming Interface\n\n[9/10] CDN\nAnswer: Incorrect. Expected: Content Delivery Network\n\n[10/10] HTTP\nAnswer: Incorrect. Expected: Hypertext Transfer Protocol\n\nCompleted session (completed)\n+-----------------+---------------------------------------------------------------------------------+\n| Deck size       | 10                                                                              |\n| Total questions | 10                                                                              |\n| Correct         | 0                                                                               |\n| Accuracy        | 0.00%                                                                           |\n| Missed terms    | #8 SSH; #9 TLS; #6 IP; #7 RAM; #4 DNS; #3 CPU; #10 VPN; #1 API; #2 CDN; #5 HTTP |\n+-----------------+---------------------------------------------------------------------------------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      },
+      {
+        "scenario": "documented_overwrite",
+        "command": [
+          "python",
+          "main.py",
+          "-f",
+          "data/glossary.json",
+          "--export",
+          "results/session.json",
+          "--overwrite"
+        ],
+        "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "exit_code": 0,
+        "stdout": "\n[1/10] API\nAnswer: Correct\n\n[2/10] CDN\nAnswer: Correct\n\n[3/10] CPU\nAnswer: Correct\n\n[4/10] DNS\nAnswer: Correct\n\n[5/10] HTTP\nAnswer: Correct\n\n[6/10] IP\nAnswer: Correct\n\n[7/10] RAM\nAnswer: Correct\n\n[8/10] SSH\nAnswer: Correct\n\n[9/10] TLS\nAnswer: Correct\n\n[10/10] VPN\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 10      |\n| Total questions | 10      |\n| Correct         | 10      |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+        "stderr": "",
+        "input_source": "Scripted sample deck backs; not student answers or personal state"
+      }
+    ],
+    "final_export": {
+      "version": 1,
+      "mode": "sequential",
+      "seed": null,
+      "finish_reason": "completed",
+      "complete": true,
+      "deck_size": 10,
+      "answered_count": 10,
+      "correct_count": 10,
+      "accuracy_percent": 100.0,
+      "missed": []
+    },
+    "isolated_default_home": true,
+    "pip_freeze_exit": 0,
+    "pip_freeze": "ast_serialize==0.13.1\nblack==26.10.1\nclick==8.5.1\ncolorama==0.4.6\ncoverage==7.16.2\nexceptiongroup==1.3.1\nflake8==7.4.1\niniconfig==2.3.1\nisort==9.0.2\nlibrt==0.16.0\nmccabe==0.7.0\nmypy==2.4.1\nmypy_extensions==1.2.0\npackaging==26.3\npathspec==1.1.1\nplatformdirs==4.12.4\npluggy==1.7.0\npycodestyle==2.15.0\npyflakes==4.0.3\nPygments==2.21.0\npytest==9.2.0\npytest-cov==7.1.0\npytokens==0.4.1\ntomli==2.5.0\ntyping_extensions==4.16.0\n"
+  }
+}

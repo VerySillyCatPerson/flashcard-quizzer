@@ -1,0 +1,14 @@
+{
+  "physical_ctrl_c_verified": false,
+  "symbolic_link": {
+    "created": false,
+    "verified": false,
+    "exception_type": "OSError",
+    "winerror": 1314,
+    "detail": "[WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-stage9-alias-iq1wn0u1\\\\deck.json' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-stage9-alias-iq1wn0u1\\\\symbolic.json'"
+  },
+  "hard_link": {
+    "created": true,
+    "samefile": true
+  }
+}

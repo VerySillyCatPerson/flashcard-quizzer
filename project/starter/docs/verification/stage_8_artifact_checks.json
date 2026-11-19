@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-18",
+  "initial_report_validation": {
+    "exit_code": 1,
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 27, in <module>\nAssertionError\n",
+    "cause": "PowerShell ASCII stdin changed a literal en dash in the helper to question mark; the existing UTF-8 report was correct."
+  },
+  "transport_diagnostic": {
+    "exit_code": 0,
+    "observed_literal_codepoint": 63,
+    "escaped_unicode_footer_checks": [
+      true,
+      true
+    ],
+    "four_student_supplied_ratings_present": true
+  },
+  "corrected_report_validation": {
+    "chunk_id": "3bf366",
+    "wall_time_seconds": 0.080436,
+    "exit_code": 0,
+    "original_token_count": 64,
+    "output": "Report: 1223 rendered words / 1270 raw tokens; required headings match; three examples; name/ratings verified; 23 local links valid.\r\nManifest: 31 source/test/configuration/template/sample files unchanged; all 11 production modules included in coverage.\r\n"
+  },
+  "git_diff_check": {
+    "chunk_id": "9e0ef2",
+    "wall_time_seconds": 0.0000132,
+    "exit_code": 0,
+    "original_token_count": 30,
+    "output": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "application_tests_unchanged": true,
+  "quality_configuration_unchanged": true,
+  "physical_ctrl_c_verified": false,
+  "python_3_10_runtime_verified": false,
+  "symlink_verified": false,
+  "full_rubric_available": false,
+  "clean_environment_reproduction_performed": false,
+  "stage_8_review_pending": true
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "example": "matching fronts with different backs",
+    "cards": [
+      {
+        "front": "bank",
+        "back": "financial institution"
+      },
+      {
+        "front": "BANK",
+        "back": "river edge"
+      }
+    ],
+    "distinct_ids": 2
+  },
+  {
+    "example": "normalized duplicate pair",
+    "error_type": "FlashcardLoadError",
+    "detail": "Cards 1 and 2 have identical normalized (front, back) content."
+  },
+  {
+    "example": "blank answer in deck",
+    "error_type": "FlashcardLoadError",
+    "detail": "Card 1: 'back' must be a non-empty string."
+  }
+]

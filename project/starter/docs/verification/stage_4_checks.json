@@ -1,0 +1,44 @@
+{
+  "stage": 4,
+  "date": "2026-11-18",
+  "runtime": "Windows CPython 3.13.17",
+  "compatibility": "Mypy targets Python 3.10; all 12 source/test files parsed with Python 3.10 grammar. Python 3.10 runtime not executed.",
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "exit_code": 0,
+      "output": "============================= test session starts =============================\r\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\r\nrootdir: C:\\Projects\\flashcard\\project\\starter\r\nconfigfile: pyproject.toml\r\ntestpaths: tests\r\nplugins: platformdirs-4.14.7, cov-7.1.0\r\ncollected 131 items\r\n\r\ntests\\test_data_loader.py .............................................. [ 35%]\r\n..........................                                               [ 54%]\r\ntests\\test_engine.py ............................                        [ 76%]\r\ntests\\test_models.py ................                                    [ 88%]\r\ntests\\test_strategies.py ...............                                 [100%]\r\n\r\n=============================== tests coverage ================================\r\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\r\n\r\nName                   Stmts   Miss Branch BrPart    Cover   Missing\r\n--------------------------------------------------------------------\r\nmain.py                    0      0      0      0  100.00%\r\nutils\\__init__.py          0      0      0      0  100.00%\r\nutils\\data_loader.py      78      0     24      0  100.00%\r\nutils\\engine.py           31      0      8      0  100.00%\r\nutils\\models.py           42      0      2      0  100.00%\r\nutils\\strategies.py       15      0      0      0  100.00%\r\n--------------------------------------------------------------------\r\nTOTAL                    166      0     34      0  100.00%\r\nCoverage HTML written to dir htmlcov\r\nCoverage JSON written to file coverage.json\r\nRequired test coverage of 81.0% reached. Total coverage: 100.00%\r\n============================= 131 passed in 0.81s =============================\r\n"
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "exit_code": 0,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n12 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "exit_code": 0,
+      "output": "Skipped 4 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy .",
+      "exit_code": 0,
+      "output": "Success: no issues found in 12 source files\r\n"
+    },
+    {
+      "name": "python310_syntax",
+      "command": "@'\nimport ast\nfrom pathlib import Path\nfiles = [Path('main.py'), *Path('utils').glob('*.py'), *Path('tests').glob('*.py')]\nfor path in files:\n    ast.parse(path.read_text(encoding='utf-8'), filename=str(path), feature_version=(3, 10))\nprint(f'Python 3.10 grammar accepted for {len(files)} source/test files on CPython 3.13.17. Python 3.10 runtime not tested.')\n'@ | .\\.venv\\Scripts\\python.exe -",
+      "exit_code": 0,
+      "output": "Python 3.10 grammar accepted for 12 source/test files on CPython 3.13.17. Python 3.10 runtime not tested.\r\n"
+    }
+  ]
+}

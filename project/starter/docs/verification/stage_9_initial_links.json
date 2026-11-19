@@ -1,0 +1,252 @@
+{
+  "scope": "All Markdown in copied submission, fenced code examples excluded; local path existence checked, not external URLs or heading-fragment semantics",
+  "links": [
+    {
+      "file": "README.md",
+      "target": "www.item1.com",
+      "exists": false
+    },
+    {
+      "file": "README.md",
+      "target": "www.item2.com",
+      "exists": false
+    },
+    {
+      "file": "README.md",
+      "target": "www.item3.com",
+      "exists": false
+    },
+    {
+      "file": "README.md",
+      "target": "LICENSE.txt",
+      "exists": true
+    },
+    {
+      "file": "project/README.md",
+      "target": "starter/",
+      "exists": true
+    },
+    {
+      "file": "project/README.md",
+      "target": "starter/README.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/environment.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_8_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_8_coverage.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/verification/stage_8_metrics.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/manual_stage_6.ps1",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/stage_8_verification.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/final_report.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/stage_7_fix_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "docs/ai_edit_log.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/README.md",
+      "target": "../../LICENSE.txt",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "stage_8_verification.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "verification/stage_2_baseline.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/environment.md",
+      "target": "verification/stage_2_followup.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "ai_edit_log.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "stage_8_verification.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "report_template.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/final_report.md",
+      "target": "design_patterns.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_3_review.md",
+      "target": "stage_4_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_4_review.md",
+      "target": "stage_5_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_5_review.md",
+      "target": "stage_6_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "stage_7_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_manifest.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_red.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_expanded_red.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_shutdown_probe.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_shutdown_red.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_before_commands.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_fix_review.md",
+      "target": "verification/stage_7_fix_after_commands.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_review.md",
+      "target": "verification/stage_7_reproductions.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_7_review.md",
+      "target": "stage_7_fix_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_checks.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_coverage.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_metrics.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "stage_7_fix_review.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "ai_edit_log.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_log_audit.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "final_report.md",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_report_validation.json",
+      "exists": true
+    },
+    {
+      "file": "project/starter/docs/stage_8_verification.md",
+      "target": "verification/stage_8_manifest.json",
+      "exists": true
+    }
+  ],
+  "broken": [
+    {
+      "file": "README.md",
+      "target": "www.item1.com",
+      "exists": false
+    },
+    {
+      "file": "README.md",
+      "target": "www.item2.com",
+      "exists": false
+    },
+    {
+      "file": "README.md",
+      "target": "www.item3.com",
+      "exists": false
+    }
+  ]
+}

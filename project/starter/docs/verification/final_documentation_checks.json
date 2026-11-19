@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-19",
+  "f3_bootstrap_accepted_on_reported_evidence": true,
+  "rating_values_preserved": [
+    [
+      "Readability",
+      "4/5"
+    ],
+    [
+      "Maintainability",
+      "4/5"
+    ],
+    [
+      "Test Quality",
+      "4/5"
+    ],
+    [
+      "Documentation",
+      "4/5"
+    ]
+  ],
+  "student_reflections_unchanged": true,
+  "authorized_factual_reasons_updated": true,
+  "historical_log_preserved_by_insertion_only": true,
+  "before_log_sha256": "3b87943c6f019568fffe4cfd075813d9fb35314eb004531bcf8bce276b0a5701",
+  "sub1_stale_gap_removed_markdown_and_json": true,
+  "report_rendered_words": 1379,
+  "report_raw_whitespace_tokens": 1426,
+  "count_scope": "Entire report including headings/lists/appendices/footer; no tables; rendered count strips Markdown syntax/link destinations.",
+  "official_template_and_protected_files_match_tested_f3_hashes": true,
+  "relative_file_links_checked": 115,
+  "broken_links": [],
+  "candidate_files": 147,
+  "accessible_report_log_evidence_references": 36,
+  "all_candidate_json_parse": true,
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "full_tests_rerun": false,
+  "runtime_results_reused": "f3_green_310.json and f3_green_313.json",
+  "application_changed": false,
+  "tests_changed": false,
+  "report_wording_approved": false,
+  "physical_ctrl_c_verified": false,
+  "actual_symlink_verified": false,
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "submitted": false
+}

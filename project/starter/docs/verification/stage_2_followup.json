@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-18",
+  "reason": "Exclude extensionless Claude instruction documents from isort; preserve the initial run in stage_2_baseline.json.",
+  "check": {
+    "command": [
+      "python",
+      "-m",
+      "isort",
+      "--check-only",
+      "."
+    ],
+    "exit_code": 0,
+    "stdout": "Skipped 4 files\n",
+    "stderr": ""
+  },
+  "effective_coverage_options": {
+    "run:source": [
+      "."
+    ],
+    "run:omit": [
+      "tests/*",
+      ".venv/*",
+      ".tools/*"
+    ],
+    "run:branch": true,
+    "run:parallel": true,
+    "run:patch": [
+      "subprocess"
+    ],
+    "report:fail_under": 81.0,
+    "report:precision": 2
+  },
+  "bootstrap_archive_sha256": "dce409744b088f94c6e37ba41f8100c384c27e029e843237364c602d30d475e5"
+}

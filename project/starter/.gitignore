@@ -1,16 +1,27 @@
 # Virtual environment
 venv/
 env/
+.venv/
+.tools/
 
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
+.mypy_cache/
+.ruff_cache/
 
 # Testing
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
+coverage.json
+coverage.xml
+
+# Personal quiz state and optional local exports
+.flashcard_quizzer/
+results/
 
 # IDE
 .vscode/

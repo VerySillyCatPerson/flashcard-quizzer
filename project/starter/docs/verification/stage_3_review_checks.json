@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-18",
+  "runtime": "CPython 3.13.17",
+  "serialization": [
+    {
+      "pair": [
+        "ab",
+        "c"
+      ],
+      "serialized": "[\"ab\",\"c\"]",
+      "card_id": "card-v1:825825018f58e795ae2d3d8df6a879567555c77654e9ca3071df2fe127aa9ebd"
+    },
+    {
+      "pair": [
+        "a",
+        "bc"
+      ],
+      "serialized": "[\"a\",\"bc\"]",
+      "card_id": "card-v1:42a6f3f44be0aaf23c936b1547dd5e41d2d25ff25f36a31474eb1851639f6751"
+    }
+  ],
+  "oversized_integer": {
+    "error_type": "FlashcardLoadError",
+    "cause_type": "ValueError",
+    "detail": "Invalid JSON value: Exceeds the limit (4300 digits) for integer string conversion: value has 10000 digits; use sys.set_int_max_str_digits() to increase the limit"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_models.py",
+    "tests/test_data_loader.py::test_oversized_integer_field_is_a_loader_error",
+    "tests/test_data_loader.py::test_unexpected_validation_errors_are_not_disguised",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "...................                                                      [100%]\n19 passed in 0.10s\n",
+  "stderr": ""
+}

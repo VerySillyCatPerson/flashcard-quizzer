@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-19",
+  "phase": "green",
+  "checks": [
+    {
+      "name": "runtime",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import json,sys; print(json.dumps({'version':sys.version,'executable':sys.executable,'prefix':sys.prefix}))"
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "{\"version\": \"3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]\", \"executable\": \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\stage9-clean-313\\\\submission\\\\project\\\\starter\\\\.venv\\\\Scripts\\\\python.exe\", \"prefix\": \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\stage9-clean-313\\\\submission\\\\project\\\\starter\\\\.venv\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.07132810004986823
+    },
+    {
+      "name": "f3_focused",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_finalization.py",
+        "-k",
+        "startup_interrupt",
+        "-vv"
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0 -- C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Projects\\flashcard\\project\\starter\nconfigfile: pyproject.toml\nplugins: platformdirs-4.14.7, cov-7.1.0\ncollecting ... collected 13 items / 9 deselected / 4 selected\n\ntests/test_finalization.py::test_startup_interrupt_retains_130_when_warning_output_fails[healthy] PASSED [ 25%]\ntests/test_finalization.py::test_startup_interrupt_retains_130_when_warning_output_fails[restored_pipe] PASSED [ 50%]\ntests/test_finalization.py::test_startup_interrupt_retains_130_when_warning_output_fails[permanent_pipe] PASSED [ 75%]\ntests/test_finalization.py::test_startup_interrupt_does_not_hide_warning_programming_errors PASSED [100%]\n\n======================= 4 passed, 9 deselected in 0.59s =======================\n",
+      "stderr": "",
+      "elapsed_seconds": 1.0706070000305772
+    },
+    {
+      "name": "pytest_coverage",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-rs",
+        "--cov=.",
+        "--cov-report=term-missing",
+        "--cov-report=html",
+        "--cov-report=json:docs/verification/f3_coverage_313.json"
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\nrootdir: C:\\Projects\\flashcard\\project\\starter\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: platformdirs-4.14.7, cov-7.1.0\ncollected 276 items\n\ntests\\test_cli.py ....................................s...............   [ 18%]\ntests\\test_data_loader.py .............................................. [ 35%]\n..........................                                               [ 44%]\ntests\\test_engine.py ............................                        [ 55%]\ntests\\test_finalization.py .............                                 [ 59%]\ntests\\test_history.py .................................................. [ 77%]\n........                                                                 [ 80%]\ntests\\test_models.py ................                                    [ 86%]\ntests\\test_paths.py .......                                              [ 89%]\ntests\\test_results_export.py .......                                     [ 91%]\ntests\\test_strategies.py ....................                            [ 98%]\ntests\\test_terminal.py ...                                               [100%]\n\n=============================== tests coverage ================================\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\n\nName                      Stmts   Miss Branch BrPart   Cover   Missing\n----------------------------------------------------------------------\nmain.py                       3      0      2      0 100.00%\nutils\\__init__.py             0      0      0      0 100.00%\nutils\\cli.py                144      1     28      2  98.26%   145->169, 182->122, 240\nutils\\data_loader.py         78      0     24      0 100.00%\nutils\\engine.py              31      0      8      0 100.00%\nutils\\history.py            126      0     30      0 100.00%\nutils\\models.py              44      0      2      0 100.00%\nutils\\paths.py               37      0      8      0 100.00%\nutils\\results_export.py      50      6      6      1  87.50%   59-60, 91-92, 121->126, 124-125\nutils\\strategies.py          20      0      0      0 100.00%\nutils\\terminal.py            69      2     16      1  96.47%   27->35, 33-34\n----------------------------------------------------------------------\nTOTAL                       602      9    124      4  98.21%\nCoverage HTML written to dir htmlcov\nCoverage JSON written to file docs/verification/f3_coverage_313.json\nRequired test coverage of 81.0% reached. Total coverage: 98.21%\n=========================== short test summary info ===========================\nSKIPPED [1] tests\\test_cli.py:436: symbolic links unavailable: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-70\\\\test_existing_file_alias_confl1\\\\deck.json' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-70\\\\test_existing_file_alias_confl1\\\\alias.json'\n======================= 275 passed, 1 skipped in 22.99s =======================\n",
+      "stderr": "",
+      "elapsed_seconds": 23.900068600079976
+    },
+    {
+      "name": "black",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "black",
+        "--check",
+        "."
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "All done! \\u2728 \\U0001f370 \\u2728\n24 files would be left unchanged.\n",
+      "elapsed_seconds": 1.7262671999633312
+    },
+    {
+      "name": "isort",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "isort",
+        "--check-only",
+        "."
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "Skipped 4 files\n",
+      "stderr": "",
+      "elapsed_seconds": 0.5933854000177234
+    },
+    {
+      "name": "flake8",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "flake8",
+        "."
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.9675750000169501
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "Success: no issues found in 24 source files\n",
+      "stderr": "",
+      "elapsed_seconds": 2.483787399949506
+    },
+    {
+      "name": "pip_check",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": "",
+      "elapsed_seconds": 0.75227779999841
+    },
+    {
+      "name": "embedded_flake8",
+      "command": [
+        "C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-313\\submission\\project\\starter\\.venv\\Scripts\\python.exe",
+        "-m",
+        "flake8",
+        "--stdin-display-name",
+        "tests/cli_helpers_bootstrap.py",
+        "-"
+      ],
+      "cwd": "C:\\Projects\\flashcard\\project\\starter",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.28072240005712956
+    }
+  ],
+  "physical_ctrl_c_verified": false,
+  "embedded_function_count": 16,
+  "embedded_missing_docstrings": []
+}

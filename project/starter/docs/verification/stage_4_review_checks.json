@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-18",
+  "runtime": "CPython 3.13.17",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_engine.py::test_unanswered_session_has_no_accuracy_or_misses",
+    "tests/test_engine.py::test_answer_after_completion_does_not_change_results",
+    "tests/test_engine.py::test_partial_statistics_and_snapshot_are_stable",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "...                                                                      [100%]\n3 passed in 0.02s\n",
+  "stderr": ""
+}

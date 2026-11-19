@@ -1,0 +1,284 @@
+{
+  "date": "2026-11-18",
+  "scope": "Available original supplied requirements and subsequent agreed behavior; not the unavailable full classroom rubric",
+  "complete_rubric_compliance_claimed": false,
+  "application_changes_made": false,
+  "criteria": [
+    {
+      "criterion": "load_json",
+      "result": "pass",
+      "evidence": [
+        "utils/data_loader.py",
+        "tests/test_data_loader.py"
+      ]
+    },
+    {
+      "criterion": "runtime_validation",
+      "result": "pass",
+      "evidence": [
+        "utils/data_loader.py",
+        "tests/test_data_loader.py"
+      ]
+    },
+    {
+      "criterion": "graceful_file_errors",
+      "result": "pass",
+      "evidence": [
+        "utils/cli.py",
+        "tests/test_cli.py"
+      ]
+    },
+    {
+      "criterion": "prompts_and_answer_input",
+      "result": "pass",
+      "evidence": [
+        "utils/terminal.py",
+        "docs/verification/stage_9_commands.json"
+      ]
+    },
+    {
+      "criterion": "case_insensitive_normalization",
+      "result": "pass",
+      "evidence": [
+        "utils/models.py",
+        "utils/engine.py",
+        "tests/test_models.py",
+        "tests/test_engine.py"
+      ]
+    },
+    {
+      "criterion": "immediate_feedback_and_expected_answer",
+      "result": "pass",
+      "evidence": [
+        "utils/terminal.py",
+        "tests/test_cli.py"
+      ]
+    },
+    {
+      "criterion": "three_finite_modes",
+      "result": "pass",
+      "evidence": [
+        "utils/strategies.py",
+        "utils/engine.py",
+        "tests/test_strategies.py"
+      ]
+    },
+    {
+      "criterion": "summary_zero_partial_complete",
+      "result": "pass",
+      "evidence": [
+        "utils/models.py",
+        "utils/terminal.py",
+        "tests/test_engine.py",
+        "tests/test_cli.py"
+      ]
+    },
+    {
+      "criterion": "python_3_10_minimum_runtime",
+      "result": "verified_windows_3_10_11_only",
+      "evidence": [
+        "docs/verification/stage_9_checks_310.json"
+      ]
+    },
+    {
+      "criterion": "standard_pip_venv_clean_setup",
+      "result": "pass",
+      "evidence": [
+        "README.md",
+        "requirements.txt",
+        "docs/verification/stage_9_setup.json"
+      ]
+    },
+    {
+      "criterion": "modularity_thin_entrypoint",
+      "result": "pass",
+      "evidence": [
+        "main.py",
+        "utils/cli.py",
+        "utils/engine.py"
+      ]
+    },
+    {
+      "criterion": "strategy_pattern",
+      "result": "pass",
+      "evidence": [
+        "utils/strategies.py",
+        "tests/test_strategies.py"
+      ]
+    },
+    {
+      "criterion": "typed_documented_named_functions",
+      "result": "pass",
+      "evidence": [
+        "docs/verification/stage_9_repository_hygiene.json"
+      ]
+    },
+    {
+      "criterion": "pep8_format_type_lint",
+      "result": "pass_both_runtimes",
+      "evidence": [
+        ".flake8",
+        "pyproject.toml",
+        "docs/verification/stage_9_checks_313.json",
+        "docs/verification/stage_9_checks_310.json"
+      ]
+    },
+    {
+      "criterion": "pytest_normal_edge_error",
+      "result": "271_passed_1_symlink_skip_per_runtime",
+      "evidence": [
+        "tests",
+        "docs/verification/stage_9_checks_313.json",
+        "docs/verification/stage_9_checks_310.json"
+      ]
+    },
+    {
+      "criterion": "coverage_all_production_above_80",
+      "result": "pass_combined_98_20_statement_98_50_branch_96_77",
+      "evidence": [
+        "pyproject.toml",
+        "docs/verification/stage_9_metrics.json"
+      ]
+    },
+    {
+      "criterion": "stdlib_runtime_declared_dev_dependencies",
+      "result": "pass",
+      "evidence": [
+        "requirements.txt",
+        "requirements-lock.txt",
+        "docs/verification/stage_9_commands.json"
+      ]
+    },
+    {
+      "criterion": "persistent_error_balance_shared_identity",
+      "result": "pass",
+      "evidence": [
+        "utils/history.py",
+        "utils/models.py",
+        "tests/test_history.py"
+      ]
+    },
+    {
+      "criterion": "seeded_randomness_source_preservation",
+      "result": "pass",
+      "evidence": [
+        "utils/strategies.py",
+        "tests/test_strategies.py"
+      ]
+    },
+    {
+      "criterion": "export_metadata_stats_misses_no_raw_answers",
+      "result": "pass",
+      "evidence": [
+        "utils/results_export.py",
+        "tests/test_results_export.py"
+      ]
+    },
+    {
+      "criterion": "overwrite_refusal_authorized_atomic_replace",
+      "result": "pass",
+      "evidence": [
+        "tests/test_results_export.py",
+        "tests/test_cli.py"
+      ]
+    },
+    {
+      "criterion": "completed_answers_update_every_mode",
+      "result": "pass",
+      "evidence": [
+        "tests/test_cli.py",
+        "tests/test_history.py"
+      ]
+    },
+    {
+      "criterion": "f1_f2_independence_and_uncertain_writes",
+      "result": "pass_tested_scenarios",
+      "evidence": [
+        "tests/test_finalization.py",
+        "docs/verification/stage_7_fix_red.json",
+        "docs/verification/stage_7_fix_shutdown_red.json"
+      ]
+    },
+    {
+      "criterion": "path_conflicts_and_aliases",
+      "result": "pass_resolved_and_hardlink_symlink_unverified",
+      "evidence": [
+        "utils/paths.py",
+        "tests/test_paths.py",
+        "docs/verification/stage_9_alias_followup.json"
+      ]
+    },
+    {
+      "criterion": "required_source_sample_test_files",
+      "result": "pass",
+      "evidence": [
+        "main.py",
+        "utils",
+        "tests",
+        "data/glossary.json",
+        "data/python_basics.json"
+      ]
+    },
+    {
+      "criterion": "readme_reproducible_commands",
+      "result": "pass_existing_blocks_new_physical_check_unverified",
+      "evidence": [
+        "README.md",
+        "docs/verification/stage_9_commands.json",
+        "docs/verification/stage_9_manual_script.json"
+      ]
+    },
+    {
+      "criterion": "five_detailed_actual_ai_examples",
+      "result": "pass_nine_grouped_stage_entries",
+      "evidence": [
+        "docs/ai_edit_log.md"
+      ]
+    },
+    {
+      "criterion": "report_template_length_reflections",
+      "result": "pass_draft_wording_pending",
+      "evidence": [
+        "docs/final_report.md",
+        "docs/report_template.md"
+      ]
+    },
+    {
+      "criterion": "relative_file_links",
+      "result": "partial_three_inherited_root_placeholders",
+      "evidence": [
+        "docs/verification/stage_9_initial_links.json"
+      ]
+    },
+    {
+      "criterion": "credential_artifact_personal_state_exclusion",
+      "result": "pass_current_bounded_scan_optional_ignore_gap",
+      "evidence": [
+        ".gitignore",
+        "docs/verification/stage_9_repository_hygiene.json"
+      ]
+    },
+    {
+      "criterion": "three_additions_generic_crud_rubric",
+      "result": "unverified_full_rubric_missing",
+      "evidence": [
+        "docs/stage_1_plan.md"
+      ]
+    },
+    {
+      "criterion": "full_rubric_compliance",
+      "result": "not_claimed_missing_rubric",
+      "evidence": [
+        "docs/stage_9_audit.md"
+      ]
+    },
+    {
+      "criterion": "physical_ctrl_c",
+      "result": "unverified_manual_only",
+      "evidence": [
+        "docs/manual_stage_6.ps1",
+        "README.md"
+      ]
+    }
+  ]
+}

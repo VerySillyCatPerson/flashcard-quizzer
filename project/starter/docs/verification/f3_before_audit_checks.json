@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-19",
+  "audit_validation_completed": true,
+  "mandatory_results": {
+    "PASS": 34,
+    "PARTIAL": 2,
+    "FAIL": 3,
+    "UNVERIFIED": 0
+  },
+  "mandatory_fully_satisfied": false,
+  "authoritative_rubric_available": true,
+  "report_limit_authoritative": [
+    1000,
+    1500
+  ],
+  "report_rendered_words": 1335,
+  "report_raw_whitespace_tokens": 1382,
+  "word_count_scope": "Entire report including headings, lists, labels, appendices and footer; no report tables exist; none excluded. Rendered count strips syntax/link destinations only.",
+  "template_headings_match": true,
+  "original_template_unchanged": true,
+  "student_reflection_paragraphs_and_four_rating_lines_unchanged": true,
+  "checklist_prompt_count": 99,
+  "checklist_result_counts": {
+    "PASS": 59,
+    "PARTIAL": 24,
+    "N/A": 14,
+    "PENDING": 2
+  },
+  "reviewer": "Codex, actual review on 2026-11-19",
+  "human_all_line_review_claimed": false,
+  "normally_parsed_documented_functions": 208,
+  "executable_bootstrap_functions": 14,
+  "missing_bootstrap_docstrings": [
+    {
+      "name": "controlled_input",
+      "bootstrap_line": 17,
+      "repository_line": 30,
+      "docstring": false
+    },
+    {
+      "name": "fail_history",
+      "bootstrap_line": 29,
+      "repository_line": 42,
+      "docstring": false
+    },
+    {
+      "name": "fail_read",
+      "bootstrap_line": 35,
+      "repository_line": 48,
+      "docstring": false
+    },
+    {
+      "name": "denied_read",
+      "bootstrap_line": 41,
+      "repository_line": 54,
+      "docstring": false
+    },
+    {
+      "name": "denied_identity",
+      "bootstrap_line": 49,
+      "repository_line": 62,
+      "docstring": false
+    },
+    {
+      "name": "denied_home",
+      "bootstrap_line": 53,
+      "repository_line": 66,
+      "docstring": false
+    },
+    {
+      "name": "interrupted_export",
+      "bootstrap_line": 59,
+      "repository_line": 72,
+      "docstring": false
+    },
+    {
+      "name": "interrupted_summary",
+      "bootstrap_line": 63,
+      "repository_line": 76,
+      "docstring": false
+    }
+  ],
+  "embedded_lint_exit_code": 1,
+  "embedded_lint_errors": 8,
+  "startup_interrupt_warning_probe_exits": [
+    130,
+    1,
+    1
+  ],
+  "new_functional_defect_F3_confirmed": true,
+  "new_functional_defect_fixed": false,
+  "source_test_configuration_dependency_files_unchanged": true,
+  "source_hashes_match_both_saved_clean_copies": true,
+  "full_suite_repeated": false,
+  "saved_clean_runtime_results": {
+    "310": "271 passed, 1 skipped",
+    "313": "271 passed, 1 skipped"
+  },
+  "coverage": {
+    "310": {
+      "statements": {
+        "covered": 590,
+        "total": 599,
+        "percent": 98.49749582637729
+      },
+      "branch_outcomes": {
+        "covered": 120,
+        "total": 124,
+        "percent": 96.7741935483871
+      },
+      "combined": {
+        "covered": 710,
+        "total": 723,
+        "percent": 98.20193637621023
+      }
+    },
+    "313": {
+      "statements": {
+        "covered": 590,
+        "total": 599,
+        "percent": 98.49749582637729
+      },
+      "branch_outcomes": {
+        "covered": 120,
+        "total": 124,
+        "percent": 96.7741935483871
+      },
+      "combined": {
+        "covered": 710,
+        "total": 723,
+        "percent": 98.20193637621023
+      }
+    }
+  },
+  "f1_f2_red_green_records_verified": {
+    "original_red": "4 failed, 2 passed",
+    "expanded_red": "5 failed, 5 passed",
+    "shutdown_red": "2 failed, 7 passed",
+    "focused_green": "12 passed"
+  },
+  "candidate_files": 136,
+  "relative_file_links_checked": 102,
+  "broken_relative_file_links": [],
+  "link_scope": "Current eligible Markdown, fenced examples omitted; file targets checked, external URLs/fragment semantics not certified.",
+  "missing_referenced_evidence": [],
+  "forbidden_artifact_paths": [],
+  "credential_filename_candidates": [],
+  "recognizable_secret_findings": [],
+  "secret_scan_is_exhaustive": false,
+  "previous_168_git_ignore_probes_reused_same_rule_hash": true,
+  "physical_ctrl_c_verified": false,
+  "actual_symlink_verified": false,
+  "physical_test_is_explicit_rubric_requirement": false,
+  "symlink_test_is_explicit_rubric_requirement": false,
+  "report_wording_approved": false,
+  "manual_result_received": false,
+  "submission_ready_claimed": false,
+  "application_test_code_modified": false,
+  "optional_features_or_dependencies_added": false,
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "submitted": false,
+  "audit_integrity_execution": {
+    "chunk_id": "d34f5e",
+    "wall_time_seconds": 0.8344652,
+    "exit_code": 0,
+    "original_token_count": 139,
+    "output": "Audit integrity checks passed: 39 source rubric bullets mapped exactly; 34 PASS, 2 PARTIAL, 3 FAIL remain accurately recorded.\r\nReport 1335 words / 1382 raw tokens; template headings and supplied reflection/rating text verified.\r\nInventory 136 files; 102 relative file links resolve; 26 report/log evidence filenames included; no detected credentials or forbidden local artifacts.\r\nValid clean test/coverage evidence reused; new embedded-code lint failure and startup-interruption defect retained; no Python/test changes or submission-readiness claim.\r\n"
+  },
+  "git_diff_check": {
+    "chunk_id": "cbc3d5",
+    "wall_time_seconds": 0.0041826,
+    "exit_code": 0,
+    "original_token_count": 30,
+    "output": "warning: in the working copy of 'project/starter/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "all_candidate_json_files_parse": true,
+  "record_write_correction": "An initial transient result-recording command failed Python parsing before changing files because PowerShell native argument quoting removed JSON quotes; piping the literal script corrected the recording only."
+}

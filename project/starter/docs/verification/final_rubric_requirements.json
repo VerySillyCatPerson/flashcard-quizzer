@@ -1,0 +1,438 @@
+{
+  "date": "2026-11-19",
+  "authority": "docs/authoritative_audit_request.md",
+  "mandatory_bullets": 39,
+  "results": {
+    "PASS": 39,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNVERIFIED": 0
+  },
+  "requirements": [
+    {
+      "id": "CR1",
+      "category": "AI Code Review",
+      "requirement": "Use AI tools to generate code for your application.",
+      "status": "PASS",
+      "evidence": "utils/models.py; utils/cli.py; docs/ai_edit_log.md Stage 3/6/7 implementation records; stage_7_fix_manifest.json original_code and current source.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CR2",
+      "category": "AI Code Review",
+      "requirement": "Review all AI-generated code using the provided checklist.",
+      "status": "PASS",
+      "evidence": "checklist_review_2026-11-19.md maps all 99 initial prompts plus dated approved-fix follow-up; f3_fix_review.md reviews changed catch/fault hooks/assertions; f3_manifest.json retains before/red/after source and hashes.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CR3",
+      "category": "AI Code Review",
+      "requirement": "Document your review process in ai_edit_log.md with specific examples.",
+      "status": "PASS",
+      "evidence": "docs/ai_edit_log.md Stages 1-9 and dated authoritative-rubric append; checklist_review_2026-11-19.md.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CR4",
+      "category": "AI Code Review",
+      "requirement": "Show evidence of modifying or rejecting poor AI suggestions.",
+      "status": "PASS",
+      "evidence": "Log Stage 1 identity/scoring/context, Stage 6 raw-answer/overwrite decisions, Stage 7 F1/F2; stage_7_fix_red.json and stage_7_fix_checks.json.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CQ1",
+      "category": "Code Quality",
+      "requirement": "All code follows PEP 8 style guidelines.",
+      "status": "PASS",
+      "evidence": "f3_green_310.json and f3_green_313.json: file-level Black/isort/flake8 and extracted executable _BOOTSTRAP flake8 all exit 0; no rule changes.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CQ2",
+      "category": "Code Quality",
+      "requirement": "Proper error handling and input validation.",
+      "status": "PASS",
+      "evidence": "utils/cli.py::main narrow TerminalOutputError catch; both f3_red_*.json show two failed/two passed before production edits, both f3_green_*.json show four focused passes; RuntimeError traceback remains visible. Existing validation/finalization tests remain passing.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CQ3",
+      "category": "Code Quality",
+      "requirement": "Code is readable and maintainable.",
+      "status": "PASS",
+      "evidence": "Separate engine/strategies/history/terminal/export/paths; main.py thin guard; checklist review sections 2 and 8; documented phase and stream complexity.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "CQ4",
+      "category": "Code Quality",
+      "requirement": "Functions have appropriate docstrings.",
+      "status": "PASS",
+      "evidence": "All 210 normally parsed functions documented; all 16 executable bootstrap functions documented (embedded_missing_docstrings empty in both f3_green_*.json). Eight original missing docstrings corrected.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "APP1",
+      "category": "Functional Application",
+      "requirement": "Build a working application that extends the starter code.",
+      "status": "PASS",
+      "evidence": "main.py + utils CLI meaningfully extend the starter; both current-runtime full suites report 275 passed/one OS symlink skip, including corrected startup-warning status 130.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "APP2",
+      "category": "Functional Application",
+      "requirement": "Implement at least 3 new features beyond basic CRUD operations.",
+      "status": "PASS",
+      "evidence": "Persistent adaptive learning: history.py/AdaptiveStrategy + test_history_reuse_changes_next_adaptive_order; seeded replay: RandomStrategy + test_seeded_randomness_reproduces_order; JSON session export: results_export.py + actual export/overwrite transcripts.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "APP3",
+      "category": "Functional Application",
+      "requirement": "Application should have clear functionality and purpose.",
+      "status": "PASS",
+      "evidence": "README.md purpose/usage; finite quizzes with immediate feedback and answered-only statistics.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "APP4",
+      "category": "Functional Application",
+      "requirement": "Use AI assistance throughout the development process.",
+      "status": "PASS",
+      "evidence": "ai_edit_log.md planning, setup, implementation, debugging, review, verification and documentation entries; no invented line-by-line authorship metric.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "DP1",
+      "category": "Design Patterns",
+      "requirement": "Implement at least 1 design pattern from the provided guide.",
+      "status": "PASS",
+      "evidence": "docs/design_patterns.md section 1 Strategy Pattern; utils/strategies.py::QuizStrategy, SequentialStrategy, RandomStrategy, AdaptiveStrategy.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "DP2",
+      "category": "Design Patterns",
+      "requirement": "Pattern should serve a real purpose, not be forced.",
+      "status": "PASS",
+      "evidence": "engine.py::QuizSession calls strategy.order once; test_structural_strategy_runs_once_and_order_is_snapshotted proves a new strategy without engine changes.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "DP3",
+      "category": "Design Patterns",
+      "requirement": "Document why you chose the pattern in your final report.",
+      "status": "PASS",
+      "evidence": "final_report.md Software Engineering Practices / Design Patterns Used explicitly names guide section 1 and the goal of changing ordering without rewriting grading/progress.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "UT1",
+      "category": "Unit Testing",
+      "requirement": "Achieve >80% test coverage using pytest.",
+      "status": "PASS",
+      "evidence": "f3_coverage_310.json and f3_coverage_313.json: statements 593/602=98.50%, branches 120/124=96.77%, combined 713/726=98.21%; all 11 production modules including main.py.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "UT2",
+      "category": "Unit Testing",
+      "requirement": "Write tests for both original and AI-generated code.",
+      "status": "PASS",
+      "evidence": "test_existing_sample_decks preserves original array/wrapper contracts; test_importing_entry_point_does_not_start_quiz and generated domain/CLI tests. Original starter had no implemented runtime logic beyond placeholders.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "UT3",
+      "category": "Unit Testing",
+      "requirement": "Include tests for edge cases and error conditions.",
+      "status": "PASS",
+      "evidence": "tests/test_data_loader.py missing/unreadable/malformed/type/blank/duplicate/deep/large cases; test_history.py save/load failures; test_finalization.py F1/F2.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "UT4",
+      "category": "Unit Testing",
+      "requirement": "Use clear test names that describe what is being tested.",
+      "status": "PASS",
+      "evidence": "Examples: test_existing_export_is_refused_without_changing_bytes; test_between_phase_interrupt_continues_pending_work_once; test_real_two_session_round_trip.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "VAL1",
+      "category": "AI-Generated Code Validation",
+      "requirement": "Test all AI-generated code thoroughly.",
+      "status": "PASS",
+      "evidence": "Current full suites each 275 passed/one privilege-dependent symlink skip; four focused F3 regressions pass after genuine red evidence. All production modules measured; manual verification remains separate.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "VAL2",
+      "category": "AI-Generated Code Validation",
+      "requirement": "Document any issues found with AI code in ai_edit_log.md.",
+      "status": "PASS",
+      "evidence": "ai_edit_log.md preserves decoder, F1/F2/shutdown, initial eight-docstring/eight-spacing and F3 findings, actual failures, student approval, correction and dual-runtime verification.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "VAL3",
+      "category": "AI-Generated Code Validation",
+      "requirement": "Show evidence of fixing or rejecting problematic AI suggestions.",
+      "status": "PASS",
+      "evidence": "stage_3_regression_before.json and genuine Stage 7 regression chain retained; f3_red_310.json/f3_red_313.json precede production fix; f3_green_310.json/f3_green_313.json show corrected behavior.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "LOG1",
+      "category": "AI Interaction Log",
+      "requirement": "Complete detailed ai_edit_log.md with specific examples of AI usage.",
+      "status": "PASS",
+      "evidence": "Nine detailed stage entries with grouped actual follow-ups; fictional starter example removed, historical facts preserved.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "LOG2",
+      "category": "AI Interaction Log",
+      "requirement": "Document prompts you used and AI responses you received.",
+      "status": "PASS",
+      "evidence": "Each stage records Prompt/Request, AI Response, changes, reasons and actual outputs; attached original/final audit requests preserved.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "LOG3",
+      "category": "AI Interaction Log",
+      "requirement": "Explain your decision-making process for accepting/rejecting AI suggestions.",
+      "status": "PASS",
+      "evidence": "Explicit User Review sections separate proposed versus accepted identity, scoring, duplicates/context, export and finalization policies.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "LOG4",
+      "category": "AI Interaction Log",
+      "requirement": "Include at least 5 meaningful AI interactions.",
+      "status": "PASS",
+      "evidence": "Five concrete examples detailed in current audit: Stage 1 identity/scoring, Stage 3 narrow decoder fix, Stage 5 retry review, Stage 6 export refinements, Stage 7 F1/F2 correction.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "REP1",
+      "category": "Final Report",
+      "requirement": "Complete the final report using the provided template.",
+      "status": "PASS",
+      "evidence": "final_report.md preserves every major/minor template heading; report_template.md unchanged SHA-256; all report fields filled.",
+      "gap": "Final wording is not approved by the student.",
+      "consequence": "Content/template criterion is met; separate user approval gate remains.",
+      "smallest_correction": "Student final wording review."
+    },
+    {
+      "id": "REP2",
+      "category": "Final Report",
+      "requirement": "Explain how you used AI throughout your development process.",
+      "status": "PASS",
+      "evidence": "Report Executive Summary, AI Collaboration Experience, three actual examples including F1/F2, current checklist attribution.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "REP3",
+      "category": "Final Report",
+      "requirement": "Reflect on what you learned about working with AI tools.",
+      "status": "PASS",
+      "evidence": "Report reflection paragraphs and four rating values match student input; authorized factual self-assessment reasons now reflect completed runtime/reproduction/rubric checks. Original reasons remain in the Stage 8 log.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "REP4",
+      "category": "Final Report",
+      "requirement": "Report should be 1000-1500 words.",
+      "status": "PASS",
+      "evidence": "Approved report 1,381 rendered words / 1,428 raw Markdown whitespace tokens including headings/lists/appendices/footer; original template unchanged; name masked at student request.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "README1",
+      "category": "README Updates",
+      "requirement": "Update README.md with new features and setup instructions.",
+      "status": "PASS",
+      "evidence": "Root/project/application READMEs describe actual features/setup; current README links post-fix evidence and distinguishes historical clean setup from current-source reruns.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "README2",
+      "category": "README Updates",
+      "requirement": "Provide clear usage examples.",
+      "status": "PASS",
+      "evidence": "Application README help/sequential/adaptive/random/export/overwrite examples; stage_9_commands.json ten actual CLI commands exit 0 across both runtimes.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "README3",
+      "category": "README Updates",
+      "requirement": "Document any dependencies or installation requirements.",
+      "status": "PASS",
+      "evidence": "README Setup, requirements.txt pinned dev tools, requirements-lock.txt Windows/3.13 scope, stdlib-only runtime and explicit interpreter/venv instructions.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "SUB1",
+      "category": "Submission Checklist",
+      "requirement": "Complete codebase with all source files, tests, and documentation.",
+      "status": "PASS",
+      "evidence": "Concrete final_submission_inventory.json includes all 11 production/13 test Python files, two sample decks, readmes, guides, report/log and evidence. CQ4 is satisfied by the verified bootstrap docstring corrections.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "SUB2",
+      "category": "Submission Checklist",
+      "requirement": "Completed ai_edit_log.md with at least 5 detailed AI interaction examples.",
+      "status": "PASS",
+      "evidence": "docs/ai_edit_log.md nine grouped stages and current dated resolution; see LOG1-LOG4.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "SUB3",
+      "category": "Submission Checklist",
+      "requirement": "Final project report using the provided template (1000-1500 words).",
+      "status": "PASS",
+      "evidence": "See REP1-REP4; report content/template/length pass and student wording approval is recorded; requested name masking applied.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "SUB4",
+      "category": "Submission Checklist",
+      "requirement": "Updated README.md with current setup instructions and feature descriptions.",
+      "status": "PASS",
+      "evidence": "See README1-README3; root/application/project entry points have no relevant stubs or current missing-rubric claim.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "SUB5",
+      "category": "Submission Checklist",
+      "requirement": "Test coverage report demonstrating >80% coverage.",
+      "status": "PASS",
+      "evidence": "f3_coverage_310.json and f3_coverage_313.json plus complete measurement commands in f3_green_310.json/f3_green_313.json; raw reports included in inventory.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    },
+    {
+      "id": "SUB6",
+      "category": "Submission Checklist",
+      "requirement": "Code quality verification: all linting tools should pass without errors.",
+      "status": "PASS",
+      "evidence": "f3_green_310.json and f3_green_313.json: Black/isort/flake8/strict mypy/pip check/extracted-bootstrap flake8 all exit 0. Earlier lint failure remains in final_bootstrap_lint.json.",
+      "gap": null,
+      "consequence": null,
+      "smallest_correction": null
+    }
+  ],
+  "additional_observations": [
+    {
+      "item": "Physical Ctrl+C",
+      "status": "UNVERIFIED",
+      "explicit_rubric_blocker": false,
+      "user_readiness_gate": true,
+      "reason": "Not an explicit rubric requirement; automated KeyboardInterrupt is separate and the user still requests a manual result."
+    },
+    {
+      "item": "Actual symlink traversal",
+      "status": "UNVERIFIED",
+      "explicit_rubric_blocker": false,
+      "user_readiness_gate": false,
+      "reason": "Creation was denied with WinError 1314; hard-link checks are separate; no rubric symlink requirement."
+    },
+    {
+      "item": "Final report wording approval",
+      "status": "PASS",
+      "explicit_rubric_blocker": false,
+      "user_readiness_gate": true,
+      "reason": "Student explicitly approved the final report and requested masking the name; physical Ctrl+C remains pending.",
+      "resolved": true
+    }
+  ],
+  "optional_suggestions_added": false,
+  "application_test_or_dependency_changes_made": true,
+  "submission_ready_claimed": false,
+  "changed_protected_files": [
+    "utils/cli.py",
+    "tests/cli_helpers.py",
+    "tests/test_finalization.py"
+  ],
+  "dependencies_changed": false,
+  "source_evidence": "f3_manifest.json",
+  "historical_nonpassing_results_preserved": true
+}

@@ -1,0 +1,51 @@
+# Local environment files throughout the repository.
+.env
+.env.*
+
+# Shareable environment examples/templates must contain dummy values only.
+!.env.example
+!.env.sample
+!.env.template
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+
+# Conventional private-key filenames; keep public keys/certificates eligible.
+*.key
+*.key.pem
+key.pem
+private.pem
+private-key.pem
+private_key.pem
+*-private.pem
+*_private.pem
+*-private-key.pem
+*_private_key.pem
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+id_ecdsa_sk
+id_ed25519_sk
+!pub.key
+!public.key
+!*.pub.key
+!*.public.key
+!pub.key.pem
+!public.key.pem
+!*.pub.key.pem
+!*.public.key.pem
+
+# Explicitly named dummy key examples/templates remain eligible.
+!example.key
+!sample.key
+!template.key
+!*.example.key
+!*.sample.key
+!*.template.key
+!example.key.pem
+!sample.key.pem
+!template.key.pem
+!*.example.key.pem
+!*.sample.key.pem
+!*.template.key.pem

@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+extend-exclude = '^/\.tools/'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+# Claude's extensionless command documents are not Python source.
+extend_skip = [".tools", ".venv", ".claude"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["main.py", "utils", "tests"]
+exclude = '(^|/)(\.venv|\.tools)/'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-config --strict-markers"
+
+[tool.coverage.run]
+source = ["."]
+branch = true
+parallel = true
+patch = ["subprocess"]
+omit = ["tests/*", ".venv/*", ".tools/*"]
+
+[tool.coverage.report]
+fail_under = 81
+precision = 2
+show_missing = true
+
+[tool.coverage.html]
+directory = "htmlcov"

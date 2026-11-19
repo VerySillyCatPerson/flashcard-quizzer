@@ -1,0 +1,370 @@
+{
+  "physical_ctrl_c_verified": false,
+  "runtime": "Windows CPython 3.13.17",
+  "cases": [
+    {
+      "scenario": "history_guard",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\history_guard\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\history_guard\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\history_guard\\results.json"
+      ],
+      "faults": [
+        "interrupt_history_guard"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+-------+\n| Deck size       | 3     |\n| Total questions | 1     |\n| Correct         | 0     |\n| Accuracy        | 0.00% |\n| Missed terms    | #1 A  |\n+-----------------+-------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\nWarning: Interrupted by Ctrl+C during finalization; pending work will continue.\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "interrupted",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "after_history_commit",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\after_history_commit\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\after_history_commit\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\after_history_commit\\results.json"
+      ],
+      "faults": [
+        "interrupt_after_history_commit"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+-------+\n| Deck size       | 3     |\n| Total questions | 1     |\n| Correct         | 0     |\n| Accuracy        | 0.00% |\n| Missed terms    | #1 A  |\n+-----------------+-------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\nWarning: Interrupted by Ctrl+C during finalization; pending work will continue.\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "interrupted",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "summary_after_eof",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\summary_after_eof\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\summary_after_eof\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\summary_after_eof\\results.json"
+      ],
+      "faults": [
+        "summary_closed_pipe"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: ",
+      "stderr": "Warning: Could not write terminal output: [Errno 22] Invalid argument\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "eof",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "summary_after_interrupt",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\summary_after_interrupt\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\summary_after_interrupt\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\summary_after_interrupt\\results.json"
+      ],
+      "faults": [
+        "summary_closed_pipe",
+        "interrupt_after_one"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\n",
+      "stderr": "Warning: Could not write terminal output: [Errno 22] Invalid argument\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "interrupted",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "uncertain_before_commit",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\uncertain_before_commit\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\uncertain_before_commit\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\uncertain_before_commit\\results.json"
+      ],
+      "faults": [
+        "history_interrupt_before_commit"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+-------+\n| Deck size       | 3     |\n| Total questions | 1     |\n| Correct         | 0     |\n| Accuracy        | 0.00% |\n| Missed terms    | #1 A  |\n+-----------------+-------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\nWarning: History saving was interrupted; persistence is not confirmed. It will not be retried during this run.\n",
+      "stored_score": 2,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "interrupted",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "uncertain_after_replace",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\uncertain_after_replace\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\uncertain_after_replace\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\uncertain_after_replace\\results.json"
+      ],
+      "faults": [
+        "history_interrupt_after_replace"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+-------+\n| Deck size       | 3     |\n| Total questions | 1     |\n| Correct         | 0     |\n| Accuracy        | 0.00% |\n| Missed terms    | #1 A  |\n+-----------------+-------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\nWarning: History saving was interrupted; persistence is not confirmed. It will not be retried during this run.\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "interrupted",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "persistent_summary_after_eof",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\persistent_summary_after_eof\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\persistent_summary_after_eof\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\persistent_summary_after_eof\\results.json"
+      ],
+      "faults": [
+        "summary_closed_pipe",
+        "leave_summary_pipe_broken"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: ",
+      "stderr": "Warning: Could not write terminal output: [Errno 22] Invalid argument\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "eof",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "persistent_summary_after_interrupt",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\persistent_summary_after_interrupt\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\persistent_summary_after_interrupt\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\persistent_summary_after_interrupt\\results.json"
+      ],
+      "faults": [
+        "summary_closed_pipe",
+        "leave_summary_pipe_broken",
+        "interrupt_after_one"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\n",
+      "stderr": "Warning: Could not write terminal output: [Errno 22] Invalid argument\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "interrupted",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    },
+    {
+      "scenario": "feedback_output_error",
+      "arguments": [
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\feedback_output_error\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\feedback_output_error\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-stage7-fix-x6yujrrc\\feedback_output_error\\results.json"
+      ],
+      "faults": [
+        "quiz_output_failure"
+      ],
+      "stdin": "private raw reply\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: ",
+      "stderr": "Warning: Could not write terminal output: scripted quiz output failure\n",
+      "stored_score": 3,
+      "history_attempts": 1,
+      "export": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "output_error",
+        "complete": false,
+        "deck_size": 3,
+        "answered_count": 1,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          }
+        ]
+      },
+      "raw_answer_exported": false
+    }
+  ]
+}

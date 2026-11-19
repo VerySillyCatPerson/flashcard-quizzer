@@ -1,0 +1,2338 @@
+{
+  "date": "2026-11-19",
+  "reviewer": "Codex; current review, not a retrospective student/human review claim",
+  "authoritative_attachment_sha256": "d653b787f6e12415f2aa0119a0ce5d41ef627dc5fa96cfee8194616de18b0d1f",
+  "reviewed_files": [
+    {
+      "path": "main.py",
+      "sha256": "09cceb66abcc1394d1ab53c47e15ca595aa27954ce9b1bf50f9454482b5257b1",
+      "functions": []
+    },
+    {
+      "path": "utils/__init__.py",
+      "sha256": "f12e0eef47364beb0d02b210fee225b2156d7b4434c2604efff05f4938d26579",
+      "functions": []
+    },
+    {
+      "path": "utils/cli.py",
+      "sha256": "1f792d7750e56b542bbfe917d85cdeaf4366b72bcce36c8460650025ccd8a2ca",
+      "functions": [
+        {
+          "name": "_parser",
+          "line": 41,
+          "docstring": true
+        },
+        {
+          "name": "_strategy",
+          "line": 82,
+          "docstring": true
+        },
+        {
+          "name": "_prepare_paths",
+          "line": 91,
+          "docstring": true
+        },
+        {
+          "name": "_finalize",
+          "line": 104,
+          "docstring": true
+        },
+        {
+          "name": "_execute",
+          "line": 186,
+          "docstring": true
+        },
+        {
+          "name": "main",
+          "line": 207,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/data_loader.py",
+      "sha256": "f67d0a6e2559853f4367391af004c7bbbc8389103cbb59f43b1d9997dc65ce41",
+      "functions": [
+        {
+          "name": "_unique_object",
+          "line": 24,
+          "docstring": true
+        },
+        {
+          "name": "_reject_constant",
+          "line": 34,
+          "docstring": true
+        },
+        {
+          "name": "_card_text",
+          "line": 39,
+          "docstring": true
+        },
+        {
+          "name": "_parse_card",
+          "line": 48,
+          "docstring": true
+        },
+        {
+          "name": "_parse_deck",
+          "line": 63,
+          "docstring": true
+        },
+        {
+          "name": "load_flashcards",
+          "line": 92,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 13,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/engine.py",
+      "sha256": "6d2dc1ad342d01c366554e578817cb95ddfd23b75b19c56941ec6bc14b25d541",
+      "functions": [
+        {
+          "name": "evaluate_answer",
+          "line": 10,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 27,
+          "docstring": true
+        },
+        {
+          "name": "current_card",
+          "line": 39,
+          "docstring": true
+        },
+        {
+          "name": "submit_answer",
+          "line": 45,
+          "docstring": true
+        },
+        {
+          "name": "summary",
+          "line": 55,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/history.py",
+      "sha256": "ec5867d3b17a503066b351892dc0a0c7ffa8d8bf0d0c68bdadbf85fcba3750e6",
+      "functions": [
+        {
+          "name": "default_history_path",
+          "line": 40,
+          "docstring": true
+        },
+        {
+          "name": "updated_scores",
+          "line": 45,
+          "docstring": true
+        },
+        {
+          "name": "_unique_object",
+          "line": 61,
+          "docstring": true
+        },
+        {
+          "name": "_reject_constant",
+          "line": 71,
+          "docstring": true
+        },
+        {
+          "name": "_validate_history",
+          "line": 76,
+          "docstring": true
+        },
+        {
+          "name": "_read_scores",
+          "line": 101,
+          "docstring": true
+        },
+        {
+          "name": "_atomic_save",
+          "line": 124,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 21,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 177,
+          "docstring": true
+        },
+        {
+          "name": "path",
+          "line": 189,
+          "docstring": true
+        },
+        {
+          "name": "scores",
+          "line": 194,
+          "docstring": true
+        },
+        {
+          "name": "load_error",
+          "line": 199,
+          "docstring": true
+        },
+        {
+          "name": "can_save",
+          "line": 204,
+          "docstring": true
+        },
+        {
+          "name": "save_session",
+          "line": 208,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/models.py",
+      "sha256": "c01f9fa105a27a5a56f6f951cab1b9b0b7764370d903b09079afd6542cd2cb9b",
+      "functions": [
+        {
+          "name": "normalize_text",
+          "line": 11,
+          "docstring": true
+        },
+        {
+          "name": "normalized_pair",
+          "line": 28,
+          "docstring": true
+        },
+        {
+          "name": "card_id",
+          "line": 33,
+          "docstring": true
+        },
+        {
+          "name": "answered_count",
+          "line": 62,
+          "docstring": true
+        },
+        {
+          "name": "correct_count",
+          "line": 67,
+          "docstring": true
+        },
+        {
+          "name": "accuracy_percent",
+          "line": 72,
+          "docstring": true
+        },
+        {
+          "name": "missed_cards",
+          "line": 79,
+          "docstring": true
+        },
+        {
+          "name": "is_complete",
+          "line": 84,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/paths.py",
+      "sha256": "afdd559b01fa79f81af632bbab46ccd4e20c60b15dd8e6bba960f7d09a008edf",
+      "functions": [
+        {
+          "name": "_resolve",
+          "line": 33,
+          "docstring": true
+        },
+        {
+          "name": "_same_existing_file",
+          "line": 43,
+          "docstring": true
+        },
+        {
+          "name": "validate_paths",
+          "line": 57,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/results_export.py",
+      "sha256": "078bdfffcb47ef7d4cc51d1c34b92b7fbef2b5df3337d137f05c29d7f8e362e8",
+      "functions": [
+        {
+          "name": "results_document",
+          "line": 22,
+          "docstring": true
+        },
+        {
+          "name": "_require_absent",
+          "line": 53,
+          "docstring": true
+        },
+        {
+          "name": "export_results",
+          "line": 68,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 15,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/strategies.py",
+      "sha256": "ae6f5b8746f4e411df0266605ea64e23cf662cc04481099dbbcdb1eafaf75743",
+      "functions": [
+        {
+          "name": "order",
+          "line": 12,
+          "docstring": true
+        },
+        {
+          "name": "order",
+          "line": 20,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 28,
+          "docstring": true
+        },
+        {
+          "name": "order",
+          "line": 32,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 42,
+          "docstring": true
+        },
+        {
+          "name": "order",
+          "line": 46,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "utils/terminal.py",
+      "sha256": "42a73351a0d439f1e6292c9a5ee210416794a4394354dfb666abaa71b4b9a91d",
+      "functions": [
+        {
+          "name": "_write",
+          "line": 21,
+          "docstring": true
+        },
+        {
+          "name": "configure_streams",
+          "line": 40,
+          "docstring": true
+        },
+        {
+          "name": "_one_line",
+          "line": 50,
+          "docstring": true
+        },
+        {
+          "name": "warn",
+          "line": 55,
+          "docstring": true
+        },
+        {
+          "name": "error",
+          "line": 60,
+          "docstring": true
+        },
+        {
+          "name": "warn_history",
+          "line": 65,
+          "docstring": true
+        },
+        {
+          "name": "play",
+          "line": 74,
+          "docstring": true
+        },
+        {
+          "name": "format_summary",
+          "line": 104,
+          "docstring": true
+        },
+        {
+          "name": "show_summary",
+          "line": 140,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "c1be88fd427cc67c4c40cf43c762c0ced95249c0e6a131f60f8a8fdfb4194ed2",
+      "functions": []
+    },
+    {
+      "path": "tests/cli_helpers.py",
+      "sha256": "22e9560a0fbcf39a0be0278fa89c3f079d6b896305f65396cd2739bb9d0bfc50",
+      "functions": [
+        {
+          "name": "run_cli",
+          "line": 168,
+          "docstring": true
+        },
+        {
+          "name": "write_deck",
+          "line": 198,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "c0f000fc49c1057f61d0ea4fe06bf0347592082bfb892ad2bf5948ecab6c324f",
+      "functions": [
+        {
+          "name": "cards",
+          "line": 9,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "8c13f1dfec6bb83d691b8f3e2fd02ecd6a002b3b7ba5454a67b39e487ee84fef",
+      "functions": [
+        {
+          "name": "test_help_does_not_require_a_file_or_touch_history",
+          "line": 15,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_arguments_exit_two",
+          "line": 37,
+          "docstring": true
+        },
+        {
+          "name": "test_all_modes_finish_and_update_history",
+          "line": 48,
+          "docstring": true
+        },
+        {
+          "name": "test_two_correct_answers_feedback_and_summary",
+          "line": 96,
+          "docstring": true
+        },
+        {
+          "name": "test_seeded_randomness_reproduces_order",
+          "line": 110,
+          "docstring": true
+        },
+        {
+          "name": "test_history_reuse_changes_next_adaptive_order",
+          "line": 143,
+          "docstring": true
+        },
+        {
+          "name": "test_default_history_path_uses_isolated_home",
+          "line": 168,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_deck_files_fail_without_traceback",
+          "line": 179,
+          "docstring": true
+        },
+        {
+          "name": "test_unreadable_deck_at_actual_entry_point",
+          "line": 207,
+          "docstring": true
+        },
+        {
+          "name": "test_bad_history_warns_preserves_bytes_and_still_exports",
+          "line": 217,
+          "docstring": true
+        },
+        {
+          "name": "test_export_is_attempted_after_history_save_failure",
+          "line": 257,
+          "docstring": true
+        },
+        {
+          "name": "test_export_failure_keeps_history_and_summary",
+          "line": 281,
+          "docstring": true
+        },
+        {
+          "name": "test_export_refusal_and_overwrite_leave_history_updates_independent",
+          "line": 308,
+          "docstring": true
+        },
+        {
+          "name": "test_existing_export_refusal_does_not_override_ctrl_c",
+          "line": 341,
+          "docstring": true
+        },
+        {
+          "name": "test_conflicting_roles_are_rejected_before_quiz",
+          "line": 361,
+          "docstring": true
+        },
+        {
+          "name": "test_resolved_relative_path_conflict",
+          "line": 385,
+          "docstring": true
+        },
+        {
+          "name": "test_history_and_export_hard_link_aliases_are_rejected",
+          "line": 405,
+          "docstring": true
+        },
+        {
+          "name": "test_existing_file_alias_conflict",
+          "line": 426,
+          "docstring": true
+        },
+        {
+          "name": "test_eof_exports_partial_summary_and_saves_completed_history",
+          "line": 445,
+          "docstring": true
+        },
+        {
+          "name": "test_ctrl_c_exports_partial_results_and_returns_130",
+          "line": 473,
+          "docstring": true
+        },
+        {
+          "name": "test_ctrl_c_wins_even_when_history_save_and_export_fail",
+          "line": 496,
+          "docstring": true
+        },
+        {
+          "name": "test_interrupt_during_finalization_still_returns_130",
+          "line": 527,
+          "docstring": true
+        },
+        {
+          "name": "test_other_expected_operational_boundaries",
+          "line": 556,
+          "docstring": true
+        },
+        {
+          "name": "test_unicode_input_and_output",
+          "line": 575,
+          "docstring": true
+        },
+        {
+          "name": "test_importing_entry_point_does_not_start_quiz",
+          "line": 588,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_data_loader.py",
+      "sha256": "33661f395aa107a263f279f141535f50e37074874bbc518791fb414ccbb974cb",
+      "functions": [
+        {
+          "name": "_write_deck",
+          "line": 12,
+          "docstring": true
+        },
+        {
+          "name": "test_loads_both_shapes_in_source_order",
+          "line": 20,
+          "docstring": true
+        },
+        {
+          "name": "test_existing_sample_decks",
+          "line": 48,
+          "docstring": true
+        },
+        {
+          "name": "test_unicode_and_utf8_bom",
+          "line": 61,
+          "docstring": true
+        },
+        {
+          "name": "test_matching_fronts_with_different_backs_are_valid",
+          "line": 70,
+          "docstring": true
+        },
+        {
+          "name": "test_metadata_is_ignored",
+          "line": 87,
+          "docstring": true
+        },
+        {
+          "name": "test_identity_survives_rename_reorder_and_additions",
+          "line": 96,
+          "docstring": true
+        },
+        {
+          "name": "test_missing_file",
+          "line": 120,
+          "docstring": true
+        },
+        {
+          "name": "test_unreadable_file",
+          "line": 137,
+          "docstring": true
+        },
+        {
+          "name": "test_directory_is_not_a_deck",
+          "line": 159,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_utf8",
+          "line": 166,
+          "docstring": true
+        },
+        {
+          "name": "test_malformed_json",
+          "line": 176,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_top_level_structures",
+          "line": 202,
+          "docstring": true
+        },
+        {
+          "name": "test_empty_decks",
+          "line": 210,
+          "docstring": true
+        },
+        {
+          "name": "test_cards_must_be_objects",
+          "line": 218,
+          "docstring": true
+        },
+        {
+          "name": "test_missing_required_fields",
+          "line": 226,
+          "docstring": true
+        },
+        {
+          "name": "test_wrong_field_types",
+          "line": 239,
+          "docstring": true
+        },
+        {
+          "name": "test_blank_field_values",
+          "line": 252,
+          "docstring": true
+        },
+        {
+          "name": "test_duplicate_pairs_report_both_positions",
+          "line": 266,
+          "docstring": true
+        },
+        {
+          "name": "test_duplicate_json_object_keys",
+          "line": 291,
+          "docstring": true
+        },
+        {
+          "name": "test_nonstandard_json_constants",
+          "line": 300,
+          "docstring": true
+        },
+        {
+          "name": "test_excessive_json_nesting",
+          "line": 308,
+          "docstring": true
+        },
+        {
+          "name": "test_oversized_integer_field_is_a_loader_error",
+          "line": 316,
+          "docstring": true
+        },
+        {
+          "name": "test_unexpected_validation_errors_are_not_disguised",
+          "line": 327,
+          "docstring": true
+        },
+        {
+          "name": "test_loader_never_prints",
+          "line": 344,
+          "docstring": true
+        },
+        {
+          "name": "fail_read",
+          "line": 146,
+          "docstring": true
+        },
+        {
+          "name": "broken_validation",
+          "line": 333,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_engine.py",
+      "sha256": "390b1939cd844ea037a50e8839dc68c51f2856619052ee2cb8c71ded589ca48a",
+      "functions": [
+        {
+          "name": "test_answer_evaluation",
+          "line": 29,
+          "docstring": true
+        },
+        {
+          "name": "test_unanswered_session_has_no_accuracy_or_misses",
+          "line": 38,
+          "docstring": true
+        },
+        {
+          "name": "test_three_card_session_with_two_correct",
+          "line": 53,
+          "docstring": true
+        },
+        {
+          "name": "test_all_correct_or_all_incorrect_statistics",
+          "line": 78,
+          "docstring": true
+        },
+        {
+          "name": "test_partial_statistics_and_snapshot_are_stable",
+          "line": 90,
+          "docstring": true
+        },
+        {
+          "name": "test_random_session_asks_every_card_once",
+          "line": 110,
+          "docstring": true
+        },
+        {
+          "name": "test_source_mutation_cannot_change_an_active_session",
+          "line": 127,
+          "docstring": true
+        },
+        {
+          "name": "test_structural_strategy_runs_once_and_order_is_snapshotted",
+          "line": 141,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_strategy_output_is_rejected",
+          "line": 171,
+          "docstring": true
+        },
+        {
+          "name": "test_empty_session_is_rejected",
+          "line": 189,
+          "docstring": true
+        },
+        {
+          "name": "test_answer_after_completion_does_not_change_results",
+          "line": 195,
+          "docstring": true
+        },
+        {
+          "name": "test_matching_fronts_grade_against_their_own_backs",
+          "line": 207,
+          "docstring": true
+        },
+        {
+          "name": "test_engine_does_not_read_or_print",
+          "line": 219,
+          "docstring": true
+        },
+        {
+          "name": "test_unexpected_grading_error_preserves_pending_card",
+          "line": 239,
+          "docstring": true
+        },
+        {
+          "name": "forbidden_input",
+          "line": 226,
+          "docstring": true
+        },
+        {
+          "name": "broken_evaluation",
+          "line": 245,
+          "docstring": true
+        },
+        {
+          "name": "__init__",
+          "line": 149,
+          "docstring": true
+        },
+        {
+          "name": "order",
+          "line": 154,
+          "docstring": true
+        },
+        {
+          "name": "order",
+          "line": 177,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_finalization.py",
+      "sha256": "3eafb74b66efc8580cee4e489ddbfe682e550722d9121b3f68b0c6aeba68bf97",
+      "functions": [
+        {
+          "name": "_existing_history",
+          "line": 12,
+          "docstring": true
+        },
+        {
+          "name": "test_between_phase_interrupt_continues_pending_work_once",
+          "line": 28,
+          "docstring": true
+        },
+        {
+          "name": "test_summary_output_failure_keeps_writes_and_exit_precedence",
+          "line": 55,
+          "docstring": true
+        },
+        {
+          "name": "test_uncertain_history_write_is_not_retried_and_export_continues",
+          "line": 89,
+          "docstring": true
+        },
+        {
+          "name": "test_feedback_output_error_saves_the_completed_answer",
+          "line": 122,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_history.py",
+      "sha256": "202d9878f615ad377eac46cf4f602ea6b85644e2b4581d13c5ef21640a1a95b2",
+      "functions": [
+        {
+          "name": "_document",
+          "line": 29,
+          "docstring": true
+        },
+        {
+          "name": "_write_history",
+          "line": 34,
+          "docstring": true
+        },
+        {
+          "name": "_one_answer",
+          "line": 39,
+          "docstring": true
+        },
+        {
+          "name": "test_missing_history_is_fresh_without_creating_files",
+          "line": 46,
+          "docstring": true
+        },
+        {
+          "name": "test_default_path_is_separate_user_state",
+          "line": 57,
+          "docstring": true
+        },
+        {
+          "name": "test_error_balance_increases_and_decreases_with_zero_floor",
+          "line": 82,
+          "docstring": true
+        },
+        {
+          "name": "test_unseen_cards_start_at_zero_and_dormant_scores_survive",
+          "line": 95,
+          "docstring": true
+        },
+        {
+          "name": "test_real_two_session_round_trip",
+          "line": 107,
+          "docstring": true
+        },
+        {
+          "name": "test_completed_answers_update_history_in_every_mode",
+          "line": 144,
+          "docstring": true
+        },
+        {
+          "name": "test_adaptive_order_stays_fixed_during_session",
+          "line": 169,
+          "docstring": true
+        },
+        {
+          "name": "test_shared_identity_across_real_deck_files",
+          "line": 184,
+          "docstring": true
+        },
+        {
+          "name": "test_edited_card_gets_fresh_score_without_erasing_old_identity",
+          "line": 206,
+          "docstring": true
+        },
+        {
+          "name": "test_partial_session_updates_only_submitted_answers",
+          "line": 222,
+          "docstring": true
+        },
+        {
+          "name": "test_zero_answer_session_does_not_create_history",
+          "line": 246,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_history_schema_is_preserved_and_save_disabled",
+          "line": 273,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_scores_do_not_partially_load",
+          "line": 292,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_identity_keys_disable_saving",
+          "line": 312,
+          "docstring": true
+        },
+        {
+          "name": "test_corrupt_history_json_is_preserved",
+          "line": 333,
+          "docstring": true
+        },
+        {
+          "name": "test_invalid_utf8_history_is_preserved",
+          "line": 345,
+          "docstring": true
+        },
+        {
+          "name": "test_valid_utf8_bom_history",
+          "line": 356,
+          "docstring": true
+        },
+        {
+          "name": "test_unreadable_history_disables_saving",
+          "line": 365,
+          "docstring": true
+        },
+        {
+          "name": "test_failed_save_preserves_previous_valid_history_and_can_retry",
+          "line": 391,
+          "docstring": true
+        },
+        {
+          "name": "test_failed_serialization_preserves_old_file",
+          "line": 427,
+          "docstring": true
+        },
+        {
+          "name": "test_cleanup_failure_is_reported_without_losing_old_file",
+          "line": 464,
+          "docstring": true
+        },
+        {
+          "name": "test_successful_session_cannot_be_counted_twice",
+          "line": 487,
+          "docstring": true
+        },
+        {
+          "name": "test_unexpected_validation_error_is_not_disguised",
+          "line": 502,
+          "docstring": true
+        },
+        {
+          "name": "test_history_never_prints",
+          "line": 520,
+          "docstring": true
+        },
+        {
+          "name": "fake_home",
+          "line": 62,
+          "docstring": true
+        },
+        {
+          "name": "denied_read",
+          "line": 373,
+          "docstring": true
+        },
+        {
+          "name": "denied",
+          "line": 405,
+          "docstring": true
+        },
+        {
+          "name": "encoding_limit",
+          "line": 438,
+          "docstring": true
+        },
+        {
+          "name": "denied",
+          "line": 473,
+          "docstring": true
+        },
+        {
+          "name": "broken_validation",
+          "line": 510,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_models.py",
+      "sha256": "6da1aa5203b7a9fcb39e97d1e3e6ac3dbd05d49bb2761786f7f3be2dacc4b865",
+      "functions": [
+        {
+          "name": "test_normalization_preserves_internal_spacing",
+          "line": 20,
+          "docstring": true
+        },
+        {
+          "name": "test_card_is_immutable",
+          "line": 25,
+          "docstring": true
+        },
+        {
+          "name": "test_card_identity_normalizes_both_fields",
+          "line": 33,
+          "docstring": true
+        },
+        {
+          "name": "test_meaningful_content_edits_change_identity",
+          "line": 46,
+          "docstring": true
+        },
+        {
+          "name": "test_identity_preserves_field_boundaries_and_internal_whitespace",
+          "line": 51,
+          "docstring": true
+        },
+        {
+          "name": "test_identity_ignores_case_and_outer_whitespace_but_keeps_punctuation",
+          "line": 57,
+          "docstring": true
+        },
+        {
+          "name": "test_identity_distinguishes_internal_space_and_punctuation_edits",
+          "line": 70,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_paths.py",
+      "sha256": "2b77aaedbbd7c754d6622aea496bcd01c7b1aa557003c2bb0220bb22df1c7c1f",
+      "functions": [
+        {
+          "name": "test_absent_outputs_are_compared_by_resolved_name",
+          "line": 11,
+          "docstring": true
+        },
+        {
+          "name": "test_valid_paths_return_canonical_destinations",
+          "line": 20,
+          "docstring": true
+        },
+        {
+          "name": "test_identity_inspection_falls_back_only_when_unsupported",
+          "line": 33,
+          "docstring": true
+        },
+        {
+          "name": "test_resolution_failures_remain_expected_path_errors",
+          "line": 55,
+          "docstring": true
+        },
+        {
+          "name": "unsupported",
+          "line": 38,
+          "docstring": true
+        },
+        {
+          "name": "fail_resolve",
+          "line": 60,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_results_export.py",
+      "sha256": "0a929d3afe6b948987cc09d2c3d8ce967e83e758963c84658108bafb3c165842",
+      "functions": [
+        {
+          "name": "test_partial_export_omits_submitted_text_and_keeps_missed_position",
+          "line": 16,
+          "docstring": true
+        },
+        {
+          "name": "test_zero_answer_result_is_json_null",
+          "line": 56,
+          "docstring": true
+        },
+        {
+          "name": "test_failed_export_preserves_previous_file",
+          "line": 66,
+          "docstring": true
+        },
+        {
+          "name": "test_existing_export_is_refused_without_changing_bytes",
+          "line": 92,
+          "docstring": true
+        },
+        {
+          "name": "test_explicit_overwrite_atomically_replaces_existing_export",
+          "line": 106,
+          "docstring": true
+        },
+        {
+          "name": "test_file_created_after_absence_check_is_not_overwritten",
+          "line": 123,
+          "docstring": true
+        },
+        {
+          "name": "denied",
+          "line": 79,
+          "docstring": true
+        },
+        {
+          "name": "publish_after_competing_writer",
+          "line": 130,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_strategies.py",
+      "sha256": "8960be82f51efa947f4e47e83aaa081050d3497e1e6de5d19c95d11aacd3c9fe",
+      "functions": [
+        {
+          "name": "test_sequential_returns_a_copy_in_deck_order",
+          "line": 14,
+          "docstring": true
+        },
+        {
+          "name": "test_random_preserves_every_card_and_source_deck",
+          "line": 30,
+          "docstring": true
+        },
+        {
+          "name": "test_same_seed_reproduces_order",
+          "line": 45,
+          "docstring": true
+        },
+        {
+          "name": "test_private_rng_does_not_consume_global_state",
+          "line": 53,
+          "docstring": true
+        },
+        {
+          "name": "test_unchanged_shuffle_is_valid",
+          "line": 61,
+          "docstring": true
+        },
+        {
+          "name": "test_adaptive_descending_scores_and_deck_order_ties",
+          "line": 76,
+          "docstring": true
+        },
+        {
+          "name": "test_adaptive_missing_scores_preserve_deck_order",
+          "line": 86,
+          "docstring": true
+        },
+        {
+          "name": "test_adaptive_snapshots_scores_and_respects_reordered_ties",
+          "line": 96,
+          "docstring": true
+        },
+        {
+          "name": "keep_order",
+          "line": 67,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "tests/test_terminal.py",
+      "sha256": "a50b1cec4f7867b4a4efe6af6cdbc3a82d6f2bebf1f1d52cc7928c312186c1ff",
+      "functions": [
+        {
+          "name": "test_string_stream_configuration_and_control_display",
+          "line": 13,
+          "docstring": true
+        },
+        {
+          "name": "test_partial_summary_labels_duplicate_fronts_by_position",
+          "line": 34,
+          "docstring": true
+        },
+        {
+          "name": "test_summary_programming_error_is_not_disguised",
+          "line": 44,
+          "docstring": true
+        },
+        {
+          "name": "broken_format",
+          "line": 51,
+          "docstring": true
+        }
+      ]
+    },
+    {
+      "path": "docs/manual_stage_6.ps1",
+      "sha256": "0f3743c7284954e362e269e2e770e9d472e90dd0d0d1522d87301e0372b2f899"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "4fc093a0fdd12e091cac373faa4efee4b829772182e8ed40579893f7d7d8ba1a"
+    },
+    {
+      "path": ".flake8",
+      "sha256": "5784f4961ccfc6dad4816706cf1e04caf3a6dde1dbf49e24d6998c24d1af635f"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "89ee641398fa9b466de96e6d1936c5307eb2127f80a121d10b175a692391425b"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "sha256": "c0db9de1e7be6b0fbb3201ea0cc557fc94fe4a2528559ec9a9a3900bd45aab60"
+    },
+    {
+      "path": "docs/report_template.md",
+      "sha256": "84920033e806c78816534e2779ec387a55991a230351dd92aea1ac7439808218"
+    },
+    {
+      "path": "data/glossary.json",
+      "sha256": "cfa17d3ad2c3c97a5f854a16aae1e2f484a4b4983d5595812593da184cf885df"
+    },
+    {
+      "path": "data/python_basics.json",
+      "sha256": "f0d6d0652cb292e63eecad8eefe90ddeef0e1741258a9ea27b27c12b3c260d8f"
+    },
+    {
+      "path": "../../.gitignore",
+      "sha256": "0cd4667e652b49570aacd57fc8009b620e1c62196036cf539e4c50a48434ef60",
+      "scope_note": "Repository hygiene patterns and explicit example/public-key exceptions reviewed."
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "a1d9ee384f68879d97a96f5a1b44f9dd60f7d6c8594640b0363b3963767f280b",
+      "scope_note": "Repository hygiene patterns and explicit example/public-key exceptions reviewed."
+    }
+  ],
+  "bootstrap_functions_reviewed_separately": [
+    {
+      "name": "controlled_input",
+      "bootstrap_line": 17,
+      "repository_line": 30,
+      "docstring": false
+    },
+    {
+      "name": "fail_history",
+      "bootstrap_line": 29,
+      "repository_line": 42,
+      "docstring": false
+    },
+    {
+      "name": "fail_read",
+      "bootstrap_line": 35,
+      "repository_line": 48,
+      "docstring": false
+    },
+    {
+      "name": "denied_read",
+      "bootstrap_line": 41,
+      "repository_line": 54,
+      "docstring": false
+    },
+    {
+      "name": "denied_identity",
+      "bootstrap_line": 49,
+      "repository_line": 62,
+      "docstring": false
+    },
+    {
+      "name": "denied_home",
+      "bootstrap_line": 53,
+      "repository_line": 66,
+      "docstring": false
+    },
+    {
+      "name": "interrupted_export",
+      "bootstrap_line": 59,
+      "repository_line": 72,
+      "docstring": false
+    },
+    {
+      "name": "interrupted_summary",
+      "bootstrap_line": 63,
+      "repository_line": 76,
+      "docstring": false
+    },
+    {
+      "name": "traced_save",
+      "bootstrap_line": 76,
+      "repository_line": 89,
+      "docstring": true
+    },
+    {
+      "name": "interrupt_guard_once",
+      "bootstrap_line": 91,
+      "repository_line": 104,
+      "docstring": true
+    },
+    {
+      "name": "interrupt_export_boundary_once",
+      "bootstrap_line": 103,
+      "repository_line": 116,
+      "docstring": true
+    },
+    {
+      "name": "replace_then_interrupt",
+      "bootstrap_line": 115,
+      "repository_line": 128,
+      "docstring": true
+    },
+    {
+      "name": "summary_into_closed_pipe",
+      "bootstrap_line": 124,
+      "repository_line": 137,
+      "docstring": true
+    },
+    {
+      "name": "fail_feedback",
+      "bootstrap_line": 143,
+      "repository_line": 156,
+      "docstring": true
+    }
+  ],
+  "production_test_config_dependency_hashes_match_saved_clean_runs": true,
+  "reused_test_results": {
+    "313": "271 passed, 1 skipped in 22.69s",
+    "310": "271 passed, 1 skipped in 22.53s"
+  },
+  "f1_f2_evidence_verified": {
+    "original_red": "4 failed, 2 passed",
+    "expanded_red": "5 failed, 5 passed",
+    "shutdown_red": "2 failed, 7 passed",
+    "focused_green": "12 passed"
+  },
+  "full_suite_repeated": false,
+  "application_or_test_source_modified": false,
+  "missing_bootstrap_docstrings": [
+    {
+      "name": "controlled_input",
+      "bootstrap_line": 17,
+      "repository_line": 30,
+      "docstring": false
+    },
+    {
+      "name": "fail_history",
+      "bootstrap_line": 29,
+      "repository_line": 42,
+      "docstring": false
+    },
+    {
+      "name": "fail_read",
+      "bootstrap_line": 35,
+      "repository_line": 48,
+      "docstring": false
+    },
+    {
+      "name": "denied_read",
+      "bootstrap_line": 41,
+      "repository_line": 54,
+      "docstring": false
+    },
+    {
+      "name": "denied_identity",
+      "bootstrap_line": 49,
+      "repository_line": 62,
+      "docstring": false
+    },
+    {
+      "name": "denied_home",
+      "bootstrap_line": 53,
+      "repository_line": 66,
+      "docstring": false
+    },
+    {
+      "name": "interrupted_export",
+      "bootstrap_line": 59,
+      "repository_line": 72,
+      "docstring": false
+    },
+    {
+      "name": "interrupted_summary",
+      "bootstrap_line": 63,
+      "repository_line": 76,
+      "docstring": false
+    }
+  ],
+  "source_docstring_count": 208,
+  "human_all_line_review_claimed": false,
+  "provided_checklist_sha256": "bcf6cb141d885afde011892caa63c53be1d2ce7511916fa8cf6de20a5c74b803",
+  "checklist_items": [
+    {
+      "id": 1,
+      "checklist_line": 8,
+      "section": "Pre-Review Questions",
+      "subsection": "",
+      "question": "Do I understand what this code is supposed to do?",
+      "result": "PASS",
+      "review_note": "Purpose reviewed: finite JSON flashcard practice; supplied contract and current CLI agree."
+    },
+    {
+      "id": 2,
+      "checklist_line": 9,
+      "section": "Pre-Review Questions",
+      "subsection": "",
+      "question": "Does it solve the problem I asked for?",
+      "result": "PASS",
+      "review_note": "Loader, three modes, grading, summary and three independent additions implement the requested local CLI."
+    },
+    {
+      "id": 3,
+      "checklist_line": 10,
+      "section": "Pre-Review Questions",
+      "subsection": "",
+      "question": "Is it appropriate for my project's context?",
+      "result": "PASS",
+      "review_note": "Standard-library runtime and modular scope fit a learning assignment; optional patterns/APIs are unnecessary."
+    },
+    {
+      "id": 4,
+      "checklist_line": 15,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Logic and Algorithm",
+      "question": "Does the code implement the correct algorithm?",
+      "result": "PASS",
+      "review_note": "Reviewed stable descending error balance (+1/-1 floor zero), permutation checks and one submission per pending card."
+    },
+    {
+      "id": 5,
+      "checklist_line": 16,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Logic and Algorithm",
+      "question": "Are all edge cases handled appropriately?",
+      "result": "PARTIAL",
+      "review_note": "Tested boundaries pass, but defensive cleanup paths and physical/symlink observations are not all verified; not a claim that every possible edge is covered."
+    },
+    {
+      "id": 6,
+      "checklist_line": 17,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Logic and Algorithm",
+      "question": "Does the logic flow make sense?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 7,
+      "checklist_line": 18,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Logic and Algorithm",
+      "question": "Are there any obvious bugs or logical errors?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 8,
+      "checklist_line": 21,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Input/Output",
+      "question": "Are all inputs validated properly?",
+      "result": "PASS",
+      "review_note": "JSON roots/cards/fields/duplicates and history schema/policy/score types are validated; argparse validates public flags."
+    },
+    {
+      "id": 9,
+      "checklist_line": 22,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Input/Output",
+      "question": "Are return values correct and consistent?",
+      "result": "PASS",
+      "review_note": "Frozen results/summaries, zero-answer None accuracy and explicit exit categories are consistent."
+    },
+    {
+      "id": 10,
+      "checklist_line": 23,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Input/Output",
+      "question": "Does the function handle empty/null inputs gracefully?",
+      "result": "PASS",
+      "review_note": "Empty decks/blank fields are rejected; empty answers are wrong; zero-answer summaries are N/A/null."
+    },
+    {
+      "id": 11,
+      "checklist_line": 24,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Input/Output",
+      "question": "Are error conditions properly managed?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 12,
+      "checklist_line": 27,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Testing",
+      "question": "Can I trace through the code with example inputs?",
+      "result": "PASS",
+      "review_note": "Traced three-card two-correct session and two-session adaptive examples against saved native transcripts."
+    },
+    {
+      "id": 13,
+      "checklist_line": 28,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Testing",
+      "question": "Have I tested with boundary conditions?",
+      "result": "PASS",
+      "review_note": "Reviewed floor zero, repeated fronts, field-boundary identity, malformed/deep/oversized JSON and completed-session rejection tests."
+    },
+    {
+      "id": 14,
+      "checklist_line": 29,
+      "section": "1. Correctness and Functionality",
+      "subsection": "Testing",
+      "question": "Does the code behave correctly with unexpected inputs?",
+      "result": "PASS",
+      "review_note": "Wrong types and nonstandard constants are rejected; programmer-error propagation has dedicated tests."
+    },
+    {
+      "id": 15,
+      "checklist_line": 34,
+      "section": "2. Code Quality",
+      "subsection": "Readability",
+      "question": "Is the code easy to understand?",
+      "result": "PASS",
+      "review_note": "Small domain modules and explicit CLI composition are readable; finalization/stream recovery are the main documented complexity."
+    },
+    {
+      "id": 16,
+      "checklist_line": 35,
+      "section": "2. Code Quality",
+      "subsection": "Readability",
+      "question": "Are variable names descriptive and meaningful?",
+      "result": "PASS",
+      "review_note": "Names describe cards, scores, pending phases and finish reasons; private helpers indicate ownership."
+    },
+    {
+      "id": 17,
+      "checklist_line": 36,
+      "section": "2. Code Quality",
+      "subsection": "Readability",
+      "question": "Is the code structure logical and well-organized?",
+      "result": "PASS",
+      "review_note": "Models/loading, engine/strategies, history, terminal, paths/export and CLI are separated."
+    },
+    {
+      "id": 18,
+      "checklist_line": 37,
+      "section": "2. Code Quality",
+      "subsection": "Readability",
+      "question": "Are there appropriate comments where needed?",
+      "result": "PASS",
+      "review_note": "Comments explain uncertain commits, shutdown descriptor recovery, serialization boundaries and no-clobber publication."
+    },
+    {
+      "id": 19,
+      "checklist_line": 40,
+      "section": "2. Code Quality",
+      "subsection": "Style and Conventions",
+      "question": "Does the code follow Python PEP 8 style guidelines?",
+      "result": "PARTIAL",
+      "review_note": "File-level checks pass, but today extracted bootstrap flake8 found eight E301/E302/E305 spacing errors. Mandatory correction awaits approval."
+    },
+    {
+      "id": 20,
+      "checklist_line": 41,
+      "section": "2. Code Quality",
+      "subsection": "Style and Conventions",
+      "question": "Are naming conventions consistent with the project?",
+      "result": "PASS",
+      "review_note": "snake_case functions, PascalCase types and private helper prefixes are consistent."
+    },
+    {
+      "id": 21,
+      "checklist_line": 42,
+      "section": "2. Code Quality",
+      "subsection": "Style and Conventions",
+      "question": "Is indentation and formatting correct?",
+      "result": "PARTIAL",
+      "review_note": "Outer formatting passes; eight blank-line violations in executable embedded source are confirmed in final_bootstrap_lint.json."
+    },
+    {
+      "id": 22,
+      "checklist_line": 43,
+      "section": "2. Code Quality",
+      "subsection": "Style and Conventions",
+      "question": "Are imports organized properly?",
+      "result": "PARTIAL",
+      "review_note": "Outer isort passes; embedded import grouping is outside that saved file-level scope and should be included in the bootstrap formatting correction."
+    },
+    {
+      "id": 23,
+      "checklist_line": 46,
+      "section": "2. Code Quality",
+      "subsection": "Documentation",
+      "question": "Are docstrings present and informative?",
+      "result": "PARTIAL",
+      "review_note": "All 208 normally parsed functions have docstrings, but 8 of 14 executable functions inside tests/cli_helpers.py _BOOTSTRAP do not. Add their docstrings after approval."
+    },
+    {
+      "id": 24,
+      "checklist_line": 47,
+      "section": "2. Code Quality",
+      "subsection": "Documentation",
+      "question": "Are parameter types and return values documented?",
+      "result": "PARTIAL",
+      "review_note": "Annotations document signatures; eight bootstrap wrappers lack accompanying function-level descriptions. The supplied checklist review now includes that embedded code."
+    },
+    {
+      "id": 25,
+      "checklist_line": 48,
+      "section": "2. Code Quality",
+      "subsection": "Documentation",
+      "question": "Are usage examples provided where helpful?",
+      "result": "PASS",
+      "review_note": "README, manual script, source docstrings and actual transcript evidence provide usage examples."
+    },
+    {
+      "id": 26,
+      "checklist_line": 49,
+      "section": "2. Code Quality",
+      "subsection": "Documentation",
+      "question": "Are any assumptions or limitations documented?",
+      "result": "PASS",
+      "review_note": "Identity sharing, finite fixed order, overwrite policy, partial statistics and persistence/concurrency/interrupt limits are documented."
+    },
+    {
+      "id": 27,
+      "checklist_line": 54,
+      "section": "3. Security Considerations",
+      "subsection": "Input Validation",
+      "question": "Are all user inputs validated and sanitized?",
+      "result": "PARTIAL",
+      "review_note": "Schemas and numeric/type constraints are strict. Display escapes newline/carriage/tab only, not every ANSI control. Stronger local-deck terminal-control filtering is optional hardening, not an explicit rubric feature."
+    },
+    {
+      "id": 28,
+      "checklist_line": 55,
+      "section": "3. Security Considerations",
+      "subsection": "Input Validation",
+      "question": "Are file paths and names checked for security issues?",
+      "result": "PASS",
+      "review_note": "Canonical names and existing aliases are compared before I/O; arbitrary user-selected paths are intentional, not a hosted upload boundary. Preflight is not a lock."
+    },
+    {
+      "id": 29,
+      "checklist_line": 56,
+      "section": "3. Security Considerations",
+      "subsection": "Input Validation",
+      "question": "Are SQL queries parameterized (if applicable)?",
+      "result": "N/A",
+      "review_note": "No database or SQL queries exist."
+    },
+    {
+      "id": 30,
+      "checklist_line": 57,
+      "section": "3. Security Considerations",
+      "subsection": "Input Validation",
+      "question": "Are regular expressions safe from ReDoS attacks?",
+      "result": "PASS",
+      "review_note": "Only fixed-format fullmatch identity regex and bounded test regexes are used; no production nested-quantifier/user-supplied regex."
+    },
+    {
+      "id": 31,
+      "checklist_line": 60,
+      "section": "3. Security Considerations",
+      "subsection": "Data Handling",
+      "question": "Are sensitive data (passwords, tokens) handled securely?",
+      "result": "PASS",
+      "review_note": "Application does not collect credentials; export omits raw answers; candidate scan and ignore exceptions were inspected. This is a bounded scan, not arbitrary-secret certification."
+    },
+    {
+      "id": 32,
+      "checklist_line": 61,
+      "section": "3. Security Considerations",
+      "subsection": "Data Handling",
+      "question": "Are temporary files created with appropriate permissions?",
+      "result": "PARTIAL",
+      "review_note": "NamedTemporaryFile provides exclusive staging names and context-managed handles; platform/default parent ACLs are not independently audited. No permission-hardening requirement is invented."
+    },
+    {
+      "id": 33,
+      "checklist_line": 62,
+      "section": "3. Security Considerations",
+      "subsection": "Data Handling",
+      "question": "Is data serialization/deserialization safe?",
+      "result": "PASS",
+      "review_note": "Uses JSON, not pickle/eval; strict schemas and explicit unsupported-policy behavior protect history."
+    },
+    {
+      "id": 34,
+      "checklist_line": 63,
+      "section": "3. Security Considerations",
+      "subsection": "Data Handling",
+      "question": "Are there any potential injection vulnerabilities?",
+      "result": "PARTIAL",
+      "review_note": "No eval or user-driven shell commands in production. Remaining terminal control characters can affect a local display; optional stronger display policy is not added during this audit."
+    },
+    {
+      "id": 35,
+      "checklist_line": 66,
+      "section": "3. Security Considerations",
+      "subsection": "Error Handling",
+      "question": "Do error messages avoid exposing sensitive information?",
+      "result": "PASS",
+      "review_note": "Messages include useful local paths/format details, not deliberately logged tokens or submitted answer text. Expected card backs are intentionally displayed."
+    },
+    {
+      "id": 36,
+      "checklist_line": 67,
+      "section": "3. Security Considerations",
+      "subsection": "Error Handling",
+      "question": "Are exceptions caught and handled appropriately?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 37,
+      "checklist_line": 68,
+      "section": "3. Security Considerations",
+      "subsection": "Error Handling",
+      "question": "Are stack traces filtered in production scenarios?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 38,
+      "checklist_line": 73,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Algorithm Efficiency",
+      "question": "Is the algorithm's time complexity acceptable?",
+      "result": "PASS",
+      "review_note": "Adaptive sorting is O(n log n). Repeated immutable snapshots incur cumulative copying; acceptable for this finite local-deck scope without a specified performance SLA."
+    },
+    {
+      "id": 39,
+      "checklist_line": 74,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Algorithm Efficiency",
+      "question": "Are there any unnecessary nested loops?",
+      "result": "PASS",
+      "review_note": "No unnecessary algorithmic nested loops were found; sequential/random and score updates are direct scans."
+    },
+    {
+      "id": 40,
+      "checklist_line": 75,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Algorithm Efficiency",
+      "question": "Could data structures be optimized?",
+      "result": "N/A",
+      "review_note": "Possible counter/hash caching is optional optimization; no data-structure change is required or implemented."
+    },
+    {
+      "id": 41,
+      "checklist_line": 76,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Algorithm Efficiency",
+      "question": "Are there redundant operations?",
+      "result": "PARTIAL",
+      "review_note": "Summary snapshots and content hashes are recomputed in some paths. This is a reviewed optional optimization, not a correctness/rubric failure."
+    },
+    {
+      "id": 42,
+      "checklist_line": 79,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Memory Usage",
+      "question": "Are large data structures handled efficiently?",
+      "result": "PARTIAL",
+      "review_note": "JSON/decks/history are loaded in memory with no configured size limit; enormous-input resource hardening is outside the agreed scope."
+    },
+    {
+      "id": 43,
+      "checklist_line": 80,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Memory Usage",
+      "question": "Are resources properly cleaned up?",
+      "result": "PARTIAL",
+      "review_note": "Normal file handles close and failed writes clean staging where possible; interruption/cleanup failure may leave a temp file, an accepted documented limitation."
+    },
+    {
+      "id": 44,
+      "checklist_line": 81,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Memory Usage",
+      "question": "Are there potential memory leaks?",
+      "result": "PASS",
+      "review_note": "Sessions and RNGs are scoped; no growing global application collection or retained completed-session loop was found."
+    },
+    {
+      "id": 45,
+      "checklist_line": 82,
+      "section": "4. Performance and Efficiency",
+      "subsection": "Memory Usage",
+      "question": "Could memory usage be optimized?",
+      "result": "N/A",
+      "review_note": "Optimizing snapshot allocation is optional performance work and was not pursued."
+    },
+    {
+      "id": 46,
+      "checklist_line": 85,
+      "section": "4. Performance and Efficiency",
+      "subsection": "I/O Operations",
+      "question": "Are file operations handled efficiently?",
+      "result": "PASS",
+      "review_note": "Each deck/history is loaded once per run and history/export write once per attempt; writes flush/fsync before publication."
+    },
+    {
+      "id": 47,
+      "checklist_line": 86,
+      "section": "4. Performance and Efficiency",
+      "subsection": "I/O Operations",
+      "question": "Are database queries optimized?",
+      "result": "N/A",
+      "review_note": "No database queries."
+    },
+    {
+      "id": 48,
+      "checklist_line": 87,
+      "section": "4. Performance and Efficiency",
+      "subsection": "I/O Operations",
+      "question": "Are network requests handled appropriately?",
+      "result": "N/A",
+      "review_note": "No application network requests; environment package downloads are separate setup evidence."
+    },
+    {
+      "id": 49,
+      "checklist_line": 88,
+      "section": "4. Performance and Efficiency",
+      "subsection": "I/O Operations",
+      "question": "Are there unnecessary I/O operations?",
+      "result": "PASS",
+      "review_note": "No per-question persistence or network I/O is introduced; only terminal I/O occurs while asking cards."
+    },
+    {
+      "id": 50,
+      "checklist_line": 93,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Exception Handling",
+      "question": "Are appropriate exception types used?",
+      "result": "PASS",
+      "review_note": "Deck/history/export/terminal exception types convey expected operations without hiding implementation failures."
+    },
+    {
+      "id": 51,
+      "checklist_line": 94,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Exception Handling",
+      "question": "Are exceptions caught at the right level?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 52,
+      "checklist_line": 95,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Exception Handling",
+      "question": "Are error messages helpful and informative?",
+      "result": "PASS",
+      "review_note": "Errors identify file/field/card positions or operation and give an overwrite remedy where applicable."
+    },
+    {
+      "id": 53,
+      "checklist_line": 96,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Exception Handling",
+      "question": "Is the application state consistent after errors?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 54,
+      "checklist_line": 99,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Defensive Programming",
+      "question": "Are assumptions validated with assertions?",
+      "result": "N/A",
+      "review_note": "Runtime preconditions use explicit exceptions rather than optimizable assert statements; tests assert invariants."
+    },
+    {
+      "id": 55,
+      "checklist_line": 100,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Defensive Programming",
+      "question": "Are preconditions checked?",
+      "result": "PASS",
+      "review_note": "Nonempty deck, strategy permutation, history version/policy and public flag/path constraints are checked."
+    },
+    {
+      "id": 56,
+      "checklist_line": 101,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Defensive Programming",
+      "question": "Are postconditions verified?",
+      "result": "PASS",
+      "review_note": "Tests verify membership, counts, unchanged bytes, one-attempt persistence, export shape and immutable snapshots."
+    },
+    {
+      "id": 57,
+      "checklist_line": 102,
+      "section": "5. Error Handling and Robustness",
+      "subsection": "Defensive Programming",
+      "question": "Is the code robust against unexpected inputs?",
+      "result": "PASS",
+      "review_note": "Malformed/unreadable files and wrong inputs are covered; no claim is made about unlimited resources or repeated forced interrupts."
+    },
+    {
+      "id": 58,
+      "checklist_line": 107,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Project Integration",
+      "question": "Does the code fit well with existing project structure?",
+      "result": "PASS",
+      "review_note": "Starter project/starter layout, data samples and original report template are preserved."
+    },
+    {
+      "id": 59,
+      "checklist_line": 108,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Project Integration",
+      "question": "Are dependencies appropriate and necessary?",
+      "result": "PASS",
+      "review_note": "Runtime imports are stdlib/local; pinned development requirements installed in both clean venvs."
+    },
+    {
+      "id": 60,
+      "checklist_line": 109,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Project Integration",
+      "question": "Are interfaces consistent with the rest of the codebase?",
+      "result": "PASS",
+      "review_note": "QuizStrategy.order and typed model/store APIs have consistent ownership; engine has no terminal/storage dependency."
+    },
+    {
+      "id": 61,
+      "checklist_line": 110,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Project Integration",
+      "question": "Will this code work with existing components?",
+      "result": "PARTIAL",
+      "review_note": "Confirmed audit F3: a pre-quiz KeyboardInterrupt followed by warning-output TerminalOutputError escapes main and returns 1 rather than 130. Normal session/finalization paths remain tested; narrow fix awaits approval."
+    },
+    {
+      "id": 62,
+      "checklist_line": 113,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Backwards Compatibility",
+      "question": "Does the code maintain existing APIs?",
+      "result": "PASS",
+      "review_note": "Both original JSON shapes remain compatible; there was no starter executable API to preserve beyond that contract."
+    },
+    {
+      "id": 63,
+      "checklist_line": 114,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Backwards Compatibility",
+      "question": "Are breaking changes documented?",
+      "result": "PASS",
+      "review_note": "Reviewed export content/overwrite refinements were requested before acceptance and are documented; raw-answer removal is not concealed."
+    },
+    {
+      "id": 64,
+      "checklist_line": 115,
+      "section": "6. Integration and Compatibility",
+      "subsection": "Backwards Compatibility",
+      "question": "Are migration paths provided if needed?",
+      "result": "N/A",
+      "review_note": "No released legacy history migration is required; unsupported version/policy is preserved with saving disabled."
+    },
+    {
+      "id": 65,
+      "checklist_line": 120,
+      "section": "7. Testing and Testability",
+      "subsection": "Unit Testing",
+      "question": "Is the code easily testable?",
+      "result": "PASS",
+      "review_note": "Pure engine/scoring/selection and separate adapters permit unit tests without terminal input."
+    },
+    {
+      "id": 66,
+      "checklist_line": 121,
+      "section": "7. Testing and Testability",
+      "subsection": "Unit Testing",
+      "question": "Are dependencies injectable for mocking?",
+      "result": "PASS",
+      "review_note": "Random is injected; filesystem/terminal faults are injected only in tests, with real file observations."
+    },
+    {
+      "id": 67,
+      "checklist_line": 122,
+      "section": "7. Testing and Testability",
+      "subsection": "Unit Testing",
+      "question": "Are side effects minimized?",
+      "result": "PASS",
+      "review_note": "Selection/grading are side-effect free; I/O is confined to terminal/store/export/CLI."
+    },
+    {
+      "id": 68,
+      "checklist_line": 123,
+      "section": "7. Testing and Testability",
+      "subsection": "Unit Testing",
+      "question": "Can edge cases be easily tested?",
+      "result": "PASS",
+      "review_note": "Tests cover empty/invalid/boundary values, decoder limits, duplicate distinctions and fixed snapshots."
+    },
+    {
+      "id": 69,
+      "checklist_line": 126,
+      "section": "7. Testing and Testability",
+      "subsection": "Test Coverage",
+      "question": "Are all code paths testable?",
+      "result": "PARTIAL",
+      "review_note": "Defensive branches are testable but not all exercised; actual symlink/physical signal behavior depends on the environment. Coverage is reported honestly."
+    },
+    {
+      "id": 70,
+      "checklist_line": 127,
+      "section": "7. Testing and Testability",
+      "subsection": "Test Coverage",
+      "question": "Are error conditions testable?",
+      "result": "PASS",
+      "review_note": "Explicit file/format/stream fault seams support error-condition tests; no production fault flags."
+    },
+    {
+      "id": 71,
+      "checklist_line": 128,
+      "section": "7. Testing and Testability",
+      "subsection": "Test Coverage",
+      "question": "Are there integration testing opportunities?",
+      "result": "PASS",
+      "review_note": "Subprocess tests execute main.py and real two-session files; F1/F2 include native closed pipes and real replacement."
+    },
+    {
+      "id": 72,
+      "checklist_line": 133,
+      "section": "8. Maintainability",
+      "subsection": "Code Organization",
+      "question": "Is the code properly modularized?",
+      "result": "PASS",
+      "review_note": "Each module has one domain/adaptor responsibility; the entry point is thin."
+    },
+    {
+      "id": 73,
+      "checklist_line": 134,
+      "section": "8. Maintainability",
+      "subsection": "Code Organization",
+      "question": "Are responsibilities clearly separated?",
+      "result": "PASS",
+      "review_note": "State, strategy, persistence, export and presentation do not duplicate ownership."
+    },
+    {
+      "id": 74,
+      "checklist_line": 135,
+      "section": "8. Maintainability",
+      "subsection": "Code Organization",
+      "question": "Is coupling between components minimized?",
+      "result": "PASS",
+      "review_note": "Engine depends on a structural ordering interface and immutable values rather than CLI/store globals."
+    },
+    {
+      "id": 75,
+      "checklist_line": 136,
+      "section": "8. Maintainability",
+      "subsection": "Code Organization",
+      "question": "Is cohesion within components maximized?",
+      "result": "PASS",
+      "review_note": "Related validation, state transitions and I/O operations stay within their owning modules."
+    },
+    {
+      "id": 76,
+      "checklist_line": 139,
+      "section": "8. Maintainability",
+      "subsection": "Extensibility",
+      "question": "Can the code be easily extended?",
+      "result": "PASS",
+      "review_note": "ReverseStrategy test demonstrates adding an algorithm without engine edits."
+    },
+    {
+      "id": 77,
+      "checklist_line": 140,
+      "section": "8. Maintainability",
+      "subsection": "Extensibility",
+      "question": "Are design patterns used appropriately?",
+      "result": "PASS",
+      "review_note": "Strategy is listed in docs/design_patterns.md section 1 and is useful for real mode interchangeability."
+    },
+    {
+      "id": 78,
+      "checklist_line": 141,
+      "section": "8. Maintainability",
+      "subsection": "Extensibility",
+      "question": "Are configuration options provided where needed?",
+      "result": "PASS",
+      "review_note": "Mode, seed, history, export and overwrite flags expose the needed choices; extra configuration is optional."
+    },
+    {
+      "id": 79,
+      "checklist_line": 142,
+      "section": "8. Maintainability",
+      "subsection": "Extensibility",
+      "question": "Is the code flexible for future requirements?",
+      "result": "PASS",
+      "review_note": "Typed interfaces and schema/policy versions permit planned extension; no new pattern/infrastructure is added."
+    },
+    {
+      "id": 80,
+      "checklist_line": 190,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Hardcoded credentials or sensitive data**",
+      "result": "PASS",
+      "review_note": "No hardcoded credential/private-key finding in current bounded candidate scan; synthetic fixture data is intentionally retained."
+    },
+    {
+      "id": 81,
+      "checklist_line": 191,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**SQL injection vulnerabilities**",
+      "result": "N/A",
+      "review_note": "No SQL surface."
+    },
+    {
+      "id": 82,
+      "checklist_line": 192,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Infinite loops or recursion without proper termination**",
+      "result": "PARTIAL",
+      "review_note": "Quiz sessions are finite; repeated external interruptions can prevent finalization progress, an accepted limit."
+    },
+    {
+      "id": 83,
+      "checklist_line": 193,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Memory leaks or resource leaks**",
+      "result": "PARTIAL",
+      "review_note": "No unbounded application retention was found; interrupted staging cleanup is best effort and can leave a file."
+    },
+    {
+      "id": 84,
+      "checklist_line": 194,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Race conditions in concurrent code**",
+      "result": "PARTIAL",
+      "review_note": "Concurrent sessions are last-writer-wins and path checks are preflight. These explicit limits are not represented as solved; concurrency infrastructure is optional."
+    },
+    {
+      "id": 85,
+      "checklist_line": 195,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Unsafe deserialization**",
+      "result": "PASS",
+      "review_note": "No unsafe deserializer/eval is used."
+    },
+    {
+      "id": 86,
+      "checklist_line": 196,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Path traversal vulnerabilities**",
+      "result": "N/A",
+      "review_note": "User-authorized local file paths are not restricted to a sandbox; no remote traversal boundary is claimed. Alias conflicts are checked."
+    },
+    {
+      "id": 87,
+      "checklist_line": 197,
+      "section": "Red Flags That Require Immediate Attention",
+      "subsection": "5. Outdated Practices",
+      "question": "**Unvalidated user input**",
+      "result": "PASS",
+      "review_note": "External JSON/CLI values are validated; trusted programmatic model constructors rely on their documented typed contract."
+    },
+    {
+      "id": 88,
+      "checklist_line": 212,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Acceptable",
+      "question": "Run final tests",
+      "result": "PASS",
+      "review_note": "Reused the unchanged-source clean runtime/test/quality evidence as the current user explicitly instructed; no new execution date is invented."
+    },
+    {
+      "id": 89,
+      "checklist_line": 213,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Acceptable",
+      "question": "Update documentation",
+      "result": "PASS",
+      "review_note": "Current documentation resolves the supplied rubric/length decision and records the actual code-documentation gap."
+    },
+    {
+      "id": 90,
+      "checklist_line": 214,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Acceptable",
+      "question": "Log AI interaction details",
+      "result": "PASS",
+      "review_note": "This dated review and exact evidence are appended to the interaction log."
+    },
+    {
+      "id": 91,
+      "checklist_line": 215,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Acceptable",
+      "question": "Commit with clear commit message",
+      "result": "N/A",
+      "review_note": "Commit action is prohibited by the user; no commit/push/publish/submit is performed."
+    },
+    {
+      "id": 92,
+      "checklist_line": 218,
+      "section": "After Review Actions",
+      "subsection": "If Code Needs Changes",
+      "question": "Document specific issues",
+      "result": "PASS",
+      "review_note": "Eight missing executable-bootstrap docstrings are named with source lines and a reproducible AST inspection."
+    },
+    {
+      "id": 93,
+      "checklist_line": 219,
+      "section": "After Review Actions",
+      "subsection": "If Code Needs Changes",
+      "question": "Make necessary modifications",
+      "result": "PENDING",
+      "review_note": "Eight docstrings plus required bootstrap formatting await approval; no active Python/test source was edited."
+    },
+    {
+      "id": 94,
+      "checklist_line": 220,
+      "section": "After Review Actions",
+      "subsection": "If Code Needs Changes",
+      "question": "Test changes thoroughly",
+      "result": "PENDING",
+      "review_note": "After approval, exercise affected CLI/bootstrap tests and quality checks; do not claim they ran for an unimplemented change."
+    },
+    {
+      "id": 95,
+      "checklist_line": 221,
+      "section": "After Review Actions",
+      "subsection": "If Code Needs Changes",
+      "question": "Update AI edit log with changes made",
+      "result": "PASS",
+      "review_note": "The code-quality finding and no-code-change boundary are recorded in the log."
+    },
+    {
+      "id": 96,
+      "checklist_line": 224,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Unacceptable",
+      "question": "Document why it's not suitable",
+      "result": "N/A",
+      "review_note": "The functioning application is not rejected wholesale; specific test-helper documentation/style criteria remain unmet."
+    },
+    {
+      "id": 97,
+      "checklist_line": 225,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Unacceptable",
+      "question": "Create a new, more specific prompt",
+      "result": "N/A",
+      "review_note": "No replacement implementation/prompt is needed during this audit."
+    },
+    {
+      "id": 98,
+      "checklist_line": 226,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Unacceptable",
+      "question": "Consider alternative approaches",
+      "result": "N/A",
+      "review_note": "Optional alternative architectures/patterns are not pursued."
+    },
+    {
+      "id": 99,
+      "checklist_line": 227,
+      "section": "After Review Actions",
+      "subsection": "If Code Is Unacceptable",
+      "question": "Learn from the experience",
+      "result": "N/A",
+      "review_note": "No new student learning reflection is invented; only reviewer observations and supplied student reflections are recorded."
+    }
+  ],
+  "checklist_result_counts": {
+    "PASS": 59,
+    "PARTIAL": 24,
+    "N/A": 14,
+    "PENDING": 2
+  },
+  "embedded_lint": {
+    "date": "2026-11-19",
+    "command": [
+      "C:\\Projects\\flashcard\\project\\starter\\.venv\\Scripts\\python.exe",
+      "-m",
+      "flake8",
+      "--stdin-display-name",
+      "tests/cli_helpers_bootstrap.py",
+      "-"
+    ],
+    "scope": "Executable _BOOTSTRAP string extracted with ast; existing file-level lint does not parse it",
+    "exit_code": 1,
+    "stdout": "tests/cli_helpers_bootstrap.py:17:1: E302 expected 2 blank lines, found 0\ntests/cli_helpers_bootstrap.py:26:1: E305 expected 2 blank lines after class or function definition, found 0\ntests/cli_helpers_bootstrap.py:41:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:76:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:91:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:103:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:115:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:124:5: E301 expected 1 blank line, found 0\n",
+    "stderr": "",
+    "application_or_test_source_modified": false
+  },
+  "mandatory_style_gap": "Eight E301/E302/E305 findings in executable bootstrap; file-level lint cannot establish embedded-code style.",
+  "confirmed_startup_interrupt_defect": {
+    "date": "2026-11-19",
+    "application_source_modified": false,
+    "test_source_modified": false,
+    "scenarios": [
+      {
+        "scenario": "healthy_warning_control",
+        "exit_code": 130,
+        "expected_exit_under_documented_interrupt_policy": 130,
+        "stdout": "",
+        "stderr": "Warning: Interrupted by Ctrl+C before quiz finalization.\n",
+        "bootstrap": "import os, runpy, sys\nfrom pathlib import Path\nimport utils.cli as cli\nimport utils.terminal as terminal\n\ndef interrupt_home() -> Path:\n    \"\"\"Inject the same pre-quiz interrupt boundary already tested by the suite.\"\"\"\n    raise KeyboardInterrupt\ncli.default_history_path = interrupt_home\n\nsys.argv = ['main.py', '--file', 'data/glossary.json']\nrunpy.run_path('main.py', run_name='__main__')\n",
+        "physical_ctrl_c_verified": false
+      },
+      {
+        "scenario": "failed_warning_restored_for_diagnostics",
+        "exit_code": 1,
+        "expected_exit_under_documented_interrupt_policy": 130,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 221, in main\n    paths = _prepare_paths(options)\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 96, in _prepare_paths\n    history = default_history_path()\n  File \"<string>\", line 8, in interrupt_home\n    raise KeyboardInterrupt\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 25, in _write\n    print(message, file=stream, flush=True)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 22] Invalid argument\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 28, in <module>\n    runpy.run_path('main.py', run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"main.py\", line 6, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\cli.py\", line 234, in main\n    terminal.warn(\"Interrupted by Ctrl+C before quiz finalization.\")\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 20, in warning_into_closed_pipe\n    original_warning(message)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 57, in warn\n    _write(f\"Warning: {message}\", error_stream=True)\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\flashcard\\project\\starter\\utils\\terminal.py\", line 35, in _write\n    raise TerminalOutputError(\n        f\"Could not write terminal output: {failure}\"\n    ) from failure\nutils.terminal.TerminalOutputError: Could not write terminal output: [Errno 22] Invalid argument\n",
+        "bootstrap": "import os, runpy, sys\nfrom pathlib import Path\nimport utils.cli as cli\nimport utils.terminal as terminal\n\ndef interrupt_home() -> Path:\n    \"\"\"Inject the same pre-quiz interrupt boundary already tested by the suite.\"\"\"\n    raise KeyboardInterrupt\ncli.default_history_path = interrupt_home\n\noriginal_warning = terminal.warn\ndef warning_into_closed_pipe(message: str) -> None:\n    \"\"\"Exercise the real warning printer against a closed native pipe.\"\"\"\n    previous = sys.stderr\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    stream = os.fdopen(write_fd, 'w', encoding='utf-8')\n    sys.stderr = stream\n    try:\n        original_warning(message)\n    finally:\n        if True:\n            sys.stderr = previous\n            stream.close()\nterminal.warn = warning_into_closed_pipe\n\nsys.argv = ['main.py', '--file', 'data/glossary.json']\nrunpy.run_path('main.py', run_name='__main__')\n",
+        "physical_ctrl_c_verified": false
+      },
+      {
+        "scenario": "failed_warning_permanent_pipe",
+        "exit_code": 1,
+        "expected_exit_under_documented_interrupt_policy": 130,
+        "stdout": "",
+        "stderr": "",
+        "bootstrap": "import os, runpy, sys\nfrom pathlib import Path\nimport utils.cli as cli\nimport utils.terminal as terminal\n\ndef interrupt_home() -> Path:\n    \"\"\"Inject the same pre-quiz interrupt boundary already tested by the suite.\"\"\"\n    raise KeyboardInterrupt\ncli.default_history_path = interrupt_home\n\noriginal_warning = terminal.warn\ndef warning_into_closed_pipe(message: str) -> None:\n    \"\"\"Exercise the real warning printer against a closed native pipe.\"\"\"\n    previous = sys.stderr\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    stream = os.fdopen(write_fd, 'w', encoding='utf-8')\n    sys.stderr = stream\n    try:\n        original_warning(message)\n    finally:\n        if False:\n            sys.stderr = previous\n            stream.close()\nterminal.warn = warning_into_closed_pipe\n\nsys.argv = ['main.py', '--file', 'data/glossary.json']\nrunpy.run_path('main.py', run_name='__main__')\n",
+        "physical_ctrl_c_verified": false
+      }
+    ],
+    "confirmed": "Expected TerminalOutputError raised inside main KeyboardInterrupt handler escapes sibling except; status 130 is replaced by 1.",
+    "proposed_fix": "Catch TerminalOutputError narrowly around the warning inside the top-level KeyboardInterrupt handler and return 130 regardless of warning success; keep programming errors visible.",
+    "fix_implemented": false,
+    "runtime": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+    "actual_executable": "C:\\Projects\\flashcard\\project\\starter\\.venv\\Scripts\\python.exe"
+  },
+  "new_functional_correction_required": true
+}

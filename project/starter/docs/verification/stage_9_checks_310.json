@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-18",
+  "runtime": "Windows CPython 3.10.11",
+  "clean_submission_copy": true,
+  "physical_ctrl_c_verified": false,
+  "symlink_verified": false,
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest -rs --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "chunk_id": "13e664",
+      "wall_time_seconds": 10.0062065,
+      "original_token_count": 100,
+      "output": "============================= test session starts =============================\r\nplatform win32 -- Python 3.10.11, pytest-9.2.0, pluggy-1.7.0\r\nrootdir: C:\\Projects\\flashcard\\project\\starter\\.tools\\stage9-clean-310\\submission\\project\\starter\r\nconfigfile: pyproject.toml\r\ntestpaths: tests\r\nplugins: platformdirs-4.12.4, cov-7.1.0\r\ncollected 272 items\r\n\r\ntests\\test_cli.py ....................................s...............   [ 19%]\r\ntests\\test_data_loader.py .............................................. [ 36%]\r\n..........................                                               [ 45%]\r\ntests\\test_engine.py ............................                        [ 55%]\r\ntests\\test_finalization.py .........                                     [ 59%]\r\ntests\\test_history.py .................................................. [ 77%]\r\n........                                                                 [ 80%]\r\ntests\\test_models.py ................                                    [ 86%]\r\ntests\\test_paths.py .......                                              [ 88%]\r\ntests\\test_results_export.py .......                                     [ 91%]\r\ntests\\test_strategies.py ....................                            [ 98%]\r\ntests\\test_terminal.py ...                                               [100%]\r\n\r\n=============================== tests coverage ================================\r\n______________ coverage: platform win32, python 3.10.11-final-0 _______________\r\n\r\nName                      Stmts   Miss Branch BrPart   Cover   Missing\r\n----------------------------------------------------------------------\r\nmain.py                       3      0      2      0 100.00%\r\nutils\\__init__.py             0      0      0      0 100.00%\r\nutils\\cli.py                141      1     28      2  98.22%   145->169, 182->122, 237\r\nutils\\data_loader.py         78      0     24      0 100.00%\r\nutils\\engine.py              31      0      8      0 100.00%\r\nutils\\history.py            126      0     30      0 100.00%\r\nutils\\models.py              44      0      2      0 100.00%\r\nutils\\paths.py               37      0      8      0 100.00%\r\nutils\\results_export.py      50      6      6      1  87.50%   59-60, 91-92, 121->126, 124-125\r\nutils\\strategies.py          20      0      0      0 100.00%\r\nutils\\terminal.py            69      2     16      1  96.47%   27->35, 33-34\r\n----------------------------------------------------------------------\r\nTOTAL                       599      9    124      4  98.20%\r\nCoverage HTML written to dir htmlcov\r\nCoverage JSON written to file coverage.json\r\nRequired test coverage of 81.0% reached. Total coverage: 98.20%\r\n=========================== short test summary info ===========================\r\nSKIPPED [1] tests\\test_cli.py:436: symbolic links unavailable: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-64\\\\test_existing_file_alias_confl1\\\\deck.json' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-64\\\\test_existing_file_alias_confl1\\\\alias.json'\r\n======================= 271 passed, 1 skipped in 22.53s =======================\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "chunk_id": "cdc3ee",
+      "wall_time_seconds": 1.2408889,
+      "exit_code": 0,
+      "original_token_count": 18,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n24 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "chunk_id": "7c75e2",
+      "wall_time_seconds": 0.6364362,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "Skipped 3 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "chunk_id": "873f08",
+      "wall_time_seconds": 0.0000191,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy .",
+      "chunk_id": "b06047",
+      "wall_time_seconds": 0.2877091,
+      "exit_code": 0,
+      "original_token_count": 12,
+      "output": "Success: no issues found in 24 source files\r\n"
+    },
+    {
+      "name": "pip_check",
+      "command": ".\\.venv\\Scripts\\python.exe -m pip check",
+      "chunk_id": "8d188d",
+      "wall_time_seconds": 0.0000277,
+      "exit_code": 0,
+      "original_token_count": 8,
+      "output": "No broken requirements found.\r\n"
+    },
+    {
+      "name": "environment",
+      "command": "@'\nimport json\nimport site\nimport sys\nfrom pathlib import Path\nprint(json.dumps({'version': sys.version, 'executable': sys.executable, 'prefix': sys.prefix, 'base_prefix': sys.base_prefix, 'user_site_enabled': site.ENABLE_USER_SITE, 'site_packages': site.getsitepackages(), 'pyvenv_cfg': Path('.venv/pyvenv.cfg').read_text(encoding='utf-8')}, indent=2))\n'@ | & .\\.venv\\Scripts\\python.exe -",
+      "chunk_id": "f6a03e",
+      "wall_time_seconds": 0.0000218,
+      "exit_code": 0,
+      "original_token_count": 233,
+      "output": "{\r\n  \"version\": \"3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]\",\r\n  \"executable\": \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\stage9-clean-310\\\\submission\\\\project\\\\starter\\\\.venv\\\\Scripts\\\\python.exe\",\r\n  \"prefix\": \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\stage9-clean-310\\\\submission\\\\project\\\\starter\\\\.venv\",\r\n  \"base_prefix\": \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\python.3.10.11\\\\tools\",\r\n  \"user_site_enabled\": false,\r\n  \"site_packages\": [\r\n    \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\stage9-clean-310\\\\submission\\\\project\\\\starter\\\\.venv\",\r\n    \"C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\stage9-clean-310\\\\submission\\\\project\\\\starter\\\\.venv\\\\lib\\\\site-packages\"\r\n  ],\r\n  \"pyvenv_cfg\": \"home = C:\\\\Projects\\\\flashcard\\\\project\\\\starter\\\\.tools\\\\python.3.10.11\\\\tools\\ninclude-system-site-packages = false\\nversion = 3.10.11\\n\"\r\n}\r\n"
+    }
+  ]
+}

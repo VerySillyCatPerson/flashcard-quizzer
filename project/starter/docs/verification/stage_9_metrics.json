@@ -1,0 +1,46 @@
+{
+  "313": {
+    "covered_statements": 590,
+    "statements": 599,
+    "statement_percent": 98.49749582637729,
+    "covered_branch_outcomes": 120,
+    "branch_outcomes": 124,
+    "branch_percent": 96.7741935483871,
+    "combined_percent": 98.20193637621024,
+    "production_files": [
+      "main.py",
+      "utils\\__init__.py",
+      "utils\\cli.py",
+      "utils\\data_loader.py",
+      "utils\\engine.py",
+      "utils\\history.py",
+      "utils\\models.py",
+      "utils\\paths.py",
+      "utils\\results_export.py",
+      "utils\\strategies.py",
+      "utils\\terminal.py"
+    ]
+  },
+  "310": {
+    "covered_statements": 590,
+    "statements": 599,
+    "statement_percent": 98.49749582637729,
+    "covered_branch_outcomes": 120,
+    "branch_outcomes": 124,
+    "branch_percent": 96.7741935483871,
+    "combined_percent": 98.20193637621024,
+    "production_files": [
+      "main.py",
+      "utils\\__init__.py",
+      "utils\\cli.py",
+      "utils\\data_loader.py",
+      "utils\\engine.py",
+      "utils\\history.py",
+      "utils\\models.py",
+      "utils\\paths.py",
+      "utils\\results_export.py",
+      "utils\\strategies.py",
+      "utils\\terminal.py"
+    ]
+  }
+}

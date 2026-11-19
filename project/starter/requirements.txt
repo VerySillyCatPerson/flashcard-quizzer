@@ -1,25 +1,9 @@
-# Core testing framework
-pytest>=7.0.0
-pytest-cov>=4.0.0
-
-# Code formatting and linting
-black>=22.0.0
-flake8>=5.0.0
-isort>=5.10.0
-
-# Type checking
-mypy>=1.0.0
-
-# Documentation generation
-sphinx>=5.0.0
-sphinx-rtd-theme>=1.0.0
-
-# Development utilities
-pre-commit>=3.0.0
-bandit>=1.7.0  # Security linting
-safety>=2.0.0  # Security vulnerability scanning
-
-# Optional: For more advanced projects
-requests>=2.28.0  # HTTP requests
-click>=8.0.0      # CLI framework
-pydantic>=1.10.0  # Data validation
+# Development tools only; the planned application uses the standard library.
+# Direct versions resolved for Python 3.10+; actual checks use CPython 3.13.17.
+pytest==9.2.0
+pytest-cov==7.1.0
+coverage==7.16.2
+black==26.10.1
+flake8==7.4.1
+isort==9.0.2
+mypy==2.4.1

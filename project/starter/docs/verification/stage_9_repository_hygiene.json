@@ -1,0 +1,62 @@
+{
+  "candidate_files": 125,
+  "forbidden_artifact_paths": [],
+  "credential_filename_candidates": [],
+  "secret_pattern_findings": [],
+  "scan_limits": "Filename rules and recognizable credential patterns only; not a proof that arbitrary credentials cannot exist. Match values are never printed. Evidence histories/answers are synthetic; author name and local paths are intentional documentation.",
+  "ignore_probes": {
+    ".venv/Scripts/python.exe": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:4:.venv/\t.venv/Scripts/python.exe"
+    },
+    ".tools/example.exe": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:5:.tools/\t.tools/example.exe"
+    },
+    "__pycache__/sample.pyc": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:8:__pycache__/\t__pycache__/sample.pyc"
+    },
+    ".pytest_cache/README.md": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:15:.pytest_cache/\t.pytest_cache/README.md"
+    },
+    ".mypy_cache/sample.json": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:11:.mypy_cache/\t.mypy_cache/sample.json"
+    },
+    ".coverage": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:16:.coverage\t.coverage"
+    },
+    "coverage.json": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:19:coverage.json\tcoverage.json"
+    },
+    "htmlcov/index.html": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:18:htmlcov/\thtmlcov/index.html"
+    },
+    "results/session.json": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:24:results/\tresults/session.json"
+    },
+    ".flashcard_quizzer/history.json": {
+      "ignored": true,
+      "rule": "project/starter/.gitignore:23:.flashcard_quizzer/\t.flashcard_quizzer/history.json"
+    },
+    ".env": {
+      "ignored": false,
+      "rule": ""
+    },
+    "private.key": {
+      "ignored": false,
+      "rule": ""
+    }
+  },
+  "missing_named_function_docstrings": [],
+  "missing_named_function_annotations": [],
+  "annotation_scope": "Parsed Python source/tests; self/cls implicit and embedded bootstrap strings are not counted as parsed functions.",
+  "initial_candidate_file_count": 115,
+  "production_nonstdlib_import_roots": []
+}

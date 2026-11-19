@@ -1,0 +1,9 @@
+{
+  "exit_code": 120,
+  "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\n",
+  "stderr": "Warning: Could not write terminal output: [Errno 22] Invalid argument\nException ignored on flushing sys.stdout:\nOSError: [Errno 22] Invalid argument\nException ignored in: <_io.TextIOWrapper name=4 mode='w' encoding='utf-8'>\nOSError: [Errno 22] Invalid argument\n",
+  "history_exists": true,
+  "export_exists": true,
+  "bootstrap": "import builtins, os, runpy, sys\nimport utils.terminal as terminal\noriginal_input = builtins.input\ncount = 0\ndef interrupted_input(prompt=''):\n    global count\n    if count == 1:\n        raise KeyboardInterrupt\n    count += 1\n    return original_input(prompt)\nbuiltins.input = interrupted_input\noriginal_summary = terminal.show_summary\ndef broken_summary(*args, **kwargs):\n    read_fd, write_fd = os.pipe()\n    os.close(read_fd)\n    sys.stdout = os.fdopen(write_fd, 'w', encoding='utf-8')\n    return original_summary(*args, **kwargs)\nterminal.show_summary = broken_summary\nsys.argv = ['main.py', *sys.argv[1:]]\nrunpy.run_path('main.py', run_name='__main__')\n",
+  "physical_ctrl_c_verified": false
+}

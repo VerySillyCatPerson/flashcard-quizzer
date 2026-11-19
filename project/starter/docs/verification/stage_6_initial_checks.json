@@ -1,0 +1,43 @@
+{
+  "stage": 6,
+  "date": "2026-11-18",
+  "phase": "initial checks before lint-only corrections",
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "exit_code": 0,
+      "output": "============================= test session starts =============================\r\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\r\nrootdir: C:\\Projects\\flashcard\\project\\starter\r\nconfigfile: pyproject.toml\r\ntestpaths: tests\r\nplugins: platformdirs-4.14.7, cov-7.1.0\r\ncollected 253 items\r\n\r\ntests\\test_cli.py ..............................s...............         [ 18%]\r\ntests\\test_data_loader.py .............................................. [ 36%]\r\n..........................                                               [ 46%]\r\ntests\\test_engine.py ............................                        [ 57%]\r\ntests\\test_history.py .................................................. [ 77%]\r\n........                                                                 [ 80%]\r\ntests\\test_models.py ................                                    [ 86%]\r\ntests\\test_paths.py .......                                              [ 89%]\r\ntests\\test_results_export.py ....                                        [ 91%]\r\ntests\\test_strategies.py ....................                            [ 99%]\r\ntests\\test_terminal.py ..                                                [100%]\r\n\r\n=============================== tests coverage ================================\r\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\r\n\r\nName                      Stmts   Miss Branch BrPart   Cover   Missing\r\n----------------------------------------------------------------------\r\nmain.py                       3      0      2      0 100.00%\r\nutils\\__init__.py             0      0      0      0 100.00%\r\nutils\\cli.py                116      0     18      0 100.00%\r\nutils\\data_loader.py         78      0     24      0 100.00%\r\nutils\\engine.py              31      0      8      0 100.00%\r\nutils\\history.py            126      0     30      0 100.00%\r\nutils\\models.py              44      0      2      0 100.00%\r\nutils\\paths.py               37      0      8      0 100.00%\r\nutils\\results_export.py      38      4      2      1  87.50%   79-80, 101->106, 104-105\r\nutils\\strategies.py          20      0      0      0 100.00%\r\nutils\\terminal.py            53      0     12      0 100.00%\r\n----------------------------------------------------------------------\r\nTOTAL                       546      4    106      1  99.23%\r\nCoverage HTML written to dir htmlcov\r\nCoverage JSON written to file coverage.json\r\nRequired test coverage of 81.0% reached. Total coverage: 99.23%\r\n======================= 252 passed, 1 skipped in 15.93s =======================\r\n"
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "exit_code": 0,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n23 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "exit_code": 0,
+      "output": "Skipped 4 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "exit_code": 1,
+      "output": ".\\tests\\cli_helpers.py:31:89: E501 line too long (94 > 88 characters)\n.\\tests\\cli_helpers.py:47:89: E501 line too long (90 > 88 characters)\n.\\tests\\cli_helpers.py:51:89: E501 line too long (95 > 88 characters)\n.\\tests\\test_cli.py:13:1: F401 'utils.data_loader.load_flashcards' imported but unused\n.\\tests\\test_terminal.py:16:89: E501 line too long (90 > 88 characters)\n.\\utils\\cli.py:45:89: E501 line too long (144 > 88 characters)\n"
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy .",
+      "exit_code": 0,
+      "output": "Success: no issues found in 23 source files\r\n"
+    },
+    {
+      "name": "python310_syntax",
+      "command": "@'\nimport ast\nfrom pathlib import Path\nfiles = [Path('main.py'), *Path('utils').glob('*.py'), *Path('tests').glob('*.py')]\nfor path in files:\n    ast.parse(path.read_text(encoding='utf-8'), filename=str(path), feature_version=(3, 10))\nprint(f'Python 3.10 grammar accepted for {len(files)} source/test files on CPython 3.13.17. Python 3.10 runtime not tested.')\n'@ | .\\.venv\\Scripts\\python.exe -",
+      "exit_code": 0,
+      "output": "Python 3.10 grammar accepted for 23 source/test files on CPython 3.13.17. Python 3.10 runtime not tested.\r\n"
+    }
+  ]
+}

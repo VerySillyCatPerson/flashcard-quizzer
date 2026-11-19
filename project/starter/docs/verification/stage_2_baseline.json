@@ -1,0 +1,132 @@
+{
+  "stage": 2,
+  "date": "2026-11-18",
+  "python": "3.13.17",
+  "implementation": "CPython",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "pip": "26.2.2",
+    "pytest": "9.2.0",
+    "pytest-cov": "7.1.0",
+    "coverage": "7.16.2",
+    "black": "26.10.1",
+    "flake8": "7.4.1",
+    "isort": "9.0.2",
+    "mypy": "2.4.1"
+  },
+  "checks": [
+    {
+      "name": "pip_check",
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "python",
+        "-m",
+        "pytest"
+      ],
+      "exit_code": 5,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\nrootdir: C:\\Projects\\flashcard\\project\\starter\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: platformdirs-4.14.7, cov-7.1.0\ncollected 0 items\n\n============================ no tests ran in 0.03s ============================\n",
+      "stderr": ""
+    },
+    {
+      "name": "coverage",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "--cov=.",
+        "--cov-report=term-missing",
+        "--cov-report=html",
+        "--cov-report=json"
+      ],
+      "exit_code": 5,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\nrootdir: C:\\Projects\\flashcard\\project\\starter\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: platformdirs-4.14.7, cov-7.1.0\ncollected 0 items\n\n=============================== tests coverage ================================\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\n\nName                Stmts   Miss    Cover   Missing\n---------------------------------------------------\nmain.py                 0      0  100.00%\nutils\\__init__.py       0      0  100.00%\n---------------------------------------------------\nTOTAL                   0      0  100.00%\nCoverage HTML written to dir htmlcov\nCoverage JSON written to file coverage.json\nRequired test coverage of 81.0% reached. Total coverage: 100.00%\n============================ no tests ran in 0.16s ============================\n",
+      "stderr": "C:\\Projects\\flashcard\\project\\starter\\.venv\\Lib\\site-packages\\coverage\\control.py:967: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.16.2/messages.html#warning-no-data-collected\n  self._warn(\"No data was collected.\", slug=\"no-data-collected\")\n"
+    },
+    {
+      "name": "black",
+      "command": [
+        "python",
+        "-m",
+        "black",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "All done! \\u2728 \\U0001f370 \\u2728\n3 files would be left unchanged.\n"
+    },
+    {
+      "name": "isort",
+      "command": [
+        "python",
+        "-m",
+        "isort",
+        "--check-only",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "Skipped 2 files\n",
+      "stderr": "<frozen runpy>:88: UserWarning: Unable to parse file .\\.claude\\commands\\debug-help due to 'charmap' codec can't encode character '\\U0001f41b' in position 11: character maps to <undefined>\n<frozen runpy>:88: UserWarning: Unable to parse file .\\.claude\\commands\\generate-function due to 'charmap' codec can't encode character '\\U0001f916' in position 11: character maps to <undefined>\n<frozen runpy>:88: UserWarning: Unable to parse file .\\.claude\\commands\\refactor-code due to 'charmap' codec can't encode character '\\U0001f504' in position 11: character maps to <undefined>\n<frozen runpy>:88: UserWarning: Unable to parse file .\\.claude\\commands\\review-code due to 'charmap' codec can't encode character '\\u274c' in position 15: character maps to <undefined>\n"
+    },
+    {
+      "name": "flake8",
+      "command": [
+        "python",
+        "-m",
+        "flake8",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "python",
+        "-m",
+        "mypy",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "Success: no issues found in 3 source files\n",
+      "stderr": ""
+    },
+    {
+      "name": "cli_help",
+      "command": [
+        "python",
+        "main.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "cli_sequential",
+      "command": [
+        "python",
+        "main.py",
+        "--mode",
+        "sequential",
+        "--file",
+        "data/glossary.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

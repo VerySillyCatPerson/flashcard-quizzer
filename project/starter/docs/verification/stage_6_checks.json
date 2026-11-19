@@ -1,0 +1,75 @@
+{
+  "stage": 6,
+  "date": "2026-11-18",
+  "runtime": "Windows CPython 3.13.17",
+  "compatibility": "Mypy targets Python 3.10; all 23 source/test files parsed with Python 3.10 grammar. Python 3.10 runtime not executed.",
+  "checks": [
+    {
+      "name": "pytest_coverage",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest -rs --cov=. --cov-report=term-missing --cov-report=html --cov-report=json",
+      "exit_code": 0,
+      "output": "============================= test session starts =============================\r\nplatform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0\r\nrootdir: C:\\Projects\\flashcard\\project\\starter\r\nconfigfile: pyproject.toml\r\ntestpaths: tests\r\nplugins: platformdirs-4.14.7, cov-7.1.0\r\ncollected 253 items\r\n\r\ntests\\test_cli.py ..............................s...............         [ 18%]\r\ntests\\test_data_loader.py .............................................. [ 36%]\r\n..........................                                               [ 46%]\r\ntests\\test_engine.py ............................                        [ 57%]\r\ntests\\test_history.py .................................................. [ 77%]\r\n........                                                                 [ 80%]\r\ntests\\test_models.py ................                                    [ 86%]\r\ntests\\test_paths.py .......                                              [ 89%]\r\ntests\\test_results_export.py ....                                        [ 91%]\r\ntests\\test_strategies.py ....................                            [ 99%]\r\ntests\\test_terminal.py ..                                                [100%]\r\n\r\n=============================== tests coverage ================================\r\n______________ coverage: platform win32, python 3.13.17-final-0 _______________\r\n\r\nName                      Stmts   Miss Branch BrPart   Cover   Missing\r\n----------------------------------------------------------------------\r\nmain.py                       3      0      2      0 100.00%\r\nutils\\__init__.py             0      0      0      0 100.00%\r\nutils\\cli.py                116      0     18      0 100.00%\r\nutils\\data_loader.py         78      0     24      0 100.00%\r\nutils\\engine.py              31      0      8      0 100.00%\r\nutils\\history.py            126      0     30      0 100.00%\r\nutils\\models.py              44      0      2      0 100.00%\r\nutils\\paths.py               37      0      8      0 100.00%\r\nutils\\results_export.py      38      4      2      1  87.50%   79-80, 101->106, 104-105\r\nutils\\strategies.py          20      0      0      0 100.00%\r\nutils\\terminal.py            53      0     12      0 100.00%\r\n----------------------------------------------------------------------\r\nTOTAL                       546      4    106      1  99.23%\r\nCoverage HTML written to dir htmlcov\r\nCoverage JSON written to file coverage.json\r\nRequired test coverage of 81.0% reached. Total coverage: 99.23%\r\n=========================== short test summary info ===========================\r\nSKIPPED [1] tests\\test_cli.py:361: symbolic links unavailable: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-50\\\\test_existing_file_alias_confl1\\\\deck.json' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-cirae\\\\pytest-50\\\\test_existing_file_alias_confl1\\\\alias.json'\r\n======================= 252 passed, 1 skipped in 15.92s =======================\r\n"
+    },
+    {
+      "name": "black",
+      "command": ".\\.venv\\Scripts\\python.exe -m black --check .",
+      "exit_code": 0,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\r\n23 files would be left unchanged.\r\n"
+    },
+    {
+      "name": "isort",
+      "command": ".\\.venv\\Scripts\\python.exe -m isort --check-only .",
+      "exit_code": 0,
+      "output": "Skipped 4 files\r\n"
+    },
+    {
+      "name": "flake8",
+      "command": ".\\.venv\\Scripts\\python.exe -m flake8 .",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "mypy",
+      "command": ".\\.venv\\Scripts\\python.exe -m mypy .",
+      "exit_code": 0,
+      "output": "Success: no issues found in 23 source files\r\n"
+    },
+    {
+      "name": "python310_syntax",
+      "command": "@'\nimport ast\nfrom pathlib import Path\nfiles = [Path('main.py'), *Path('utils').glob('*.py'), *Path('tests').glob('*.py')]\nfor path in files:\n    ast.parse(path.read_text(encoding='utf-8'), filename=str(path), feature_version=(3, 10))\nprint(f'Python 3.10 grammar accepted for {len(files)} source/test files on CPython 3.13.17. Python 3.10 runtime not tested.')\n'@ | .\\.venv\\Scripts\\python.exe -",
+      "exit_code": 0,
+      "output": "Python 3.10 grammar accepted for 23 source/test files on CPython 3.13.17. Python 3.10 runtime not tested.\r\n"
+    }
+  ],
+  "manual_script": {
+    "initial_policy_block": {
+      "name": "manual_noninteractive",
+      "command": "& .\\docs\\manual_stage_6.ps1 -SkipInteractive",
+      "chunk_id": "a79058",
+      "wall_time_seconds": 0.2164929,
+      "exit_code": 1,
+      "original_token_count": 117,
+      "output": "& : File C:\\Projects\\flashcard\\project\\starter\\docs\\manual_stage_6.ps1 cannot be loaded because running scripts is \r\ndisabled on this system. For more information, see about_Execution_Policies at \r\nhttps:/go.microsoft.com/fwlink/?LinkID=135170.\r\nAt line:2 char:3\r\n+ & .\\docs\\manual_stage_6.ps1 -SkipInteractive\r\n+   ~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : SecurityError: (:) [], PSSecurityException\r\n    + FullyQualifiedErrorId : UnauthorizedAccess\r\n"
+    },
+    "verified_run": {
+      "name": "manual_noninteractive",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\\docs\\manual_stage_6.ps1 -SkipInteractive",
+      "chunk_id": "ab2a29",
+      "wall_time_seconds": 1.2034727,
+      "exit_code": 0,
+      "original_token_count": 1194,
+      "output": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\r\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\r\n\r\nQuiz JSON flashcards in sequential, random, or adaptive order.\r\n\r\noptions:\r\n  -h, --help            show this help message and exit\r\n  -f, --file FILE       UTF-8 JSON deck\r\n  -m, --mode {sequential,random,adaptive}\r\n                        quiz order (default: sequential)\r\n  --history HISTORY     history file (default:\r\n                        ~/.flashcard_quizzer/history.json)\r\n  --seed SEED           reproducible seed, only with --mode random\r\n  --export EXPORT       optional versioned JSON results file\r\n\r\nHistory saves at session end or orderly interruption. Forced termination may\r\nlose updates; concurrent sessions are not merged.\r\n\r\n[1/3] A\r\nAnswer: Correct\r\n\r\n[2/3] B\r\nAnswer: Incorrect. Expected: Beta\r\n\r\n[3/3] C\r\nAnswer: Correct\r\n\r\nCompleted session (completed)\r\n+-----------------+--------+\r\n| Deck size       | 3      |\r\n| Total questions | 3      |\r\n| Correct         | 2      |\r\n| Accuracy        | 66.67% |\r\n| Missed terms    | #2 B   |\r\n+-----------------+--------+\r\nSequential exit: 0 (expected 0; 2/3, 66.67%, missed #2 B)\n\r\n\r\n[1/3] B\r\nAnswer: Correct\r\n\r\n[2/3] A\r\nAnswer: Correct\r\n\r\n[3/3] C\r\nAnswer: Correct\r\n\r\nCompleted session (completed)\r\n+-----------------+---------+\r\n| Deck size       | 3       |\r\n| Total questions | 3       |\r\n| Correct         | 3       |\r\n| Accuracy        | 100.00% |\r\n| Missed terms    | None    |\r\n+-----------------+---------+\r\nAdaptive exit: 0 (expected 0; order B,A,C; 100%)\n\r\n[1/3] C\r\nAnswer: Incorrect. Expected: Gamma\r\n\r\n[2/3] A\r\nAnswer: Incorrect. Expected: Alpha\r\n\r\n[3/3] B\r\nAnswer: Incorrect. Expected: Beta\r\n\r\nCompleted session (completed)\r\n+-----------------+------------------+\r\n| Deck size       | 3                |\r\n| Total questions | 3                |\r\n| Correct         | 0                |\r\n| Accuracy        | 0.00%            |\r\n| Missed terms    | #3 C; #1 A; #2 B |\r\n+-----------------+------------------+\r\nRandom exit: 0 (expected 0; each card once; same seed reproduces order)\n\r\n[1/3] A\r\nAnswer: Correct\r\n\r\n[2/3] B\r\nAnswer: \r\nPartial session (eof)\r\n+-----------------+---------+\r\n| Deck size       | 3       |\r\n| Total questions | 1       |\r\n| Correct         | 1       |\r\n| Accuracy        | 100.00% |\r\n| Missed terms    | None    |\r\n+-----------------+---------+\r\nWarning: Input ended before the quiz was complete (EOF).\r\nEOF exit: 1 (expected 1; partial 1/3, 100%, no missed cards)\nusage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\r\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\r\nmain.py: error: Deck 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009\\deck.json' and Export 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009\\deck.json' refer to the same file; choose distinct paths.\r\nConflict exit: 2 (expected 2; no quiz or file changes)\nWarning: Previous scores could not be loaded. Adaptive mode will use deck order. Learning updates will not be saved during this run. History 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009\\corrupt.json': Invalid history JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\r\n\r\n[1/3] A\r\nAnswer: Correct\r\n\r\n[2/3] B\r\nAnswer: Correct\r\n\r\n[3/3] C\r\nAnswer: Correct\r\n\r\nCompleted session (completed)\r\n+-----------------+---------+\r\n| Deck size       | 3       |\r\n| Total questions | 3       |\r\n| Correct         | 3       |\r\n| Accuracy        | 100.00% |\r\n| Missed terms    | None    |\r\n+-----------------+---------+\r\nCorrupt-history exit: 1 (expected 1; warning, 100%, corrupt file preserved, export written)\n\r\n[1/3] A\r\nAnswer: Correct\r\n\r\n[2/3] B\r\nAnswer: Correct\r\n\r\n[3/3] C\r\nAnswer: Correct\r\n\r\nCompleted session (completed)\r\n+-----------------+---------+\r\n| Deck size       | 3       |\r\n| Total questions | 3       |\r\n| Correct         | 3       |\r\n| Accuracy        | 100.00% |\r\n| Missed terms    | None    |\r\n+-----------------+---------+\r\nWarning: Cannot export results to 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009': Could not write results: [WinError 5] Access is denied: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\.flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009.4l5nq8iv.tmp' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009'\r\nExport-failure exit: 1 (expected 1; summary/history retained)\nTemporary artifacts retained for inspection: C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-manual-7fe2606e48cc4da39e1c08bf81ce0009\nanswered_count correct_count  accuracy_percent\r\n-------------- -------------  ----------------\r\n             3             2 66.66666666666666\r\n\r\n\r\n"
+    },
+    "verified_status_markers": {
+      "Sequential": 0,
+      "Adaptive": 0,
+      "Random": 0,
+      "EOF": 1,
+      "Conflict": 2,
+      "Corrupt-history": 1,
+      "Export-failure": 1
+    },
+    "physical_ctrl_c_executed": false,
+    "policy_note": "The local script was verified in a child PowerShell process with -ExecutionPolicy Bypass; machine/user policy settings were not changed."
+  }
+}

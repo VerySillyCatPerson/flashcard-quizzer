@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-18",
+  "runtime": "CPython 3.13.17",
+  "kind": "scripted command demonstrations with isolated temporary home/history/export; not user answers",
+  "physical_ctrl_c_tested": false,
+  "records": [
+    {
+      "scenario": "help",
+      "argv": [
+        "python",
+        "main.py",
+        "--help"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "",
+      "exit_code": 0,
+      "stdout": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\n\nQuiz JSON flashcards in sequential, random, or adaptive order.\n\noptions:\n  -h, --help            show this help message and exit\n  -f, --file FILE       UTF-8 JSON deck\n  -m, --mode {sequential,random,adaptive}\n                        quiz order (default: sequential)\n  --history HISTORY     history file (default:\n                        ~/.flashcard_quizzer/history.json)\n  --seed SEED           reproducible seed, only with --mode random\n  --export EXPORT       optional versioned JSON results file\n\nHistory saves at session end or orderly interruption. Forced termination may\nlose updates; concurrent sessions are not merged.\n",
+      "stderr": ""
+    },
+    {
+      "scenario": "sequential_two_correct_export",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\results.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": " alpha \nwrong\nGAMMA\n",
+      "exit_code": 0,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\nAnswer: Incorrect. Expected: Beta\n\n[3/3] C\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+--------+\n| Deck size       | 3      |\n| Total questions | 3      |\n| Correct         | 2      |\n| Accuracy        | 66.67% |\n| Missed terms    | #2 B   |\n+-----------------+--------+\n",
+      "stderr": ""
+    },
+    {
+      "scenario": "adaptive_reuses_history",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "-m",
+        "adaptive",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "beta\nalpha\ngamma\n",
+      "exit_code": 0,
+      "stdout": "\n[1/3] B\nAnswer: Correct\n\n[2/3] A\nAnswer: Correct\n\n[3/3] C\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 3       |\n| Correct         | 3       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": ""
+    },
+    {
+      "scenario": "seeded_random",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "-m",
+        "random",
+        "--seed",
+        "7",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "wrong\nwrong\nwrong\n",
+      "exit_code": 0,
+      "stdout": "\n[1/3] C\nAnswer: Incorrect. Expected: Gamma\n\n[2/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[3/3] B\nAnswer: Incorrect. Expected: Beta\n\nCompleted session (completed)\n+-----------------+------------------+\n| Deck size       | 3                |\n| Total questions | 3                |\n| Correct         | 0                |\n| Accuracy        | 0.00%            |\n| Missed terms    | #3 C; #1 A; #2 B |\n+-----------------+------------------+\n",
+      "stderr": ""
+    },
+    {
+      "scenario": "eof_partial_export",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\partial.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "alpha\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\nAnswer: \nPartial session (eof)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 1       |\n| Correct         | 1       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": "Warning: Input ended before the quiz was complete (EOF).\n"
+    },
+    {
+      "scenario": "invalid_arguments",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "-m",
+        "unknown"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\nmain.py: error: argument -m/--mode: invalid choice: 'unknown' (choose from 'sequential', 'random', 'adaptive')\n"
+    },
+    {
+      "scenario": "missing_deck",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\missing.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Error: Cannot load flashcards from 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\missing.json': File does not exist.\n"
+    },
+    {
+      "scenario": "deck_export_conflict",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\nmain.py: error: Deck 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json' and Export 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json' refer to the same file; choose distinct paths.\n"
+    },
+    {
+      "scenario": "corrupt_history_continues",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "-m",
+        "adaptive",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\corrupt.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\degraded.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "alpha\nbeta\ngamma\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\nAnswer: Correct\n\n[3/3] C\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 3       |\n| Correct         | 3       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": "Warning: Previous scores could not be loaded. Adaptive mode will use deck order. Learning updates will not be saved during this run. History 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\corrupt.json': Invalid history JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n"
+    },
+    {
+      "scenario": "export_after_history_save_failure",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\saved-despite-history-failure.json"
+      ],
+      "execution": "actual entry point via test-only runpy fault bootstrap",
+      "faults": [
+        "history_save"
+      ],
+      "stdin": "alpha\nbeta\ngamma\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\nAnswer: Correct\n\n[3/3] C\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 3       |\n| Correct         | 3       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": "Warning: History error for 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json': scripted history-save denial. Learning updates were not saved.\n"
+    },
+    {
+      "scenario": "ctrl_c_wins_over_history_and_export_failures",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\export-directory"
+      ],
+      "execution": "actual entry point via test-only runpy fault bootstrap",
+      "faults": [
+        "interrupt_after_one",
+        "history_save"
+      ],
+      "stdin": "alpha\n",
+      "exit_code": 130,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\n\nPartial session (interrupted)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 1       |\n| Correct         | 1       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": "Warning: Interrupted by Ctrl+C.\nWarning: History error for 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json': scripted history-save denial. Learning updates were not saved.\nWarning: Cannot export results to 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\export-directory': Could not write results: [WinError 5] Access is denied: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-cli-evidence-mmdv29q4\\\\.export-directory.8j8gs9en.tmp' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-cli-evidence-mmdv29q4\\\\export-directory'\n"
+    },
+    {
+      "scenario": "native_export_failure",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\export-directory"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "alpha\nbeta\ngamma\n",
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\nAnswer: Correct\n\n[3/3] C\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 3       |\n| Correct         | 3       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": "Warning: Cannot export results to 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-cli-evidence-mmdv29q4\\export-directory': Could not write results: [WinError 5] Access is denied: 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-cli-evidence-mmdv29q4\\\\.export-directory.tx5iac0o.tmp' -> 'C:\\\\Users\\\\cirae\\\\AppData\\\\Local\\\\Temp\\\\flashcard-cli-evidence-mmdv29q4\\\\export-directory'\n"
+    },
+    {
+      "scenario": "specified_glossary_command",
+      "argv": [
+        "python",
+        "main.py",
+        "--mode",
+        "sequential",
+        "--file",
+        "data/glossary.json"
+      ],
+      "execution": "direct actual-entry-point subprocess",
+      "faults": [],
+      "stdin": "Application Programming Interface\nContent Delivery Network\nCentral Processing Unit\nDomain Name System\nHypertext Transfer Protocol\nInternet Protocol\nRandom Access Memory\nSecure Shell\nTransport Layer Security\nVirtual Private Network\n",
+      "exit_code": 0,
+      "stdout": "\n[1/10] API\nAnswer: Correct\n\n[2/10] CDN\nAnswer: Correct\n\n[3/10] CPU\nAnswer: Correct\n\n[4/10] DNS\nAnswer: Correct\n\n[5/10] HTTP\nAnswer: Correct\n\n[6/10] IP\nAnswer: Correct\n\n[7/10] RAM\nAnswer: Correct\n\n[8/10] SSH\nAnswer: Correct\n\n[9/10] TLS\nAnswer: Correct\n\n[10/10] VPN\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 10      |\n| Total questions | 10      |\n| Correct         | 10      |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": ""
+    }
+  ]
+}

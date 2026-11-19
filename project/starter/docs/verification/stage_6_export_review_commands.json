@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-18",
+  "kind": "synthetic isolated temporary-file demonstrations",
+  "physical_ctrl_c_verified": false,
+  "records": [
+    {
+      "scenario": "new_export",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\results.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: Incorrect. Expected: Beta\n\n[3/3] C\nAnswer: Incorrect. Expected: Gamma\n\nCompleted session (completed)\n+-----------------+------------------+\n| Deck size       | 3                |\n| Total questions | 3                |\n| Correct         | 0                |\n| Accuracy        | 0.00%            |\n| Missed terms    | #1 A; #2 B; #3 C |\n+-----------------+------------------+\n",
+      "stderr": "",
+      "export_document": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "completed",
+        "complete": true,
+        "deck_size": 3,
+        "answered_count": 3,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          },
+          {
+            "position": 2,
+            "card_id": "card-v1:afad8912d9e28a763650e31545e7b88d48fa27c9a00f314fd732c5f83584d957",
+            "front": "B",
+            "expected": "Beta"
+          },
+          {
+            "position": 3,
+            "card_id": "card-v1:32c569283944e27f942e5f7e16cd63fbf0e0ce5f6ff7e07a4d44fd2225c47f9c",
+            "front": "C",
+            "expected": "Gamma"
+          }
+        ]
+      },
+      "submitted_text_omitted": true,
+      "bytes_preserved": null,
+      "export_sha256": "8667ce69899fa9b9e5e1cfb0c60422ceab8b05fe060e8d54c69ffed5a98389bb",
+      "history_scores": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "scenario": "existing_export_refused",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\results.json"
+      ],
+      "exit_code": 1,
+      "stdout": "\n[1/3] A\nAnswer: Incorrect. Expected: Alpha\n\n[2/3] B\nAnswer: Incorrect. Expected: Beta\n\n[3/3] C\nAnswer: Incorrect. Expected: Gamma\n\nCompleted session (completed)\n+-----------------+------------------+\n| Deck size       | 3                |\n| Total questions | 3                |\n| Correct         | 0                |\n| Accuracy        | 0.00%            |\n| Missed terms    | #1 A; #2 B; #3 C |\n+-----------------+------------------+\n",
+      "stderr": "Warning: Cannot export results to 'C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\results.json': Export already exists; use --overwrite to replace it.\n",
+      "export_document": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "completed",
+        "complete": true,
+        "deck_size": 3,
+        "answered_count": 3,
+        "correct_count": 0,
+        "accuracy_percent": 0.0,
+        "missed": [
+          {
+            "position": 1,
+            "card_id": "card-v1:435b0dd2a61c88ae4f51399653f10f2ada32e51f4e329a8a3f8645d613d4c8e7",
+            "front": "A",
+            "expected": "Alpha"
+          },
+          {
+            "position": 2,
+            "card_id": "card-v1:afad8912d9e28a763650e31545e7b88d48fa27c9a00f314fd732c5f83584d957",
+            "front": "B",
+            "expected": "Beta"
+          },
+          {
+            "position": 3,
+            "card_id": "card-v1:32c569283944e27f942e5f7e16cd63fbf0e0ce5f6ff7e07a4d44fd2225c47f9c",
+            "front": "C",
+            "expected": "Gamma"
+          }
+        ]
+      },
+      "submitted_text_omitted": true,
+      "bytes_preserved": true,
+      "export_sha256": "8667ce69899fa9b9e5e1cfb0c60422ceab8b05fe060e8d54c69ffed5a98389bb",
+      "history_scores": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "scenario": "authorized_overwrite",
+      "argv": [
+        "python",
+        "main.py",
+        "-f",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\deck.json",
+        "--history",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\history.json",
+        "--export",
+        "C:\\Users\\cirae\\AppData\\Local\\Temp\\flashcard-export-review-nwsrmjiz\\results.json",
+        "--overwrite"
+      ],
+      "exit_code": 0,
+      "stdout": "\n[1/3] A\nAnswer: Correct\n\n[2/3] B\nAnswer: Correct\n\n[3/3] C\nAnswer: Correct\n\nCompleted session (completed)\n+-----------------+---------+\n| Deck size       | 3       |\n| Total questions | 3       |\n| Correct         | 3       |\n| Accuracy        | 100.00% |\n| Missed terms    | None    |\n+-----------------+---------+\n",
+      "stderr": "",
+      "export_document": {
+        "version": 1,
+        "mode": "sequential",
+        "seed": null,
+        "finish_reason": "completed",
+        "complete": true,
+        "deck_size": 3,
+        "answered_count": 3,
+        "correct_count": 3,
+        "accuracy_percent": 100.0,
+        "missed": []
+      },
+      "submitted_text_omitted": true,
+      "bytes_preserved": false,
+      "export_sha256": "825d8763b9bce172662b7ad9134a0d9862e5affab6df379508b6c0bf8c395752",
+      "history_scores": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "scenario": "help",
+      "argv": [
+        "python",
+        "main.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: main.py [-h] -f FILE [-m {sequential,random,adaptive}]\n               [--history HISTORY] [--seed SEED] [--export EXPORT]\n               [--overwrite]\n\nQuiz JSON flashcards in sequential, random, or adaptive order.\n\noptions:\n  -h, --help            show this help message and exit\n  -f, --file FILE       UTF-8 JSON deck\n  -m, --mode {sequential,random,adaptive}\n                        quiz order (default: sequential)\n  --history HISTORY     history file (default:\n                        ~/.flashcard_quizzer/history.json)\n  --seed SEED           reproducible seed, only with --mode random\n  --export EXPORT       optional JSON metadata/statistics/misses file (refuses\n                        existing files)\n  --overwrite           atomically replace an existing --export file; history\n                        is unaffected\n\nHistory saves at session end or orderly interruption. Forced termination may\nlose updates; concurrent sessions are not merged.\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-19",
+  "command": [
+    "C:\\Projects\\flashcard\\project\\starter\\.venv\\Scripts\\python.exe",
+    "-m",
+    "flake8",
+    "--stdin-display-name",
+    "tests/cli_helpers_bootstrap.py",
+    "-"
+  ],
+  "scope": "Executable _BOOTSTRAP string extracted with ast; existing file-level lint does not parse it",
+  "exit_code": 1,
+  "stdout": "tests/cli_helpers_bootstrap.py:17:1: E302 expected 2 blank lines, found 0\ntests/cli_helpers_bootstrap.py:26:1: E305 expected 2 blank lines after class or function definition, found 0\ntests/cli_helpers_bootstrap.py:41:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:76:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:91:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:103:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:115:5: E301 expected 1 blank line, found 0\ntests/cli_helpers_bootstrap.py:124:5: E301 expected 1 blank line, found 0\n",
+  "stderr": "",
+  "application_or_test_source_modified": false
+}
